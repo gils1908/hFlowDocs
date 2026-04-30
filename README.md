@@ -1,55 +1,49 @@
-# Mintlify Starter Kit
+# hFlow Help (Mintlify)
 
-Use the starter kit to get your docs deployed and ready to customize.
+User-facing help for **hFlow**, published with [Mintlify](https://mintlify.com). Production site: **https://help.hflow.pro**
 
-Click the green **Use this template** button at the top of this repo to copy the Mintlify starter kit. The starter kit contains examples with
+This repository is a **sibling** to the main hFlow app repo (e.g. clone it next to `Gilat/` as `hFlowDocs/`), similar to how the marketing site can live under `website/`.
 
-- Guide pages
-- Navigation
-- Customizations
-- API reference pages
-- Use of popular components
+## Local preview
 
-**[Follow the full quickstart guide](https://starter.mintlify.com/quickstart)**
+From this directory (where `docs.json` is):
+
+```bash
+npm i -g mint
+mint dev
+```
+
+Visit `http://localhost:3000`.
+
+## Deploy
+
+- **Branch:** pushes to `main` should trigger Mintlify if the [GitHub app](https://dashboard.mintlify.com/settings/organization/github-app) is installed on **`gils1908/hFlowDocs`**.
+- **Dashboard:** confirm the Mintlify project’s connected repo is **`gils1908/hFlowDocs`** (not an old starter repo such as `docs`). If the dashboard still points elsewhere, reconnect GitHub to this repository.
+- **Domain:** custom host **help.hflow.pro** is configured in Mintlify; DNS for `help.hflow.pro` should resolve (A records or CNAME per Mintlify’s domain instructions).
+
+## When you change the product — update the docs
+
+Use this checklist so help stays accurate:
+
+1. **Identify the audience** — teachers, admins, or both?
+2. **Update or add MDX** under `hflow/` (or new sections in `docs.json` if you add pages).
+3. **Screenshots** — refresh images if the UI changed (store under `images/`).
+4. **Release notes** — add a short bullet to `hflow/changelog.mdx` for user-visible changes.
+5. **Preview** — run `mint dev` and click through the affected pages.
+6. **Ship** — commit and push to `main`.
 
 ## AI-assisted writing
 
-Set up your AI coding tool to work with Mintlify:
+Optional Mintlify skill for editors using Cursor or other tools:
 
 ```bash
 npx skills add https://mintlify.com/docs
 ```
 
-This command installs Mintlify's documentation skill for your configured AI tools like Claude Code, Cursor, Windsurf, and others. The skill includes component reference, writing standards, and workflow guidance.
+## Repository
 
-See the [AI tools guides](/ai-tools) for tool-specific setup.
+- **GitHub:** [gils1908/hFlowDocs](https://github.com/gils1908/hFlowDocs)
 
-## Development
+## License
 
-Install the [Mintlify CLI](https://www.npmjs.com/package/mint) to preview your documentation changes locally. To install, use the following command:
-
-```
-npm i -g mint
-```
-
-Run the following command at the root of your documentation, where your `docs.json` is located:
-
-```
-mint dev
-```
-
-View your local preview at `http://localhost:3000`.
-
-## Publishing changes
-
-Install our GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app) to propagate changes from your repo to your deployment. Changes are deployed to production automatically after pushing to the default branch.
-
-## Need help?
-
-### Troubleshooting
-
-- If your dev environment isn't running: Run `mint update` to ensure you have the most recent version of the CLI.
-- If a page loads as a 404: Make sure you are running in a folder with a valid `docs.json`.
-
-### Resources
-- [Mintlify documentation](https://mintlify.com/docs)
+See [LICENSE](LICENSE).
