@@ -1,0 +1,64 @@
+---
+title: "Students: Admin vs Teacher"
+description: "What each role can see and do on the Students page."
+---
+
+This feature allows staff to work from the same Students page while enforcing role-based access for sensitive actions.
+
+## Most common use case
+
+When you are troubleshooting “why can’t I see this button/student?” start with this page first.
+
+## Admin visibility and actions
+
+Admins can:
+
+- See all active students in the organization (subject to filters)
+- Use full filters (year, language, grade, class, tier, search)
+- Add students manually
+- Import students from CSV
+- Export students to CSV
+- Open the student data drawer
+- Edit student name details from the row action
+- Open Student Enrollment and remove a student from roster
+
+## Teacher visibility and actions
+
+Teachers see only students within active assignments (year + grade + optional class match).
+
+Teacher behavior:
+
+- Assignment-focused header (single assignment badge or selector)
+- Search within assigned roster
+- No Add Student, Import CSV, Export CSV, or edit-row actions
+- Drawer access depends on assessment permissions:
+  - If assessment access is enabled: student name opens drawer
+  - If disabled: names are read-only text and drawer is not available
+- Notes are view-only in the drawer for teachers
+
+## Role troubleshooting checklist
+
+### 1) Teacher cannot see expected students
+
+Check:
+
+- Teacher has active assignment(s) for the current date
+- Assignment school year and grade match student-year records
+- If assignment class is set, class name must match
+
+### 2) Teacher cannot open drawer
+
+Check:
+
+- Teacher has assessment access enabled in org/user settings
+
+### 3) “Missing” admin actions
+
+Check:
+
+- Current user role is admin
+
+## Screenshot needed
+
+- Admin Students header showing `Import CSV`, `Export CSV`, and `+ Add Student`
+- Teacher Students header showing assignment selector and search-only controls

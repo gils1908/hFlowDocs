@@ -26,6 +26,10 @@
             "group": "Using hFlow",
             "pages": [
               "hflow/students",
+              "hflow/students/roles-and-permissions",
+              "hflow/students/add-students",
+              "hflow/students/delete-student",
+              "hflow/students/view-student-data",
               "hflow/assessments",
               "hflow/tiers",
               "hflow/workflows"

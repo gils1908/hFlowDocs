@@ -1,0 +1,62 @@
+---
+title: "View Student Data (Drawer)"
+description: "Open and use the student profile drawer from the Students table."
+---
+
+This feature allows staff to inspect student-level details quickly without leaving the Students page.
+
+## Most common use case
+
+Open a student to review notes, reading fluency assessments (BOY/MOY/EOY), checkpoints, and goal context.
+
+## How to open the drawer
+
+1. Go to `Students`.
+2. Find a student in the table.
+3. Click the student name.
+
+Notes:
+
+- Admins can always open the drawer from student name.
+- Teachers can open it only when assessment access is enabled.
+
+## What data is shown
+
+Top summary:
+
+- Student name
+- Student code
+- Grade
+- School year
+- External student ID (if present)
+
+Content sections:
+
+- **Notes**
+  - Admin: can add/edit notes and optional link
+  - Teacher: note is view-only
+- **Reading Fluency Progress**
+  - Scheduled assessments by period (BOY/MOY/EOY)
+  - Checkpoints
+  - Tier displays where available
+- **Goals**
+  - Admin-only create/edit
+
+## How to add or edit data from drawer
+
+1. Open the drawer.
+2. For scheduled assessments, use add/edit actions in period cards.
+3. For checkpoints, use **+ Add Checkpoint** and edit as needed.
+4. For notes/accommodations:
+   - Admin can add/edit
+   - Teacher can only view
+
+## Unsaved-changes behavior
+
+- Drawer prevents accidental loss with discard prompts when there are unsaved edits.
+
+## Screenshot needed
+
+- Drawer header and summary block
+- Notes section (admin edit view and teacher read-only view)
+- Reading Fluency cards with BOY/MOY/EOY rows and checkpoint card

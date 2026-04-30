@@ -1,0 +1,38 @@
+---
+title: "Delete a Student"
+description: "Remove a student from roster through Enrollment history."
+---
+
+This feature allows admins to remove a student from the active roster when the student should no longer appear in day-to-day workflows.
+
+## Important before you start
+
+- Student removal is done from **Student Enrollment** (not from the main Students table actions).
+- Confirmation states this action cannot be undone in-app.
+- Enrollment and assessment history are hidden after removal.
+
+## How to remove a student
+
+1. Go to `Students` -> `Student Enrollment` page.
+2. Find the student and open enrollment details.
+3. Click **Remove student from roster**.
+4. Review warning dialog.
+5. Click **Remove student** to confirm.
+
+Expected result:
+
+- Student no longer appears in active student listings.
+
+## Who can do this
+
+- Admin only.
+
+## Common issues
+
+- **Button disabled**: finish or cancel any in-progress enrollment edit first.
+- **Remove failed**: retry and check if there are backend permission or data constraints.
+
+## Screenshot needed
+
+- Enrollment modal with `Remove student from roster` action
+- Final confirmation dialog (`Remove student`)
