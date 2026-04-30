@@ -46,6 +46,10 @@ Use this checklist so help stays accurate:
 5. **Preview** — run `mint dev` and click through the affected pages.
 6. **Ship** — commit and push to `main`.
 
+## Maintainers
+
+- **`HELP_PAGE_LOG.md`** — numbered, dated history of doc changes (`DOC-nnnn`) and **Open doc backlog** for screenshots and follow-ups. Do not put that backlog language on published MDX pages; keep the live site reader-facing only.
+
 ## AI-assisted writing
 
 Optional Mintlify skill for editors using Cursor or other tools:
