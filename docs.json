@@ -8,6 +8,11 @@
     "dark": "#312E81"
   },
   "favicon": "/favicon.svg",
+  "seo": {
+    "metatags": {
+      "canonical": "https://help.hflow.pro"
+    }
+  },
   "navigation": {
     "tabs": [
       {
