@@ -30,6 +30,7 @@
               "hflow/students/add-students",
               "hflow/students/delete-student",
               "hflow/students/view-student-data",
+              "hflow/students/student-progress-charts",
               "hflow/assessments",
               "hflow/tiers",
               "hflow/workflows"

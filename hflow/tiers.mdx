@@ -3,15 +3,18 @@ title: "Tiers"
 description: "Assessment tiers in hFlow — codes, meaning, and display."
 ---
 
-This page is a **placeholder** for tier documentation.
+This page explains how hFlow assigns reading tiers from assessment scores and how tier labels appear in the product.
 
-## What to document here
+## What tiers mean
 
-- What a tier represents in your program
-- How tier codes are stored and shown (e.g. display **Tier 2** as stored — avoid duplicating the word “Tier” in labels)
-- How tiers relate to assessments or eligibility
-- Who can change tier data (if applicable)
+Tiers summarize reading performance for a **scheduled** assessment using your org’s tier rules (accuracy and fluency bands) for that **school year**, **grade**, **language**, and period (**BOY**, **MOY**, or **EOY**). Tier **1** is strongest and tier **3** indicates the most intensive support. The app stores labels exactly as **Tier 1**, **Tier 2**, or **Tier 3**—show that text without adding another “Tier” prefix in the UI.
 
-## When you ship a feature
+## Per-assessment tier vs overall tier
 
-Update when tier rules, badges, or reporting change.
+Each assessment row has its **own** tier from that row’s scores and the tier definitions for the year of that enrollment (**student year**). If a student has more than one enrollment year, each year’s assessments use that year’s tier configuration.
+
+Some programs record **several reading passages** for the same period (for example, multiple EOY passages). Each passage keeps its own tier in the database. **Gradebook-style summaries** may show **median** fluency and accuracy across those passages; the tier pill on that summary is based on those **displayed** median numbers, not on a single passage alone. Rosters and **overall** placement still use the **most conservative** tier among the passages for that period (the higher tier number).
+
+## Who can change what you see
+
+Tier **rules** (cut scores) are configured by org admins in tier settings. Tier values on individual assessments update when scores change or when someone runs **Refresh tier assignments** on the Assessments page (for example after rule changes).

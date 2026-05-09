@@ -3,15 +3,27 @@ title: "Assessments"
 description: "Creating, editing, and understanding assessments in hFlow."
 ---
 
-This page is a **placeholder** for assessment-related help.
+This feature allows teachers and admins to record **scheduled** reading assessments (BOY, MOY, EOY), optional median-based (three-passage) entry, domain comprehension and ACTFL levels, and to use **bulk gradebook** entry for a class.
 
-## What to document here
+## How to add or edit a scheduled assessment
 
-- How to add or edit an assessment
-- Fields: totals, correct counts, time, comprehension, dates
-- How results appear on the student record
-- Any validation rules users should know
+1. From **Students** (profile drawer) or the **Assessments** page, choose **Add assessment** or open an existing scheduled assessment.
+2. Enter **Total words**, **Correct words**, and **Time** (seconds), or complete all three passages when **Median-based assessment** is enabled.
+3. Set **Reading comprehension** and **Reading ACTFL**, and expand **Listening**, **Speech**, and **Writing** when you need those domains.
+4. Review **Grade-level overall**: the app computes a single level (**Below**, **Approaching**, or **At Grade**) from the skill scores you entered—using only domains that have a value, then rounding the average to a whole level.
+5. Turn on **Manual override** only if the stored overall must differ from that calculation. If you change **any** reading or language skill value (comprehension or ACTFL on reading, listening, speech, or writing), the override is cleared and the overall is recomputed.
+6. **ACTFL overall (composite)** is **read-only**. It is the average of the four ACTFL levels you entered (each 1–9), rounded to one decimal for storage and band mapping, with a short band label (for example `2.5 - NM` or `3 - NH` when the value is a whole number). It updates whenever any of those ACTFL fields change.
 
-## When you ship a feature
+**Expected outcome:** Saving writes scores, tier, **grade-level overall**, and **ACTFL composite** on the assessment row. The confirmation step when editing lists changes, including overall and composite when they differ.
 
-Align screenshots and steps with the live **Assessment** UI whenever metrics or forms change.
+## How to use bulk gradebook entry
+
+1. From **Assessments**, open bulk entry for the desired **language**, **grade**, and **class** context.
+2. For each period, use the **G. overall** column to leave the level on **Auto** (follows the same rules as the modal) or choose a fixed level. The **ACTFL Σ** column shows the composite for that row; it is not editable here.
+3. If you edit comprehension or any domain ACTFL field after choosing a fixed overall, **Auto** is applied again for that cell (manual override is cleared), matching the assessment modal.
+
+**Expected outcome:** Saving calls the same server rules as individual edits; median (three-passage) rows duplicate shared skill and overall fields on all three passage records so data stays consistent.
+
+## Exports and print
+
+Overall language level and ACTFL composite are stored for use in the app. **CSV import/export** for bulk assessments, **print students**, and **org-wide data downloads** are unchanged and do not add these fields.
