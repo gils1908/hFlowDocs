@@ -4,6 +4,16 @@ Maintainers only: not published on help.hflow.pro. For each substantive change u
 
 ## Entries (newest first)
 
+### DOC-0016 — 2026-05-09 — Checkpoint drag order persistence
+
+**Summary:** Added task steps for drag-and-drop checkpoint reordering, default date-based ordering behavior, and persistence scope (per student enrollment year + language) in the student profile help page.
+
+**Files (this repo):**
+
+- changed `hflow/students/view-student-data.mdx`
+
+**Related (Gilat app):** `StudentProfileSummaryPanel.tsx`, `StudentProfileDrawer.tsx`, `src/app/api/student-years/[studentYearId]/checkpoint-order/route.ts`.
+
 ### DOC-0015 — 2026-05-09 — Students: IDs in drawer only; drawer above header
 
 **Summary:** Roster rows no longer list ID/Ext ID on the table; copy controls for those values live in the profile drawer header. Documented z-order fix so the drawer is not covered by the app header.
