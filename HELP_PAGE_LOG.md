@@ -4,6 +4,16 @@ Maintainers only: not published on help.hflow.pro. For each substantive change u
 
 ## Entries (newest first)
 
+### DOC-0017 — 2026-05-09 — ACTFL chart: band abbrev inside bars
+
+**Summary:** Documented that the ACTFL-by-skill bars show the proficiency band abbreviation (NL–AH) under the level digit inside each bar when space allows.
+
+**Files (this repo):**
+
+- changed `hflow/students/student-progress-charts.mdx`
+
+**Related (Gilat app):** `LanguageProgressSection.tsx`.
+
 ### DOC-0016 — 2026-05-09 — Checkpoint drag order persistence
 
 **Summary:** Added task steps for drag-and-drop checkpoint reordering, default date-based ordering behavior, and persistence scope (per student enrollment year + language) in the student profile help page.
