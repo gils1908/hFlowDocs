@@ -4,6 +4,19 @@ Maintainers only: not published on help.hflow.pro. For each substantive change u
 
 ## Entries (newest first)
 
+### DOC-0018 — 2026-05-12 — Reports menu + Copy Charts
+
+**Summary:** Published **Org reports (Reports menu)**: how to open each header report, what each summarizes, **Copy Charts** on Growth, Language Progress, and Grade Language Distribution (including two-panel stitched PNG), clipboard vs download behavior, and that Reading Tier Distribution has no Copy Charts. Linked student progress charts to org reports for shared export behavior.
+
+**Files (this repo):**
+
+- added `hflow/reports.mdx`
+- changed `docs.json` (nav order)
+- changed `index.mdx` (Org reports card)
+- changed `hflow/students/student-progress-charts.mdx` (**Copy Charts** label + cross-link)
+
+**Related (Gilat app):** `AppShell` Reports dropdown; `grade-progress/page.tsx`, `grade-language-distribution/page.tsx`, `growth/page.tsx`, `StudentTrendReport.tsx`, `exportChart.ts`.
+
 ### DOC-0017 — 2026-05-09 — ACTFL chart: band abbrev inside bars
 
 **Summary:** Documented that the ACTFL-by-skill bars show the proficiency band abbreviation (NL–AH) under the level digit inside each bar when space allows.
