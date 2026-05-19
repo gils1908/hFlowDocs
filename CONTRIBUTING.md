@@ -1,34 +1,104 @@
-> **Customize this file**: Tailor this template to your project by noting specific contribution types you're looking for, adding a Code of Conduct, or adjusting the writing guidelines to match your style.
+> **Customize this file**: Tailor this template to note specific contribution types, a Code of Conduct, or internal release steps.
 
 # Contribute to the documentation
 
-Thank you for your interest in contributing to our documentation! This guide will help you get started.
+Thank you for contributing to **hFlow Help**. This repo is **maintainer-facing** setup; the published site at **help.hflow.pro** is written for teachers and administrators only. School-facing pages live under **`hflow/`** and **`index.mdx`**.
 
 ## How to contribute
 
-### Option 1: Edit directly on GitHub
+### Option 1 — Edit directly on GitHub or Mintlify
 
-1. Navigate to the page you want to edit
-2. Click the "Edit this file" button (the pencil icon)
-3. Make your changes and submit a pull request
+1. Navigate to the page you want to change.
+2. Use the Mintlify/GitHub edit flow your team prefers.
+3. Submit or merge according to **`main`** protections.
 
-### Option 2: Local development
+### Option 2 — Local clone and preview
 
-1. Fork and clone this repository
-2. Install the Mintlify CLI: `npm i -g mint`
-3. Create a branch for your changes
-4. Make changes
-5. Navigate to the docs directory and run `mint dev`
-6. Preview your changes at `http://localhost:3000`
-7. Commit your changes and submit a pull request
+These steps are **not** shown to help-site readers.
 
-For more details on local development, see our [development guide](development.mdx).
+#### 1. Clone the docs repo
 
-## Writing guidelines
+If you use the hFlow application monorepo, clone help next to Gilat:
 
-- **Use active voice**: "Run the command" not "The command should be run"
-- **Address the reader directly**: Use "you" instead of "the user"
-- **Keep sentences concise**: Aim for one idea per sentence
-- **Lead with the goal**: Start instructions with what the user wants to accomplish
-- **Use consistent terminology**: Don't alternate between synonyms for the same concept
-- **Include examples**: Show, don't just tell
+```bash
+cd /path/to/Gilat
+git clone https://github.com/gils1908/hFlowDocs.git hFlowDocs
+cd hFlowDocs
+```
+
+You can also clone **`gils1908/hFlowDocs`** anywhere; you only need the directory that contains **`docs.json`**.
+
+#### 2. Install the Mintlify CLI
+
+**Prerequisites:** Node.js **19+**.
+
+```bash
+npm i -g mint
+```
+
+If the preview looks wrong, update the CLI:
+
+```bash
+mint update
+```
+
+#### 3. Preview locally
+
+From the repo root (where **`docs.json`** lives):
+
+```bash
+mint dev
+```
+
+Open **http://localhost:3000**. The dev server reloads when you edit MDX.
+
+Optional custom port:
+
+```bash
+mint dev --port 3333
+```
+
+#### 4. Validate links
+
+```bash
+mint broken-links
+```
+
+#### 5. Publish
+
+1. Commit on a branch (or **`main`** if that is team policy).
+2. Push to GitHub. Mintlify builds from the linked repo; confirm the [GitHub app](https://dashboard.mintlify.com/settings/organization/github-app) is installed on **`gils1908/hFlowDocs`**.
+3. Custom domain and DNS: see [README.md](README.md).
+
+#### Troubleshooting — Mintlify CLI
+
+- **Sharp / darwin-arm64 error:** `npm remove -g mint`, upgrade Node to v19+, then `npm i -g mint`.
+- **Unknown error:** delete **`~/.mintlify`** and run **`mint dev`** again.
+
+## Sync with Mintlify / GitHub
+
+Edits made in the **Mintlify web editor** commit to GitHub (usually **`main`**). Before you edit the same clone locally — or before agents push — sync so you never work on stale files or overwrite upstream changes.
+
+1. From this repo root:
+   ```bash
+   git fetch origin
+   git pull --rebase
+   ```
+   If your branch has no upstream yet: **`git pull --rebase origin main`**.
+
+2. If you have **uncommitted** local changes when you need to pull:
+   **`git stash push -u -m "wip"`**, then pull/rebase, then **`git stash pop`**. Resolve conflicts before continuing.
+
+3. Prefer **`git pull --rebase`** on **`main`**. Avoid force-push unless you intentionally discard remote commits.
+
+The Gilat workspace uses the **pull-docs** Cursor skill; see `.cursor/skills/pull-docs/SKILL.md` there.
+
+## Authoring standards (school-facing)
+
+**Before every change under `hflow/` or `index.mdx`, read [AUTHORING.md](AUTHORING.md) end-to-end**—especially **Voice and phrasing** (no **Expected outcome** / **Expected result** labels); **Audience** (non-developer); structure, screenshots, navigation, **`HELP_PAGE_LOG.md`**.
+
+Concise reminders:
+
+- Active voice (“Click **Save**”) and address the reader as **you**
+- Bold UI labels (**Students**, **Import CSV**)
+- One idea per sentence; describe what appears next in ordinary sentences after the steps

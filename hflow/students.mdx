@@ -15,8 +15,9 @@ The roster row shows the student name and grade; **ID** and **Ext ID** (with cop
 
 - Who can see what on the Students page
 - How to add students (manual and import by CSV)
-- How to remove a student from the roster
+- How to remove a student from the roster (**Enrollment**)
 - How to open and use the student data drawer
+- Candidate students (admins evaluating learners before roster placement)
 
 ## Start here (most common paths)
 
@@ -29,11 +30,23 @@ The roster row shows the student name and grade; **ID** and **Ext ID** (with cop
     Add one student, add many via CSV, and handle common validation errors.
   </Card>
 
-  <Card title="Delete a Student" icon="trash" href="/hflow/students/delete-student">
-    Remove a student from roster from Enrollment history, with safeguards.
+  <Card title="Enrollment: remove from roster" icon="trash" href="/hflow/students/delete-student">
+    Remove someone from the active roster using Enrollment with safeguards.
   </Card>
 
-  <Card title="View Student Data (Drawer)" icon="panel-right" href="/hflow/students/view-student-data">
+  <Card title="View students (drawer)" icon="panel-right" href="/hflow/students/view-student-data">
     Open the profile drawer and interpret fields, notes, goals, and assessments.
   </Card>
+
+  <Card title="Candidate students" icon="user-clock" href="/hflow/students/candidate-students">
+    Prospective students before they join the main roster (admins).
+  </Card>
 </CardGroup>
+
+## Reference
+
+![Admin Students toolbar with filters and roster actions](/images/students/admin-students-header.png)
+
+<Note>
+  Teachers see a slimmer header centered on assignments and search. See [Admin vs Teacher](/hflow/students/roles-and-permissions) for the full checklist.
+</Note>

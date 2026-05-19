@@ -39,16 +39,19 @@ Optional: if you intentionally want docs on Vercel under another domain, use Min
 
 Use this checklist so help stays accurate:
 
-1. **Identify the audience** — teachers, admins, or both?
-2. **Update or add MDX** under `hflow/` (or new sections in `docs.json` if you add pages).
-3. **Screenshots** — refresh images if the UI changed (store under `images/`).
-4. **Release notes** — add a short bullet to `hflow/changelog.mdx` for user-visible changes.
-5. **Preview** — run `mint dev` and click through the affected pages.
-6. **Ship** — commit and push to `main`.
+1. **Authoring checklist** — before changing `hflow/` or `index.mdx`, read **[AUTHORING.md](AUTHORING.md)** (voice, structure, screenshots, nav). Sidebar pages stay non-technical; no “Expected outcome” style labels (**Voice and phrasing** section).
+2. **Proposed updates first** — In app workstreams, list impacted paths and edits before implementing (see `.cursor/rules/help-pages-implications.mdc` in the Gilat repo).
+3. **Update or add MDX** under `hflow/` (or new sections in `docs.json` if you add pages).
+4. **Screenshots** — refresh images if the UI changed (store under `images/`).
+5. **Release notes** — add a short bullet to `hflow/changelog.mdx` for user-visible changes.
+6. **Preview** — run `mint dev` and click through the affected pages (maintainers).
+7. **Ship** — commit and push via your usual workflow (`HELP_PAGE_LOG.md` entry when substantive).
 
 ## Maintainers
 
 - **`HELP_PAGE_LOG.md`** — numbered, dated history of doc changes (`DOC-nnnn`) and **Open doc backlog** for screenshots and follow-ups. Do not put that backlog language on published MDX pages; keep the live site reader-facing only.
+
+**Note:** The published site **navigation** excludes maintainer/setup topics. Clone, Mintlify CLI, Git, and authoring rules live in **this README** and [CONTRIBUTING.md](CONTRIBUTING.md) — not linked from `docs.json`. Old URLs `/quickstart` and `/development` redirect home.
 
 ## AI-assisted writing
 

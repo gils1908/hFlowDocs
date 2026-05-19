@@ -4,6 +4,52 @@ Maintainers only: not published on help.hflow.pro. For each substantive change u
 
 ## Entries (newest first)
 
+### DOC-0022 — 2026-05-18 — ACTFL proficiency scale reference page
+
+**Summary:** Published **`hflow/actfl-proficiency-scale.mdx`** (intro from public ACTFL summaries, links to **[Language Testing International](https://www.languagetesting.com/actfl-proficiency-scale)** and **[ACTFL](https://www.actfl.org/)**, distinction versus **reading tiers**, where hFlow uses **1–9** domain levels / composite). Nav: **Assessments** group adds this page after **Assessments**. Cross-linked from **Assessments**, **Tiers**, **Student progress charts**; changelog entry.
+
+**Files (this repo):**
+
+- added `hflow/actfl-proficiency-scale.mdx`
+- changed `docs.json`, `hflow/assessments.mdx`, `hflow/tiers.mdx`, `hflow/students/student-progress-charts.mdx`, `hflow/changelog.mdx`
+
+### DOC-0021 — 2026-05-18 — Authoring guideline: mandatory every edit + Voice and phrasing
+
+**Summary:** Made **`AUTHORING.md`** explicitly **mandatory** for every **`hflow/`** and **`index.mdx`** edit; added **Voice and phrasing** (forbid Expected outcome/result scaffolding; examples table), **Audience and honesty**, and tightened cross-references from **`CONTRIBUTING.md`**, **`README.md`**, **`AGENTS.md`**, Gilat **`help-pages-implications.mdc`**, and **`MAINTENANCE.md`** so contributors and agents re-read authoring rules on each help touch.
+
+**Files (this repo):**
+
+- changed `AUTHORING.md`, `README.md`, `CONTRIBUTING.md`, `AGENTS.md`
+
+**Related (Gilat app repo):** `.cursor/rules/help-pages-implications.mdc`, `docs/llm/MAINTENANCE.md`
+
+### DOC-0020 — 2026-05-18 — Plain-language outcomes (drop “Expected outcome”)
+
+**Summary:** Removed **Expected outcome / Expected result** labels across **`hflow/**/*.mdx`**, rewriting follow-up sentences (“After saving…”, “You should see…”); updated **`AUTHORING.md`** and **`.cursor/rules/help-pages-implications.mdc`** to instruct plain prose instead of that pattern.
+
+**Files (this repo):**
+
+- changed `AUTHORING.md`
+- changed many `hflow/**/*.mdx` pages (students, assessments, reports, languages, communications, configuration, getting-started)
+
+**Related (Gilat app):** `.cursor/rules/help-pages-implications.mdc`
+
+### DOC-0019 — 2026-05-18 — Help IA, audience split, Reports + Configuration guides
+
+**Summary:** Sidebar reorganized around app concepts (**Welcome**, nested **Students** guides, **Assessments**, **Reports** with per-report pages, **Tiers**, **Languages**, **Communications**, **Configuration** guides). Removed maintainer **`quickstart`**, **`development`**, and **workflows** from navigation; redirects `/quickstart` and `/development` → `/`. Deleted placeholders **`admin-settings`** and **`workflows`**. Added **`hflow/getting-started`**, **Languages**, **Communications**, **candidate students**, and configuration topics (org profile, email templates, staff, data exports, benchmarks, tier rules). Added **`AUTHORING.md`**; **`CONTRIBUTING.md`** now carries clone/Mintlify/publish; **`.mintignore`** hides template folders (**`ai-tools`**, **`api-reference`**, **`essentials`**, **`snippets`**). Students hub and roles pages embed **`admin-students-header`** with `<Note>` for teacher layouts; enrollment steps use **Students → Enrollment**. Gilat **`MAINTENANCE.md`** checklist + **`help-pages-implications`** rule require **Proposed updates** bullets for help.
+
+**Files (this repo):**
+
+- added `AUTHORING.md`
+- changed `.mintignore`, `CONTRIBUTING.md`, `README.md`, `docs.json`, `index.mdx`
+- added `hflow/getting-started.mdx`, `hflow/languages.mdx`, `hflow/communications.mdx`, `hflow/students/candidate-students.mdx`
+- added `hflow/reports/reading-tier-distribution.mdx`, `growth-reading.mdx`, `language-progress-report.mdx`, `grade-language-distribution.mdx`
+- added `hflow/configuration/org-profile.mdx`, `email-templates.mdx`, `staff.mdx`, `data-exports.mdx`, `benchmarks.mdx`, `tier-rules.mdx`
+- changed `hflow/reports.mdx`, `hflow/students.mdx`, `roles-and-permissions.mdx`, `view-student-data.mdx`, `delete-student.mdx`
+- removed `quickstart.mdx`, `development.mdx`, `hflow/admin-settings.mdx`, `hflow/workflows.mdx`
+
+**Related (Gilat app):** `.cursor/rules/help-pages-implications.mdc`, `docs/llm/MAINTENANCE.md`
+
 ### DOC-0018 — 2026-05-12 — Reports menu + Copy Charts
 
 **Summary:** Published **Org reports (Reports menu)**: how to open each header report, what each summarizes, **Copy Charts** on Growth, Language Progress, and Grade Language Distribution (including two-panel stitched PNG), clipboard vs download behavior, and that Reading Tier Distribution has no Copy Charts. Linked student progress charts to org reports for shared export behavior.
@@ -204,11 +250,6 @@ Maintainers only: not published on help.hflow.pro. For each substantive change u
 
 ## Open doc backlog (maintainers)
 
-- [ ] Students hub: screenshot — table header and filter bar (admin view; multi-select grade, class, reading tier)
-- [ ] Students hub: screenshot — table in teacher view (assignment-focused header)
-- [ ] Roles: screenshot — teacher Students header (assignment selector, search-only controls)
-- [ ] Add students: screenshots — Import CSV flow (pick → confirm → results)
-- [ ] Add students: screenshot or example — failures export with `failure_reason`
-- [ ] View drawer: screenshot — teacher read-only notes (if visually distinct from admin)
-- [ ] Delete student: screenshot — enrollment detail with **Remove student from roster**
-- [ ] Delete student: screenshot — final confirmation (**Remove student**)
+- [ ] CSV import flow: screenshots for choose file → confirm row count → results summary (**Add students** page).
+- [ ] CSV failures export: screenshot or sanitized example listing `failure_reason` column (**Add students**).
+- [ ] Enrollment remove: screenshots for enrollment detail (**Remove student from roster**) and final confirmation (**Remove student**).

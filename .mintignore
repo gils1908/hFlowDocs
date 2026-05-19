@@ -5,3 +5,9 @@
 # Draft content
 drafts/
 *.draft.mdx
+
+# Mintlify starter / non-product pages (not linked in docs.json)
+ai-tools/
+api-reference/
+essentials/
+snippets/

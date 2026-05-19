@@ -9,7 +9,8 @@
 - This is a documentation site built on [Mintlify](https://mintlify.com)
 - Pages are MDX files with YAML frontmatter
 - Configuration lives in `docs.json`
-- Run `mint dev` to preview locally
+- School-facing standards: **[AUTHORING.md](AUTHORING.md)** — read **before every published-page edit**, especially **Voice and phrasing**.
+- Run `mint dev` to preview locally (maintainers)
 - Run `mint broken-links` to check links
 
 ## Terminology

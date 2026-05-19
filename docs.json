@@ -13,33 +13,85 @@
       "canonical": "https://help.hflow.pro"
     }
   },
+  "redirects": [
+    {
+      "source": "/quickstart",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/development",
+      "destination": "/",
+      "permanent": true
+    }
+  ],
   "navigation": {
     "tabs": [
       {
         "tab": "Help",
         "groups": [
           {
-            "group": "Getting started",
-            "pages": ["index", "quickstart", "development"]
+            "group": "Welcome",
+            "pages": ["index", "hflow/getting-started"]
           },
           {
-            "group": "Using hFlow",
+            "group": "Students",
             "pages": [
               "hflow/students",
-              "hflow/students/roles-and-permissions",
-              "hflow/students/add-students",
-              "hflow/students/delete-student",
-              "hflow/students/view-student-data",
-              "hflow/students/student-progress-charts",
-              "hflow/reports",
-              "hflow/assessments",
-              "hflow/tiers",
-              "hflow/workflows"
+              {
+                "group": "Guides",
+                "pages": [
+                  "hflow/students/roles-and-permissions",
+                  "hflow/students/view-student-data",
+                  "hflow/students/add-students",
+                  "hflow/students/delete-student",
+                  "hflow/students/student-progress-charts",
+                  "hflow/students/candidate-students"
+                ]
+              }
             ]
           },
           {
-            "group": "Administration",
-            "pages": ["hflow/admin-settings"]
+            "group": "Assessments",
+            "pages": ["hflow/assessments", "hflow/actfl-proficiency-scale"]
+          },
+          {
+            "group": "Reports",
+            "pages": [
+              "hflow/reports",
+              {
+                "group": "Organization reports",
+                "pages": [
+                  "hflow/reports/reading-tier-distribution",
+                  "hflow/reports/growth-reading",
+                  "hflow/reports/language-progress-report",
+                  "hflow/reports/grade-language-distribution"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Tiers",
+            "pages": ["hflow/tiers"]
+          },
+          {
+            "group": "Languages",
+            "pages": ["hflow/languages"]
+          },
+          {
+            "group": "Communications",
+            "pages": ["hflow/communications"]
+          },
+          {
+            "group": "Configuration",
+            "pages": [
+              "hflow/configuration/org-profile",
+              "hflow/configuration/email-templates",
+              "hflow/configuration/staff",
+              "hflow/configuration/data-exports",
+              "hflow/configuration/benchmarks",
+              "hflow/configuration/tier-rules"
+            ]
           },
           {
             "group": "Support",
