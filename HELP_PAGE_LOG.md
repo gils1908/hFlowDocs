@@ -4,6 +4,14 @@ Maintainers only: not published on help.hflow.pro. For each substantive change u
 
 ## Entries (newest first)
 
+### DOC-0023 — 2026-05-25 — Email templates auto-save
+
+**Summary:** Updated **Email templates** help: custom templates auto-save with inline **Saving…** / **Saved** next to the name; removed manual Save and unsaved-changes dialog from the guide.
+
+**Files (this repo):**
+
+- changed `hflow/configuration/email-templates.mdx`
+
 ### DOC-0022 — 2026-05-18 — ACTFL proficiency scale reference page
 
 **Summary:** Published **`hflow/actfl-proficiency-scale.mdx`** (intro from public ACTFL summaries, links to **[Language Testing International](https://www.languagetesting.com/actfl-proficiency-scale)** and **[ACTFL](https://www.actfl.org/)**, distinction versus **reading tiers**, where hFlow uses **1–9** domain levels / composite). Nav: **Assessments** group adds this page after **Assessments**. Cross-linked from **Assessments**, **Tiers**, **Student progress charts**; changelog entry.
