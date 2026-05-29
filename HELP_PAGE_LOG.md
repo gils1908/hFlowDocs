@@ -4,6 +4,25 @@ Maintainers only: not published on help.hflow.pro. For each substantive change u
 
 ## Entries (newest first)
 
+### DOC-0025 — 2026-05-28 — Communications sessions, groups, email template tokens
+
+**Summary:** Replaced outdated Communications campaign guide with session-based hub workflow (groups, sessions, roster filters, focus drafter, Reset Template, Copy/Mark Sent). Added **Student groups** guide (Manage Groups, builder pool/roster, admin vs teacher filters). Updated **Email templates** for dropdown UI, template filters, and token panel (**Show for period**, **Filter tokens…**, categories).
+
+**Open doc backlog (screenshots):** Communications hub (group/session, roster filters, donut); draft screen (Reset Template, preview, Copy/Mark Sent); Email Templates token panel; Groups builder (pool/roster transfer).
+
+**Files (this repo):**
+
+- changed `hflow/communications.mdx`, `hflow/configuration/email-templates.mdx`, `hflow/students.mdx`, `docs.json`
+- added `hflow/students/groups.mdx`
+
+### DOC-0024 — 2026-05-26 — H-188 Reading-only assessment card layouts
+
+**Summary:** Documented roster period cells and Assessments gradebook cards when only reading is reported (no L/S/W), including “not reported” footers and return to full layout after L/S/W entry.
+
+**Files (this repo):**
+
+- changed `hflow/students.mdx`, `hflow/assessments.mdx`
+
 ### DOC-0023 — 2026-05-25 — Email templates auto-save
 
 **Summary:** Updated **Email templates** help: custom templates auto-save with inline **Saving…** / **Saved** next to the name; removed manual Save and unsaved-changes dialog from the guide.

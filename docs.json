@@ -45,6 +45,7 @@
                   "hflow/students/view-student-data",
                   "hflow/students/add-students",
                   "hflow/students/delete-student",
+                  "hflow/students/groups",
                   "hflow/students/student-progress-charts",
                   "hflow/students/candidate-students"
                 ]

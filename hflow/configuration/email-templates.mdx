@@ -1,25 +1,63 @@
 ---
 title: "Email templates"
-description: "Create and maintain custom communication templates with merge tokens."
+description: "Create and maintain communication templates with merge tokens for the Communications draft screen."
 ---
 
-Administrators open **Email Templates** to customize messages used in the [Communications](/hflow/communications) workspace. System templates ship with the product; your school can duplicate them, rename them, and tune subject or body text.
+Administrators use **Email Templates** under **Configuration** to define subject and body text for family updates. Staff choose these templates when drafting in [Communications](/hflow/communications); hFlow fills **tokens** with each student’s data in the preview.
 
 ## How to open Email Templates
 
 1. In the header, open **Configuration**.
 2. Choose **Email Templates**.
 
+## How to select and filter templates
+
+1. Open the template dropdown at the top and pick a template (a lock icon marks **system** templates).
+2. Use **Search templates…** to find by name.
+3. Use the filter chips **All**, **System**, **Mine**, **BOY**, **MOY**, or **EOY** to narrow the list.
+
+System templates are read-only until you **Duplicate** them.
+
 ## How to create or edit a template
 
-1. Select a template row in the left list (system templates are read-only until you duplicate them).
-2. Edit **Name**, **Subject**, and **Body** in the fields provided.
-3. Use the token picker or token reference on the page to insert placeholders that Communications fills per student or class.
-4. Changes save automatically after you pause typing. Next to the template name you briefly see **Saving…**, then **Saved**. Switching to another template saves any pending edits first.
+1. Select a custom template, or duplicate a system template and rename it.
+2. Edit **Name**, **Subject**, and **Body** in the center panel.
+3. Click tokens in the right-hand **Tokens** panel to insert placeholders into the focused field (subject or body).
+4. Changes save automatically after you pause typing. Next to the template name you briefly see **Saving…**, then **Saved**.
 
-## How to duplicate or import
+Duplicated templates appear in the dropdown immediately. The next time someone opens a student draft in Communications, they can select the updated template; use **Reset Template** on the draft screen to pull in changes after you save here.
 
-1. Duplicate a template when you want a safe starting copy with a new name.
-2. Use **Import** when your team shares JSON or file bundles from another hFlow environment—resolve any name conflicts following the prompts on screen.
+## How to use token filters
 
-Your template list refreshes straight away here, and the **Communications** picker shows the newest version the next time you compose a campaign.
+The **Tokens** panel on the right helps you find placeholders without scrolling the full list.
+
+1. **Show for period** — choose **All**, **BOY**, **MOY**, or **EOY** to hide tokens for other assessment periods (period-specific metrics and charts).
+2. **Filter tokens…** — type to match token labels or placeholder text.
+3. Browse by category: **GENERAL**, **READING**, **LISTENING**, **SPEECH**, **WRITING**, **OVERALL**, **VISUALS** (charts). Only categories with matching tokens are shown.
+
+Click a chip to insert it at the cursor in the subject or body field you last clicked.
+
+### Token naming (quick reference)
+
+- Most assessment tokens follow `{skill}_{metric}_{period}` — for example `reading_fluency_boy`, `listening_comprehension_moy`.
+- Chart tokens follow `{kind}_chart_{period}` — for example `reading_chart_eoy`, `actfl_chart_boy`.
+- General tokens include student, parent, and teacher fields (see labels on each chip).
+
+Empty or missing data in hFlow may leave a token blank in the Communications preview.
+
+## How to duplicate, import, or export
+
+1. **Duplicate** — copy the selected template under a new name (works for system templates).
+2. **Import** — load a JSON bundle from another environment; resolve name conflicts using the on-screen prompts.
+3. **Export** — download your custom templates when at least one custom template exists.
+
+## How to delete a custom template
+
+1. Select a custom (unlocked) template.
+2. Click **Delete** and confirm in the dialog.
+
+System templates cannot be deleted.
+
+## Related
+
+- [Communications](/hflow/communications) — sessions, roster tracking, draft preview, **Reset Template**, **Copy**, and **Mark Sent**.

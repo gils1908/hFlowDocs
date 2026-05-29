@@ -1,28 +1,101 @@
 ---
 title: "Communications"
-description: "Draft and send family-facing messages using templates and cohort filters."
+description: "Draft family update emails for a student group, track outreach in sessions, and copy messages to your mail app."
 ---
 
-The **Communications** workspace helps coordinators build email-style messages for guardians using **communication templates**, student filters (such as grade, class, and assessment periods), and a live preview before anything is sent. Access depends on your organization’s roles and invites setup.
+The **Communications Hub** helps teachers and coordinators prepare personalized family emails from hFlow assessment data. You work in three layers: a **student group** (who), a **session** (one outreach round), and **per-student drafts** (the message you copy and send outside hFlow).
 
-## How to open Communications
+> **Demo data notice**  
+> Any names, student records, and examples in this section are fictitious sample data for demonstration and training only.
 
-1. Sign in as a user who may access school-wide messaging (typically an administrator).
+## Before you start: student groups
+
+Communications uses **custom groups** you create under **Students → Manage Groups** (or **Manage Groups** from the hub). Each group is tied to one **school year** and one **language**, and holds the roster you will email.
+
+If you have no groups yet, create one first—see [Student groups](/hflow/students/groups). The hub only lists groups you own.
+
+## Who can use Communications
+
+- **Communications** appears in the header for staff who can sign in to hFlow (teachers and administrators).
+- **Email templates** (wording and tokens) are managed under **Configuration → Email Templates** (typically administrators).
+
+## How to open the Communications Hub
+
+1. Sign in to hFlow.
 2. In the header, click **Communications**.
 
-## How to choose who the message is for
+You see **Select Group** and **Select Session** at the top, a progress summary on the left when a session is active, and the **Roster** on the right.
 
-1. Set **language**, **school year**, and any **grade** or **class** filters at the top of the hub. Empty multi-selects usually mean “all” in that dimension—confirm against the labels above each control.
-2. Optionally narrow by **assessment period** or campaign labels your school uses (such as BOY / MOY / EOY touchpoints) when those filters are present.
-3. Review the student count shown for the current filter set before composing.
+## How to pick a group and session
 
-## How to write and send (high level)
+1. Open the **Select Group** dropdown and choose a group (name and language are shown).
+2. Open **Select Session** and choose an existing session, or click **+ New Session**.
+3. For a new session, enter a name (for example `BOY Updates`) and click **Create Session**.
 
-1. Pick a **template** (system or custom—see [Email templates](/hflow/configuration/email-templates) to manage custom bodies).
-2. Edit subject and body in the editor; use token buttons or the token reference on the page to insert student- or class-specific fields where supported.
-3. Preview substitutions with sample students from your filtered list.
-4. Complete the send or export step using the primary action on the page (wording matches the button in the app).
+A new session includes every student who is in the group **at creation time**. If you change the group roster later, students already in the session stay on that session’s roster; new group members are not added automatically to old sessions.
 
-The log or delivery status panel updates student-by-student—retry or widen filters when you see persistent errors.
+When a session is selected, the left panel shows a progress ring (**sent** vs still **draft**), plus group size, language, and when the session started.
 
-If you cannot see **Communications** in the header, your account may not have permission—ask your hFlow administrator.
+## How to track progress on the roster
+
+1. With a session selected, review the **Roster** cards.
+2. Use the filter tabs **All**, **Sent**, and **Not Sent** to narrow the list.
+3. Use **Sort** for **Status**, **Name**, or **Grade**.
+4. **SENT** cards show the date marked sent; others show **DRAFT**.
+
+Click a student card to open the draft screen for that person.
+
+## How to draft a message for one student
+
+The draft screen opens in focus mode with the student on the left and the composer on the right.
+
+1. Confirm **Parent name**, **Parent email**, and **Teacher name** if your template uses those tokens.
+2. Choose a **Template** from the dropdown. Templates are maintained under [Email templates](/hflow/configuration/email-templates).
+3. Wait briefly while hFlow fills the **Preview** subject and body from the template and the student’s data. Edits auto-save; you may see **Saving…** then **Saved** near the preview title.
+4. Adjust the preview text if needed. Chart images appear above the preview only when the template includes chart tokens and the student has data for them.
+5. Use the arrows or the small roster chips at the top to move to the previous or next student in the group.
+6. Click **Close** to return to the hub. Your group, session, and roster filter choices are preserved when possible.
+
+### Changing templates mid-draft
+
+If you change the **Template** dropdown after editing the preview, hFlow asks **Replace your edits?** Choosing **Replace** rebuilds the preview from the new template and current student data. **Keep editing** leaves your current text.
+
+## How to use Reset Template
+
+Use **Reset Template** when the template was updated in **Configuration** and you need that newest saved wording—not for small typos in your preview.
+
+1. Click **Reset Template** next to the template dropdown.
+2. In **Reload template?**, read the warning that your preview will be replaced with the latest saved template and fresh student data.
+3. Click **Reload template** to continue, or **Keep editing** to cancel.
+
+After a reload you can still edit the preview; auto-save continues as before.
+
+## How to copy the email and mark sent
+
+hFlow does not send email directly. You copy the message and send it from Outlook, Gmail, or another tool.
+
+1. Click **Preview** to read the full subject and body in a modal.
+2. Click **Copy** to place HTML and plain text on your clipboard.
+3. Paste into your mail client, address the guardian, and send.
+4. Back in hFlow, click **Mark Sent** so the session roster shows **SENT** for that student.
+
+If you marked someone sent by mistake, click **Mark as Draft** to clear the sent status (the preview text is kept).
+
+## Tokens and templates
+
+Templates use placeholders such as `{{student_first_name}}` or `{{reading_fluency_boy}}`. hFlow replaces them with live values when the preview is built. To add or change tokens, edit templates in [Email templates](/hflow/configuration/email-templates)—including **Show for period**, **Filter tokens…**, and the token categories on that page.
+
+If a value is missing in hFlow (no assessment for that period, for example), the corresponding token may appear empty in the preview.
+
+## Common issues
+
+- **No groups in the dropdown** — Create a group under [Student groups](/hflow/students/groups), then return to Communications.
+- **No sessions** — Select a group and use **+ New Session** or **Create Session** in the left panel.
+- **Reset Template failed** — Check your connection, confirm the template still exists in Configuration, or pick another template.
+- **Copy failed** — Use **Preview** and copy manually from the body field.
+- **Charts missing** — Confirm assessments exist for that language/year and the template includes the right chart tokens.
+
+## Related pages
+
+- [Student groups](/hflow/students/groups) — build and maintain rosters for Communications.
+- [Email templates](/hflow/configuration/email-templates) — template text, tokens, and filters.

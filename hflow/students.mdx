@@ -7,7 +7,7 @@ This feature allows admins and teachers to find students quickly, review key rea
 
 ## Period cells on the roster
 
-The roster row shows the student name and grade; **ID** and **Ext ID** (with copy actions) appear only in the profile drawer. For each scheduled period (BOY, MOY, EOY), the roster shows a **compact** snapshot: **Reading** (comprehension, reading ACTFL, reading tier) and **Language** (ACTFL overall composite and a hover summary of domain skills and grade-level overall). Turn on **Show Reading Only** to use a single Reading card with fluency and accuracy on the row; tooltips are off in that mode so values stay visible without hovering. Your choice is saved per user. Students without an assigned reading tier still appear whenever they match your other filters (there is no “hide unassigned” option).
+The roster row shows the student name and grade; **ID** and **Ext ID** (with copy actions) appear only in the profile drawer. For each scheduled period (BOY, MOY, EOY), the roster shows a **compact** snapshot: **Reading** (comprehension, reading ACTFL, reading tier) and **Language** (ACTFL overall composite and a hover summary of domain skills and grade-level overall). When an assessment has reading scores but no listening, speaking, or writing entered—and **Show Reading Only** is off—the period cell shows one full-width Reading card with fluency and accuracy and a note that non-reading skills were not reported. Turn on **Show Reading Only** to use a single Reading card with fluency and accuracy on the row; tooltips are off in that mode so values stay visible without hovering. Your choice is saved per user. Students without an assigned reading tier still appear whenever they match your other filters (there is no “hide unassigned” option).
 
 > **Demo data notice** Any names, student records, IDs, and examples shown in this documentation section are fictitious sample data for demonstration and training purposes only. Any resemblance to real persons, schools, or records is purely coincidental.
 
@@ -32,6 +32,10 @@ The roster row shows the student name and grade; **ID** and **Ext ID** (with cop
 
   <Card title="Enrollment: remove from roster" icon="trash" href="/hflow/students/delete-student">
     Remove someone from the active roster using Enrollment with safeguards.
+  </Card>
+
+  <Card title="Student groups" icon="users" href="/hflow/students/groups">
+    Build custom rosters for Communications sessions (year, language, pool builder).
   </Card>
 
   <Card title="View students (drawer)" icon="panel-right" href="/hflow/students/view-student-data">
