@@ -4,6 +4,16 @@ Maintainers only: not published on help.hflow.pro. For each substantive change u
 
 ## Entries (newest first)
 
+### DOC-0030 — 2026-05-31 — Staff roles and permissions help
+
+**Summary:** Rewrote **[Staff](/hflow/configuration/staff)** with Owner / Admin / Teacher definitions, navigation scope, assessment access, classroom assignments, and owner-only staff workflows. Updated **[Students: Admin vs Teacher](/hflow/students/roles-and-permissions)** to distinguish owners from admins and link to Staff. **Troubleshooting** sign-in section links to Staff for menu questions.
+
+**Open doc backlog (screenshots):** Staff list (role groups), Add Staff modal (role + assessments checkbox), staff detail (role, Active, Assessments, assignments table).
+
+**Files (this repo):**
+
+- changed `hflow/configuration/staff.mdx`, `hflow/students/roles-and-permissions.mdx`, `hflow/troubleshooting.mdx`, `HELP_PAGE_LOG.md`
+
 ### DOC-0029 — 2026-05-31 — Ship hFlow brand logos to production
 
 **Summary:** Added **`images/brand/`** PNG lockups (light + dark) and pushed **`docs.json`** `logo.light` / `logo.dark` paths so help.hflow.pro navbar matches local. Prior pushes only included the video commit without these assets.

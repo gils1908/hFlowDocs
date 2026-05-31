@@ -1,28 +1,113 @@
 ---
 title: "Staff"
-description: "Invite coworkers, assign grades and classes, and control assessment access."
+description: "Organization roles, permissions, and how owners invite and manage coworkers."
 ---
 
-Users who **manage staff** can add colleagues, tie them to instructional assignments (grades and optional classes), and enable or disable access to assessments. Ownership and admin privileges are defined by your organization’s policy.
+This page is for **organization owners** who add colleagues, set roles, and control who can see assessments and which classes each teacher serves. **Admins** and **teachers** use other parts of hFlow according to the permissions below; only **owners** see **Configuration → Staff**.
+
+## Organization roles
+
+hFlow has three roles inside your school. Each person has one role per organization.
+
+| Role | Typical use | What they can reach in the app |
+|------|-------------|--------------------------------|
+| **Owner** | Primary account (first invite from hFlow) | Everything, including **Staff** management. Assessments are always on. Class assignments are not used. |
+| **Admin** | Coordinators, literacy leads, office staff | Same broad access as an owner **except** **Staff** (cannot invite people or change roles). Assessments can be turned on or off per person. Class assignments are not used. |
+| **Teacher** | Classroom educators | Only students tied to **active classroom assignments** (school year, language, grade, and optional class). Optional access to **Assessments** and related student editing. |
+
+<Note>
+  **Owner** and **Admin** both use the full **Students** tools (filters, enrollment, import/export). **Teachers** use a narrower Students experience. Details are in [Students: Admin vs Teacher](/hflow/students/roles-and-permissions).
+</Note>
+
+### Owners
+
+Owners can:
+
+- Open **Configuration → Staff** and manage everyone in the organization
+- Change another person’s **role**, **Active** status, and **Assessments** access (except their own controls when viewing their own profile)
+- Invite new owners, admins, or teachers
+- Use all areas of the app: **Students** (including enrollment and candidate students), **Reports**, **Languages**, **Communications**, and **Configuration** (org profile, email templates, data exports)
+
+Assessments are always enabled for owners; you do not turn them off on the staff detail page.
+
+### Admins
+
+Admins can:
+
+- Work across the **whole organization** on **Students**, **Reports**, **Languages**, and **Communications**
+- Open **Configuration** items such as **Org Profile**, **Email Templates**, and **Data Exports**
+- Receive **Assessments** access when an owner enables it on their staff record (same toggle as for teachers)
+
+Admins **cannot** open **Staff** or send staff invitations. Ask an owner if you need a new colleague or a role change.
+
+### Teachers
+
+Teachers can:
+
+- See **Students** and **Groups** for their **active assignments** only
+- Use **Communications**
+- Open **Assessments** only when an owner has enabled **Assessments** on their account
+
+Teachers **cannot** open **Reports**, **Languages**, **Student Enrollment**, **Candidate Students**, or **Configuration**. The header menu stays focused on day-to-day classroom work.
+
+## Assessment access
+
+**Assessment access** is separate from the role name. It controls whether someone sees the **Assessments** page and can add or edit assessments and checkpoints (within their scope).
+
+| Role | Assessment access |
+|------|-------------------|
+| **Owner** | Always on |
+| **Admin** | Owner sets on or off (staff detail **Assessments** switch) |
+| **Teacher** | Owner sets on or off; when on, editing is limited to students on their active assignments |
+
+When assessment access is **off** for a teacher, they can still use the **Students** roster for their assignments, but student names do not open the full profile drawer for editing assessments. See [Students: Admin vs Teacher](/hflow/students/roles-and-permissions).
+
+When adding someone, use **Allow access to assessments and checkpoints** in the **Add Staff Member** modal (for admins and teachers). Owners always receive assessment access automatically.
+
+## Classroom assignments (teachers only)
+
+Teachers need **classroom assignments** so hFlow knows which students they serve. Each assignment includes school year, language, grade, and optionally a specific class (or all classes in that grade).
+
+- Assignments are added when you invite a **teacher**, or later on that person’s staff detail page.
+- Each row has an **Active** toggle. Inactive assignments no longer include those students in the teacher’s roster.
+- **Owners** and **admins** are not assigned to classes; they already see the full organization on **Students**.
 
 ## How to open Staff settings
 
-1. In the header, open **Configuration**.
-2. Choose **Staff** (only appears when your account includes staff-management permission).
+1. Sign in at [app.hflow.pro](https://app.hflow.pro).
+2. In the header, open **Configuration**.
+3. Choose **Staff**.
+
+If **Staff** is missing, your account is not an **owner**. Ask an existing owner to adjust your role or to complete the invite for you.
 
 ## How to add someone new
 
-1. Click **+ Add Staff Member** (top of the list).
-2. Enter **name** and **email** (required fields mirror the modal in the product).
-3. Save to create a pending invitation, then attach **assignments**: school year, grade, optional class, and activation toggles.
-4. Send the invite email when prompted.
+1. On the **Staff** page, click **+ Add Staff Member**.
+2. Choose **Role**: **Teacher**, **Admin**, or **Owner**.
+   - **Owner** — full access including staff management; assessments always on; no class assignments.
+   - **Admin** — org-wide access except staff management; no class assignments.
+   - **Teacher** — requires classroom assignments; scope is limited to those classes.
+3. Enter **name** and **email**.
+4. For **Admin** or **Teacher**, optionally check **Allow access to assessments and checkpoints**.
+5. For **Teacher**, select school year, language, and grades/classes (or grant all grades for a language) before saving.
+6. Click **Save** to create a pending invitation and continue on the invite detail page, or use **Save and send invite** to email the invitation immediately.
 
-## How to edit assignments
+After saving without sending, the new row appears under pending invites (**Invite not sent**) until you open it and choose **Send invite**.
 
-1. Open a staff row to view assignments.
-2. Toggle **Active** per assignment row when coverage changes mid-year (wording matches the table on screen).
-3. Save before leaving—unsaved edits may trigger the discard dialog used elsewhere in hFlow.
+## How to edit someone on staff
 
-Teachers then see only students who match those active assignments, and assessment menu visibility follows the **assessment access** flags you set here.
+1. On **Staff**, click the person’s name.
+2. Change **Role**, **Active**, or **Assessments** (for admins and teachers) as needed.
+3. For **teachers**, update **Classroom Assignments** (dates, scope, **Active** per row, or **+ Assign to Class**).
 
-If you do not see **Staff** under **Configuration**, ask an organization owner to grant management rights.
+You cannot demote or deactivate the **only active owner** in the organization. Changing someone from **Teacher** to **Admin** or **Owner** removes their classroom assignments.
+
+## How to edit assignments on a pending invite
+
+1. Open the pending invite from **Staff** (**Set up & send** or the invite row).
+2. Add or adjust classroom assignments for teacher invites; changes save as you work.
+3. Click **Send invite** when you are ready. If a teacher has no assignments yet, hFlow asks you to confirm before sending.
+
+## Reference
+
+Screenshots for the staff list, **Add Staff Member** modal (role and assessment access), and staff detail (role, **Active**, **Assessments**, assignments) are tracked in the maintainer backlog until they are published here.

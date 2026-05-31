@@ -3,15 +3,15 @@ title: "Students: Admin vs Teacher"
 description: "What each role can see and do on the Students page."
 ---
 
-This feature allows staff to work from the same Students page while enforcing role-based access for sensitive actions.
+This page explains how **Students** behaves for **owners**, **admins**, and **teachers**. For how roles are assigned and who can open **Staff**, see [Staff roles and permissions](/hflow/configuration/staff).
 
 ## Most common use case
 
 When you are troubleshooting “why can’t I see this button/student?” start with this page first.
 
-## Admin visibility and actions
+## Owner and admin visibility and actions
 
-Admins can:
+**Owners** and **admins** (sometimes called “admin mode” in the app) can:
 
 - See all active students in the organization (subject to filters)
 - Use full filters (year, language, grade, class, reading tier, search). Grade, class, and reading tier each support multiple selections (OR logic). Language stays a single selection on this page.
@@ -21,6 +21,8 @@ Admins can:
 - Open the student data drawer
 - Edit student name details from the row action
 - Open Student Enrollment and remove a student from roster
+
+Only **owners** manage staff invitations and roles under **Configuration → Staff**.
 
 ## Teacher visibility and actions
 
@@ -50,14 +52,13 @@ Check:
 
 Check:
 
-- Teacher has assessment access enabled in org/user settings
+- Teacher has assessment access enabled on their staff record (an **owner** sets this under **Configuration → Staff**)
 
 ### 3) “Missing” admin actions
 
 Check:
 
-- Current user role is admin
-
+- Current user role is **owner** or **admin** (not **teacher**)
 
 <Note>
   Teachers see assignment pickers and search without import, export, or add-student actions—the layout is narrower than this admin example.
