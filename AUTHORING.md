@@ -4,6 +4,16 @@
 
 This site targets **school staff** (teachers, coordinators, admins). Write in plain language; avoid repos, CLI commands, APIs, or internal ticket jargon on those pages.
 
+**Published URLs (use consistently in links):**
+
+| Purpose | URL |
+|--------|-----|
+| Sign in / daily use | **https://app.hflow.pro** |
+| Marketing / public site | **https://www.hflow.pro** |
+| Help (this site) | **https://help.hflow.pro** |
+
+Do not link staff to bare `hflow.pro` for the app or help.
+
 Maintainership (clone, Mintlify CLI, Git) lives in **`CONTRIBUTING.md`** and **`README.md`** — those documents are **not** linked from the public sidebar.
 
 ---
@@ -63,10 +73,12 @@ description: "One line: what someone can accomplish on this page."
 
 ---
 
-## Screenshots
+## Screenshots and brand assets
 
-- Store files under **`images/<area>/`** (e.g. `images/students/`).
-- Reference in MDX with stable paths such as `/images/students/example.png`.
+- **Logos:** Official artwork lives in **`images/brand/`** (lockup for hero/home, small mark optional on long guides). Source files: Gilat app repo **`Assets/hFlow Logos/`** (`D_lockup_flat` for light backgrounds, `D_lockup_3d` for dark theme logo in `docs.json`).
+- **Videos:** Store MP4 files under **`videos/`** with kebab-case names. Use H.264 + AAC, **`movflags +faststart`**, and keep files roughly under ~25 MB when possible. Embed with `<video controls playsInline>` and `<source type="video/mp4">` (avoid wrapping in `<Frame>`—it can block playback). Path `/videos/…` from site root. **Commit and push** the MP4 in `hFlowDocs` or the file 404s on help.hflow.pro.
+- **Product screenshots:** Store under **`images/<area>/`** (e.g. `images/students/`).
+- Reference in MDX with stable paths such as `/images/students/example.png` or `/images/brand/hflow-lockup.png`.
 - Refresh images when UI copy or layout materially changes.
 
 ---

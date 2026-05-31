@@ -4,6 +4,34 @@ Maintainers only: not published on help.hflow.pro. For each substantive change u
 
 ## Entries (newest first)
 
+### DOC-0028 — 2026-05-31 — Getting started video embed
+
+**Summary:** Embedded setup walkthrough on **[Getting started](/hflow/getting-started)** (`<video>` + `<source>`, no `Frame`). **`videos/hflow-getting-started-guide.mp4`** re-encoded for web (~10 MB, H.264 + faststart). **Must be committed and pushed** to `hFlowDocs` for playback on help.hflow.pro.
+
+**Files (this repo):**
+
+- added `videos/hflow-getting-started-guide.mp4`
+- changed `hflow/getting-started.mdx`, `AUTHORING.md`
+
+### DOC-0027 — 2026-05-31 — Correct app / website / help URLs
+
+**Summary:** Staff-facing links now use **app.hflow.pro** (app), **www.hflow.pro** (website), and **help.hflow.pro** (help). Updated **`docs.json`** navbar, **`index.mdx`**, **`getting-started.mdx`**, and **`AUTHORING.md`** domain table.
+
+**Files (this repo):**
+
+- changed `docs.json`, `index.mdx`, `hflow/getting-started.mdx`, `AUTHORING.md`
+
+### DOC-0026 — 2026-05-31 — Getting started, brand logos, troubleshooting, assessment CSV
+
+**Summary:** Rebuilt **[Getting started](/hflow/getting-started)** from the setup and data-import tutorial (org profile → languages/tiers → student CSV → assessment CSV). Added **`images/brand/`** lockup and mark PNGs from `Assets/hFlow Logos` (flat lockup for light theme, 3d lockup for dark); updated **`docs.json`** site logo paths. Expanded **Languages**, **Assessments** (CSV import section), and **Troubleshooting** (staff FAQs). Refreshed **`index.mdx`** with lockup and getting-started cards. Removed broken screenshot references (files were never in repo). **Org profile** save button label aligned to **Save Changes**.
+
+**Open doc backlog (screenshots):** Students roster header, Add Student modal, student drawer (re-add under `images/students/` when captured).
+
+**Files (this repo):**
+
+- added `images/brand/hflow-lockup.png`, `hflow-lockup-sm.png`, `hflow-lockup-dark.png`, `hflow-mark.png`, `hflow-mark-sm.png`
+- changed `docs.json`, `index.mdx`, `hflow/getting-started.mdx`, `hflow/languages.mdx`, `hflow/assessments.mdx`, `hflow/troubleshooting.mdx`, `hflow/changelog.mdx`, `hflow/configuration/org-profile.mdx`, `hflow/students.mdx`, `hflow/students/add-students.mdx`, `hflow/students/view-student-data.mdx`, `hflow/students/roles-and-permissions.mdx`
+
 ### DOC-0025 — 2026-05-28 — Communications sessions, groups, email template tokens
 
 **Summary:** Replaced outdated Communications campaign guide with session-based hub workflow (groups, sessions, roster filters, focus drafter, Reset Template, Copy/Mark Sent). Added **Student groups** guide (Manage Groups, builder pool/roster, admin vs teacher filters). Updated **Email templates** for dropdown UI, template filters, and token panel (**Show for period**, **Filter tokens…**, categories).
