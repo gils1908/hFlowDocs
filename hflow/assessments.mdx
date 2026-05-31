@@ -1,11 +1,17 @@
 ---
 title: "Assessments"
-description: "Creating, editing, and understanding assessments in hFlow."
+description: "Creating, editing, importing, and understanding assessments in hFlow."
 ---
 
-This feature allows teachers and admins to record **scheduled** reading assessments (BOY, MOY, EOY), optional median-based (three-passage) entry, domain comprehension and ACTFL levels, and to use **bulk gradebook** entry for a class.
+This feature allows teachers and admins to record **scheduled** reading assessments (BOY, MOY, EOY), optional median-based (three-passage) entry, domain comprehension and ACTFL levels, and to use **bulk gradebook** entry or **CSV import** for a class.
 
 For background on the ACTFL Proficiency Scale versus your program’s charts and forms, see [ACTFL proficiency scale (overview)](/hflow/actfl-proficiency-scale).
+
+## How to open the gradebook
+
+1. In the header, click **Assessments**.
+2. Choose **language**, **school year**, **grade**, and **class** using the filters at the top.
+3. Use period tabs or cards to view or edit scores for BOY, MOY, and EOY.
 
 ## How to add or edit a scheduled assessment
 
@@ -16,7 +22,7 @@ For background on the ACTFL Proficiency Scale versus your program’s charts and
 5. Turn on **Manual override** only if the stored overall must differ from that calculation. If you change **any** reading or language skill value (comprehension or ACTFL on reading, listening, speech, or writing), the override is cleared and the overall is recomputed.
 6. **ACTFL overall (composite)** is **read-only**. It is the average of the four ACTFL levels you entered (each 1–9), rounded to one decimal for storage and band mapping, with a short band label (for example `2.5 - NM` or `3 - NH` when the value is a whole number). It updates whenever any of those ACTFL fields change.
 
-Saving stores scores, tier, **grade-level overall**, and **ACTFL composite** on the assessment row, and edit confirmations list what changed—including overall and composite whenever they drift from previous values.
+Click **Save Changes** (or **Add Assessment** on a new row) to store scores, tier, **grade-level overall**, and **ACTFL composite** on the assessment.
 
 ## How to use bulk gradebook entry
 
@@ -26,10 +32,58 @@ Saving stores scores, tier, **grade-level overall**, and **ACTFL composite** on 
 
 Bulk save runs the same server checks as editing one cell at a time; median (three-passage) rows duplicate shared skill fields and grade-level overall across all three passages so totals stay aligned.
 
+## Import assessments from CSV
+
+Bulk import is the fastest way to load many scores after your roster exists.
+
+1. On **Assessments**, set **language**, **grade**, and **class** to match the students in your file.
+2. Click **Import CSV**.
+3. Click the **?** help control in the import header for the full column list (same rules summarized below).
+4. Upload your CSV, confirm the row count, and click **Proceed**.
+5. Review successes and failures. Download **Successes** or **Failures** if you need to fix rows and re-upload.
+
+Re-uploading updates existing assessments for the same student, school year, period, and language—it does not create duplicate rows.
+
+<Note>
+  Maximum **500 rows** per file. Split larger schools across multiple uploads. Median-based three-passage CSV import is not enabled—use **Bulk Entry → Use Median** in the app, or omit the `passage` column.
+</Note>
+
+### Required columns (every row)
+
+- `first_name`, `last_name`, `school_year`, `grade`, `language`, `period`
+
+### Optional — student matching
+
+- `middle_name`, `student_code`, `tested_at`
+
+### Optional — scores (at least one score column per row)
+
+**Reading fluency / accuracy** (use all three together, or omit all three):
+
+- `total_words`, `correct_words`, `total_time`, `comprehension` (`Good`, `Partial`, `Low`, or blank)
+
+**ACTFL levels** (1–9 or recognized level names):
+
+- `reading_actfl_level`, `listening_actfl_level`, `writing_actfl_level`, `speech_actfl_level`
+
+**Domain comprehension** (`at_grade`, `approaching`, `below`, or blank):
+
+- `listening_comprehension`, `writing_comprehension`, `speech_comprehension`
+
+### Matching and updates
+
+- Students match by first name, last name, and optional middle name (case-insensitive) in the same grade and school year.
+- If several students share the same name, include `student_code` on those rows.
+- **New** assessment → creates a row; **existing** → updates values; duplicate rows in one file → first row wins.
+
+Checkpoints are not imported—add them from the student profile drawer.
+
+For a full first-time workflow, see [Getting started](/hflow/getting-started).
+
 ## Read-only gradebook cards
 
 When **Show Reading Only** is off, a scheduled assessment with reading metrics but no listening, speaking, or writing results appears as a reading-focused card (Corr / Tot / Time, accuracy, WCPM, comprehension, reading ACTFL) with a short note that those language skills were not reported. After you add any listening, speaking, or writing value and save, the card returns to the full layout with domain rows. Hover **View/Edit** works the same as on other assessment cards.
 
 ## Exports and print
 
-Overall language level and ACTFL composite are stored for use in the app. **CSV import/export** for bulk assessments, **print students**, and **org-wide data downloads** are unchanged and do not add these fields.
+Overall language level and ACTFL composite are stored for use in the app. **Print students** and **org-wide data downloads** follow your school’s export settings; bulk assessment CSV is import-focused in the gradebook flow described above.

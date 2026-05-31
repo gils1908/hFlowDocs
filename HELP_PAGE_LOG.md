@@ -4,9 +4,18 @@ Maintainers only: not published on help.hflow.pro. For each substantive change u
 
 ## Entries (newest first)
 
+### DOC-0029 — 2026-05-31 — Ship hFlow brand logos to production
+
+**Summary:** Added **`images/brand/`** PNG lockups (light + dark) and pushed **`docs.json`** `logo.light` / `logo.dark` paths so help.hflow.pro navbar matches local. Prior pushes only included the video commit without these assets.
+
+**Files (this repo):**
+
+- added `images/brand/hflow-lockup.png`, `hflow-lockup-sm.png`, `hflow-lockup-dark.png`, `hflow-mark.png`, `hflow-mark-sm.png`
+- changed `docs.json`, `index.mdx`, and remaining unpublished help MDX from the May help refresh
+
 ### DOC-0028 — 2026-05-31 — Getting started video embed
 
-**Summary:** Embedded setup walkthrough on **[Getting started](/hflow/getting-started)** (`<video>` + `<source>`, no `Frame`). **`videos/hflow-getting-started-guide.mp4`** re-encoded for web (~10 MB, H.264 + faststart). **Must be committed and pushed** to `hFlowDocs` for playback on help.hflow.pro.
+**Summary:** Embedded setup walkthrough on **[Getting started](/hflow/getting-started)** (`<video>` + `<source>`, no `Frame`). **`videos/hflow-getting-started-guide.mp4`** re-encoded for web (H.264 + faststart); later prepended **hflow logo night** intro (~10 s) before the tutorial body. **Must be committed and pushed** to `hFlowDocs` for playback on help.hflow.pro.
 
 **Files (this repo):**
 

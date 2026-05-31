@@ -1,17 +1,80 @@
 ---
 title: "Troubleshooting"
-description: "Common issues and how to resolve them in hFlow."
+description: "Common questions and fixes for hFlow staff."
 ---
 
-This page is a **placeholder** for FAQs and troubleshooting.
+![hFlow mark](/images/brand/hflow-mark-sm.png)
 
-## What to document here
+This page answers questions school staff ask most often. For step-by-step first-time setup, start with [Getting started](/hflow/getting-started).
 
-- Login or access issues
-- “Why don’t I see this student?”-style questions
-- Browser or device notes if relevant
-- How to get help (email, internal escalation)
+## Sign-in and access
 
-## When you ship a feature
+### I cannot sign in
 
-Add new FAQ entries when support sees repeat questions after a release.
+Open the app at [app.hflow.pro](https://app.hflow.pro) (not the marketing site at www.hflow.pro). Confirm you are using the email address your school registered and the password from your invitation. Use **Forgot password** on the login page if needed. If sign-in still fails, contact [support@hflow.pro](mailto:support@hflow.pro).
+
+### My account is not associated with an organization
+
+Your login exists but is not linked to a school roster yet. Ask your hFlow administrator or school owner to complete staff setup. Until linking finishes, you will not see the full menu.
+
+### I do not see Configuration, Languages, or Import CSV
+
+Those tools are for **organization administrators** (and owners). Teachers see a slimmer menu focused on **Students** and **Assessments**. See [Admin vs Teacher](/hflow/students/roles-and-permissions).
+
+## Students and roster
+
+### Why is my student list empty?
+
+A new school account starts with no students. Import a CSV or add students manually—see [Getting started](/hflow/getting-started) and [Add Students](/hflow/students/add-students).
+
+### Why do I not see a student I expect?
+
+Check **school year**, **grade**, and **language** filters on **Students**. Confirm the student was imported for that year and grade. Teachers only see students assigned to them unless your school grants broader access.
+
+### CSV import failed or skipped rows
+
+Open the **Failures** download from the import results. Common causes:
+
+- Missing required columns (`first_name`, `last_name`, `school_year`, `grade` for students)
+- Invalid `school_year` format (must be `YYYY-YYYY` with the second year equal to the first plus one)
+- Invalid `grade` (integer `0`–`12`)
+- More than **500 rows** in one file—split the file and import again
+- Duplicate `external_student_id` when that column is used
+
+### Class or section errors on import
+
+If a grade uses sections, provide a `class` value for each row. If the grade has no sections, leave `class` blank. Typing `5a` or `5b` in the CSV creates those sections automatically—you do not set them up elsewhere first.
+
+## Assessments and tiers
+
+### Tiers look wrong after import
+
+Tiers follow the bands on **Languages** for that language, grade, period, and school year. Review sliders under **Edit Tiers** and save, then confirm assessments use the correct period (BOY, MOY, EOY).
+
+### Assessment CSV rows were skipped
+
+Match student **names** exactly to the roster file for the same `school_year` and `grade`. Include `language` and `period` on every row. Each row needs at least one score column. If two students share a name, add `student_code`.
+
+### I uploaded the same file again—will it duplicate?
+
+No. Student import updates class assignment when the student is already enrolled for that year and grade. Assessment import **updates** existing BOY/MOY/EOY rows for the same student and language.
+
+### Reading-only cards on the gradebook
+
+When an assessment has reading scores but no listening, speaking, or writing, the gradebook may show a reading-focused card until you enter those domains. See [Assessments](/hflow/assessments#read-only-gradebook-cards).
+
+## Reports and communications
+
+### A report shows no data
+
+Confirm filters (year, grade, language, period) match students who have assessments for that period. Empty rosters or missing imports produce empty charts.
+
+### I cannot send communications
+
+**Communications** requires admin access and configured **email templates**. See [Communications](/hflow/communications) and [Email templates](/hflow/configuration/email-templates).
+
+## Browser and getting help
+
+hFlow works best in current versions of Chrome, Edge, Safari, or Firefox. If a page behaves oddly, try a hard refresh or another browser.
+
+For issues not covered here, email [support@hflow.pro](mailto:support@hflow.pro) with your school name, the page you were on, and a short description of what you expected versus what happened.

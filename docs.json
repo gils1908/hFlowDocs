@@ -32,7 +32,10 @@
         "groups": [
           {
             "group": "Welcome",
-            "pages": ["index", "hflow/getting-started"]
+            "pages": [
+              "index",
+              "hflow/getting-started"
+            ]
           },
           {
             "group": "Students",
@@ -104,16 +107,16 @@
     "global": {
       "anchors": [
         {
-          "anchor": "hFlow",
-          "href": "https://hflow.pro",
+          "anchor": "hFlow website",
+          "href": "https://www.hflow.pro",
           "icon": "house"
         }
       ]
     }
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/images/brand/hflow-lockup.png",
+    "dark": "/images/brand/hflow-lockup-dark.png"
   },
   "navbar": {
     "links": [
@@ -125,7 +128,7 @@
     "primary": {
       "type": "button",
       "label": "Open hFlow",
-      "href": "https://hflow.pro"
+      "href": "https://app.hflow.pro"
     }
   },
   "contextual": {
