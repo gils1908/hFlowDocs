@@ -4,6 +4,78 @@ Maintainers only: not published on help.hflow.pro. For each substantive change u
 
 ## Entries (newest first)
 
+### DOC-0038 — 2026-05-31 — Data exports: delete is final
+
+**Summary:** Note under delete section: deletion is final, cannot be undone, no restore—download first if needed.
+
+**Files (this repo):**
+
+- changed `hflow/configuration/data-exports.mdx`, `HELP_PAGE_LOG.md`
+
+### DOC-0037 — 2026-05-31 — Data exports: server retention vs manual download
+
+**Summary:** Under download steps, clarified completed exports stay in hFlow but are **not automatically downloaded**.
+
+**Files (this repo):**
+
+- changed `hflow/configuration/data-exports.mdx`, `HELP_PAGE_LOG.md`
+
+### DOC-0036 — 2026-05-31 — Data exports help expanded
+
+**Summary:** Expanded [Data exports](/hflow/configuration/data-exports): periodic backup recommendation, all school years per ZIP, 10 completed retention cap and storage-limit modal, download/delete/cancel, one job at a time, deleted students included. Removed outdated school-year checkbox steps.
+
+**Files (this repo):**
+
+- changed `hflow/configuration/data-exports.mdx`, `HELP_PAGE_LOG.md`
+
+### DOC-0035 — 2026-05-31 — Benchmarks help under Languages nav
+
+**Summary:** Moved **Benchmarks** from Configuration to **Languages** sidebar (order: Languages → Benchmarks → Tiers). Link from Languages page to benchmarks guide.
+
+**Files (this repo):**
+
+- changed `docs.json`, `hflow/languages.mdx`, `HELP_PAGE_LOG.md`
+
+### DOC-0034 — 2026-05-31 — Benchmarks and tier rules help aligned with Languages
+
+**Summary:** Rewrote [Benchmarks](/hflow/configuration/benchmarks) and [Tier rules](/hflow/configuration/tier-rules) to match the product: benchmarks derive from Tier 1 on **Languages**, read-only optional Configuration summary, no manual save-on-benchmarks flow. Clarified read-only **Benchmarks** table on Languages.
+
+**Files (this repo):**
+
+- changed `hflow/configuration/benchmarks.mdx`, `hflow/configuration/tier-rules.mdx`, `hflow/languages.mdx`, `HELP_PAGE_LOG.md`
+
+### DOC-0033 — 2026-05-31 — Help nav restructure and student home page
+
+**Summary:** Renamed sidebar **Shortcuts** → **Navigation**; moved **Tiers** under **Languages**; flattened **Students** (removed Guides subgroup). Replaced drawer doc with **[Student home page](/hflow/students/student-home-page)** (360° intro, header, Summary / Reading / Language tabs, assessments, checkpoints, notes, goals). Permanent redirect from `/hflow/students/view-student-data`. Updated cross-links across Students, Assessments, Getting started, roles, staff.
+
+**Open doc backlog (screenshots):** Student home header, Summary tab (goals/notes/assessments/checkpoints), Reading and Language progress tabs.
+
+**Files (this repo):**
+
+- added `hflow/students/student-home-page.mdx`
+- deleted `hflow/students/view-student-data.mdx`
+- changed `docs.json`, `hflow/students.mdx`, `hflow/students/roles-and-permissions.mdx`, `hflow/students/student-progress-charts.mdx`, `hflow/assessments.mdx`, `hflow/getting-started.mdx`, `hflow/shortcuts.mdx`, `hflow/configuration/staff.mdx`, `hflow/tiers.mdx`, `index.mdx`, `hflow/changelog.mdx`, `HELP_PAGE_LOG.md`
+
+### DOC-0032 — 2026-05-31 — Shortcuts help page
+
+**Summary:** New standalone **[Shortcuts](/hflow/shortcuts)** guide: saved views / filter states, Tier 3 example, shortcuts vs [student groups](/hflow/students/groups), multi-screen reuse (Students, Assessments, reports), admin vs teacher, create/pin/rename/reorder/delete. Sidebar group **Shortcuts**; links from Students hub, Assessments, Reports.
+
+**Open doc backlog (screenshots):** Shortcut chip (unsaved, saved, modified), Save shortcut dialog, Manage shortcuts with drag reorder, Pinned section in menu.
+
+**Files (this repo):**
+
+- added `hflow/shortcuts.mdx`
+- changed `docs.json`, `hflow/students.mdx`, `hflow/assessments.mdx`, `hflow/reports.mdx`, `hflow/changelog.mdx`, `HELP_PAGE_LOG.md`
+
+### DOC-0031 — 2026-05-31 — Getting started sample CSV downloads
+
+**Summary:** Added **`samples/csv/hflow-sample-students.csv`** and **`hflow-sample-assessments.csv`** (fictitious data; reference only). **[Getting started](/hflow/getting-started)** explains CSV format, links downloads on steps 3 and 4 with **do not import as-is** guidance.
+
+**Files (this repo):**
+
+- added `samples/csv/hflow-sample-students.csv`, `samples/csv/hflow-sample-assessments.csv`
+- changed `hflow/getting-started.mdx`, `hflow/changelog.mdx`, `HELP_PAGE_LOG.md`
+
 ### DOC-0030 — 2026-05-31 — Staff roles and permissions help
 
 **Summary:** Rewrote **[Staff](/hflow/configuration/staff)** with Owner / Admin / Teacher definitions, navigation scope, assessment access, classroom assignments, and owner-only staff workflows. Updated **[Students: Admin vs Teacher](/hflow/students/roles-and-permissions)** to distinguish owners from admins and link to Staff. **Troubleshooting** sign-in section links to Staff for menu questions.

@@ -23,6 +23,11 @@
       "source": "/development",
       "destination": "/",
       "permanent": true
+    },
+    {
+      "source": "/hflow/students/view-student-data",
+      "destination": "/hflow/students/student-home-page",
+      "permanent": true
     }
   ],
   "navigation": {
@@ -38,21 +43,20 @@
             ]
           },
           {
+            "group": "Navigation",
+            "pages": ["hflow/shortcuts"]
+          },
+          {
             "group": "Students",
             "pages": [
               "hflow/students",
-              {
-                "group": "Guides",
-                "pages": [
-                  "hflow/students/roles-and-permissions",
-                  "hflow/students/view-student-data",
-                  "hflow/students/add-students",
-                  "hflow/students/delete-student",
-                  "hflow/students/groups",
-                  "hflow/students/student-progress-charts",
-                  "hflow/students/candidate-students"
-                ]
-              }
+              "hflow/students/student-home-page",
+              "hflow/students/roles-and-permissions",
+              "hflow/students/add-students",
+              "hflow/students/delete-student",
+              "hflow/students/groups",
+              "hflow/students/student-progress-charts",
+              "hflow/students/candidate-students"
             ]
           },
           {
@@ -75,12 +79,12 @@
             ]
           },
           {
-            "group": "Tiers",
-            "pages": ["hflow/tiers"]
-          },
-          {
             "group": "Languages",
-            "pages": ["hflow/languages"]
+            "pages": [
+              "hflow/languages",
+              "hflow/configuration/benchmarks",
+              "hflow/tiers"
+            ]
           },
           {
             "group": "Communications",
@@ -93,7 +97,6 @@
               "hflow/configuration/email-templates",
               "hflow/configuration/staff",
               "hflow/configuration/data-exports",
-              "hflow/configuration/benchmarks",
               "hflow/configuration/tier-rules"
             ]
           },

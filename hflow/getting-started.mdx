@@ -64,6 +64,10 @@ Assessments and rosters use these bands immediately for the language, grade, per
 
 More detail: [Languages](/hflow/languages) and [Tiers overview](/hflow/tiers).
 
+## About CSV files
+
+A **CSV** (comma-separated values) file is a plain text file you can open in a text editor or in spreadsheet apps such as Microsoft Excel, Google Sheets, Apple Numbers, and others. Each line is usually one row; columns are separated by commas. When you save a spreadsheet as **CSV**, use that file for **Import CSV** in hFlow.
+
 ## Step 3 — Import your students
 
 1. Open **Students** → **View Students**.
@@ -74,6 +78,10 @@ More detail: [Languages](/hflow/languages) and [Tiers overview](/hflow/tiers).
    - Optional: `middle_name` (helps when two students share the same first and last name), `class` (for example `5a` or `5b`—you do not create sections elsewhere; hFlow creates them from the file)
 5. Upload the file, confirm the row count on the preview screen, and click **Proceed**.
 6. Review results. Successful rows appear in the summary; errors show in red with an option to download a **Failures** report. Click **Done** when finished.
+
+<Note>
+  **Example file (do not import as-is):** [Download hflow-sample-students.csv](/samples/csv/hflow-sample-students.csv) shows fictitious names and columns in the format hFlow expects. **Do not load this file into your school roster**—use it only as a reference when you build your own CSV from your student data.
+</Note>
 
 Imported students appear on the roster for that school year and grade. Reading and language cells stay blank until you add assessments.
 
@@ -93,6 +101,10 @@ More detail: [Add Students (Manual + CSV)](/hflow/students/add-students).
    - At least one score column per row: reading fields (`total_words`, `correct_words`, `total_time` together), `comprehension`, ACTFL levels (`reading_actfl_level`, `listening_actfl_level`, and similar), or domain comprehension columns
 5. Upload, confirm the count, click **Proceed**, then review successes and failures like the student import.
 
+<Note>
+  **Example file (do not import as-is):** [Download hflow-sample-assessments.csv](/samples/csv/hflow-sample-assessments.csv) matches the sample student names and includes **Hebrew** scores for school year **2025-2026**. Import your student roster first (step 3). **Do not load this file into your school**—use it only as a reference when you build your own assessment CSV.
+</Note>
+
 Re-uploading a corrected file **updates** existing assessments for the same student, year, period, and language—it does not create duplicates.
 
 <Note>
@@ -103,11 +115,11 @@ More detail: [Assessments — CSV import](/hflow/assessments#import-assessments-
 
 ## After setup
 
-Your roster and gradebook should show color-coded **reading tiers** from the bands you set, plus reading and language scores where you imported them. You can add or edit individual assessments from the student drawer or gradebook, run **Reports** from the header, and configure **Communications** when your school uses template-based family messages.
+Your roster and gradebook should show color-coded **reading tiers** from the bands you set, plus reading and language scores where you imported them. You can add or edit individual assessments from a student’s home page or the gradebook, run **Reports** from the header, and configure **Communications** when your school uses template-based family messages.
 
 ## Where to go next
 
-- [Students overview](/hflow/students) — filters, period cells, and drawer
+- [Students overview](/hflow/students) — filters, period cells, and student home page
 - [Assessments](/hflow/assessments) — gradebook entry and CSV import
 - [Reports overview](/hflow/reports) — tier distribution, growth, and language progress
 - [Troubleshooting](/hflow/troubleshooting) — common questions

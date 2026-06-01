@@ -1,0 +1,97 @@
+---
+title: "Student home page"
+description: "Open a student from the roster for a 360° view of performance, assessments, notes, goals, and progress charts."
+---
+
+The **student home page** is a full-page view—not a side panel—that gives teachers and administrators a convenient **360° picture** of one learner. You can review notes and goals, scheduled reading assessments, checkpoints, mini trend snapshots, and longer **Reading progress** and **Language progress** charts without leaving the student’s context.
+
+> **Demo data notice**  
+> Any names, student records, IDs, and examples shown in this documentation section are fictitious sample data for demonstration and training purposes only. Any resemblance to real persons, schools, or records is purely coincidental.
+
+## How to open the student home page
+
+1. Go to **Students** → **View Students**.
+2. Click the student’s **name** in the roster.
+
+Admins can always open the page from the name. Teachers can open it only when **Assessments** access is enabled for their account; otherwise names stay plain text on the roster. See [Students: Admin vs Teacher](/hflow/students/roles-and-permissions).
+
+Use **Close** (top right) to return to the roster. Your place in the student list is preserved.
+
+## Header and context selectors
+
+At the top of the page you will see:
+
+- **Student name**, **grade**, and the current **reading tier** badge (when a tier applies for the selected year and language)
+- **Student ID** and **External ID** (when present), with **Copy IDs** for both values
+- **School year** and **Language** dropdowns—the page loads assessments and charts for that combination
+- **Edit student** (admins only)—update legal name fields and external ID
+
+Choose the school year and language before the main content appears. If either is missing, the page prompts you to select them.
+
+## Tabs on the student home page
+
+Three tabs sit below the header:
+
+| Tab | What it shows |
+|-----|----------------|
+| **Summary** | Notes, goals (admins), accuracy/fluency snapshots, scheduled BOY/MOY/EOY assessments, and checkpoints |
+| **Reading progress** | Full reading trend charts and assessment snapshot (same family of charts as [Student progress charts](/hflow/students/student-progress-charts)) |
+| **Language progress** | ACTFL-by-skill and comprehension charts for the student |
+
+Switching tabs updates the URL so you can bookmark or share a link to a specific tab.
+
+## Summary tab
+
+### Show Reading Only
+
+On **Summary**, **Show Reading Only** (switch) simplifies assessment cards to **reading** fluency and accuracy. Listening, speaking, and writing domains are hidden on those cards. This preference applies on the student home page only—it does not change the main **Students** roster toggle.
+
+### Top row
+
+- **Goals** (admins only) — one active goal with body text and date; **+ Add goal** or edit when empty. Teachers do not see this column.
+- **Notes** — free-text note and optional link for the enrollment year (stored as the student’s accommodation/note record). Admins add or edit; teachers see the text when present but cannot change it.
+- **Accuracy** and **Fluency** — compact trend snapshots for the selected year and language.
+
+### Assessments (scheduled)
+
+Three columns—**Beginning of Year**, **Middle of Year**, and **End of Year**—show scheduled reading assessments. Each card displays scores, tier, comprehension, and language domains (unless **Show Reading Only** is on). Use **Add** or open a card to create or edit an assessment when you have permission.
+
+### Checkpoints
+
+Below scheduled assessments, **Checkpoints** lists additional reading assessments in a horizontal strip you can scroll. Admins (and teachers with assessment access) can **+ Add** checkpoints, edit cards, and **drag** the handle on a column to reorder. Order is saved per student, school year, and language. Teachers without assessment access see checkpoints read-only and cannot reorder.
+
+Default order follows assessment dates; undated checkpoints fall back to creation order until you rearrange them.
+
+## Reading progress and Language progress tabs
+
+These tabs embed the student trend report for that learner:
+
+- **Performance trend** (current year, last three years, or all time) and **Year** when needed
+- Chart cards with benchmarks (reading) or ACTFL / comprehension views (language)
+- **Copy Charts** where available (same behavior as on the standalone progress report)
+
+For chart-specific tips and troubleshooting, see [Student progress charts](/hflow/students/student-progress-charts).
+
+## How to add or edit data
+
+1. Confirm **School year** and **Language**.
+2. On **Summary**, use period cards under **Assessments** for BOY/MOY/EOY, or **+ Add** under **Checkpoints**.
+3. Use **+ Add note** / edit on **Notes** (admins) or **+ Add goal** / edit on **Goals** (admins).
+4. Modals for assessments, checkpoints, goals, and notes follow the same patterns as elsewhere in hFlow; unsaved changes show discard prompts if you close mid-edit.
+
+You can also add or edit scheduled assessments from the **Assessments** gradebook; see [Assessments](/hflow/assessments).
+
+## Admin vs teacher
+
+<Note>
+  **Administrators** can edit the student record, goals, notes, assessments, and checkpoint order (subject to your workflow).
+
+  **Teachers** with **Assessments** access can edit assessments and checkpoints and reorder checkpoints. Without that access, they may still open the student home page when allowed, but assessment actions are read-only and checkpoint order is locked. Teachers always see notes read-only and do not manage goals.
+</Note>
+
+## Where to go next
+
+- [Students overview](/hflow/students) — roster filters and period cells
+- [Assessments](/hflow/assessments) — gradebook and CSV import
+- [Student progress charts](/hflow/students/student-progress-charts) — detailed chart behavior
+- [Students: Admin vs Teacher](/hflow/students/roles-and-permissions)

@@ -1,26 +1,75 @@
 ---
 title: "Data exports"
-description: "Download organization data as Excel exports packaged in a zip file."
+description: "Download organization data as Excel workbooks in a zip file, with retention and delete controls."
 ---
 
-**Data exports** produces **Excel workbooks by school year** and delivers them inside a single **ZIP** administrators can save locally. Downloads are queued; when your file is ready, use the actions in the history table (**Admin only**).
+**Data exports** lets organization **administrators** download a ZIP file of Excel workbooks—one workbook per school year that has enrollment data in hFlow. Use exports for reporting, audits, and **periodic off-site backups** of your roster and assessment history. Teachers and coordinators do not have access to this screen.
+
+<Note>
+  hFlow is not a substitute for your district’s official backup or records system. We still recommend running a **Data export** on a schedule you agree with leadership (for example monthly or each term), saving the ZIP to secure storage your school controls, and following your pupil-data retention policy.
+</Note>
 
 ## How to open Data exports
 
 1. In the header, open **Configuration**.
-2. Choose **Data exports** (labeled **Data Exports** in the title on screen).
+2. Choose **Data exports** (the page title reads **Data Exports**).
+
+## What each export contains
+
+When you start an export, hFlow packages **all school years** that appear in your organization’s enrollment data. Each year becomes its own Excel workbook inside one ZIP file. The export includes **active** students and students marked **deleted** in hFlow (for compliance and historical record-keeping).
+
+The history table shows **Students** (unique count), **Records** (student-year rows), **Years** included, and **Size** when the job finishes.
 
 ## How to start an export
 
-1. Choose the **school year** checkboxes your policy allows (controls match the labels on the form).
-2. Click **Export** (the button reads **Working…** until the server accepts the job).
+1. On **Data Exports**, click **Export**.
+2. The button shows **Working…** while the server accepts the job.
+3. A new row appears in the table; status moves from **processing** to **completed** (or **failed** if something went wrong).
 
-A new row appears in the exports table and its status moves from queued → processing → complete.
+Only **one export can run at a time** for your organization. Wait for the current job to finish or cancel it before starting another.
 
-## How to download
+Large organizations may need several minutes; the page refreshes automatically while a job is **processing**.
 
-1. When the status column shows completion, choose **Download** (or equivalent) on that row.
+## How many exports hFlow keeps
 
-Your browser saves a ZIP with one workbook for each selected school year.
+hFlow stores up to **10 completed** exports per organization—the files you can still download from the table. Older completed files are not kept indefinitely.
 
-Use your district’s retention rules for pupil data before sharing files outside the organization. If exports fail repeatedly, contact [support@hflow.pro](mailto:support@hflow.pro) with the timestamps shown beside the failing row.
+When you already have 10 completed exports and start another:
+
+1. hFlow shows **Storage limit reached**.
+2. The message explains that continuing will remove the **oldest completed** export **after** the new export succeeds.
+3. Click **Continue** to proceed, or **Cancel** to keep the existing ten.
+
+You can also free space anytime by **deleting** exports you no longer need (see below). After a successful export, hFlow may remove the oldest completed file automatically if your org is still over the limit.
+
+Failed or cancelled jobs do not count toward the ten completed slots in the same way as successful downloads; you can delete those rows to clear clutter.
+
+## How to download a completed export
+
+When an export finishes, hFlow **keeps the ZIP on the server** so you can download it later from the table—but exports are **not automatically downloaded** to your computer. You must click **Download** on each completed row you want saved locally.
+
+1. When **Status** is **completed**, click the **Download** action on that row.
+2. Your browser saves the ZIP using the filename shown in the **File** column (for example `hFlow Export 2026-05-31 ….zip`).
+
+Save the file somewhere your team treats as secure backup storage. Downloads use a time-limited link from hFlow’s servers; if a row is deleted later, you must rely on the copy you saved locally.
+
+## How to delete an export
+
+<Note>
+  Deleting an export is **final** and **cannot be undone**. hFlow removes the file from the server immediately; there is no recycle bin or restore. Download a copy first if you might need the ZIP again.
+</Note>
+
+1. On a row with status **completed**, **failed**, or **cancelled**, click **Delete** (trash icon).
+2. In **Delete export?**, read the warning: the file is removed from hFlow’s servers permanently; copies you already downloaded are not affected.
+3. Click **Delete** to confirm, or **Keep** to cancel.
+
+You cannot delete rows while **another export is processing**—finish or cancel the in-progress job first.
+
+## How to cancel an in-progress export
+
+1. While **Status** is **processing**, click **Cancel** (×) on that row.
+2. The job stops and the status becomes **cancelled**. You can delete the row or start a new export.
+
+## Privacy and sharing
+
+Exports contain identifiable student and assessment data. Follow your district’s rules before emailing ZIP files, storing them in personal cloud drives, or sharing outside the organization. If exports fail repeatedly, contact [support@hflow.pro](mailto:support@hflow.pro) with the **Started** / **Finished** timestamps and any error text shown on the row.
