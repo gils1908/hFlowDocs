@@ -4,6 +4,14 @@ Maintainers only: not published on help.hflow.pro. For each substantive change u
 
 ## Entries (newest first)
 
+### DOC-0041 — 2026-06-01 — Sample CSV downloads via Google Drive
+
+**Summary:** Getting started example student and assessment CSV links now point to Google Drive (Mintlify does not serve `.csv` on the current plan). Notes mention opening Drive and using **Download** to save the file.
+
+**Files (this repo):**
+
+- changed `hflow/getting-started.mdx`, `HELP_PAGE_LOG.md`
+
 ### DOC-0040 — 2026-05-31 — Dark theme logo: C_deep_3d (white wordmark)
 
 **Summary:** Replaced dark-theme help logo (`hflow-lockup-dark.png`) with **`Assets/hFlow Logos/C_deep_3d/hFlow-512.png`** (square mark, white **hFlow** text on deep background). Light lockup unchanged. Prior dark asset was horizontal **`D_lockup_3d`** lockup with dark navy wordmark, which was hard to read on dark UI.
