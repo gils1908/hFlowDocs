@@ -4,6 +4,22 @@ Maintainers only: not published on help.hflow.pro. For each substantive change u
 
 ## Entries (newest first)
 
+### DOC-0040 — 2026-05-31 — Dark theme logo: C_deep_3d (white wordmark)
+
+**Summary:** Replaced dark-theme help logo (`hflow-lockup-dark.png`) with **`Assets/hFlow Logos/C_deep_3d/hFlow-512.png`** (square mark, white **hFlow** text on deep background). Light lockup unchanged. Prior dark asset was horizontal **`D_lockup_3d`** lockup with dark navy wordmark, which was hard to read on dark UI.
+
+**Files (this repo):**
+
+- changed `images/brand/hflow-lockup-dark.png`, `index.mdx`, `hflow/getting-started.mdx`, `AUTHORING.md`, `HELP_PAGE_LOG.md`
+
+### DOC-0039 — 2026-05-31 — Dark mode lockup on help home and Getting started
+
+**Summary:** Help home and Getting started now show the 3D dark lockup (`hflow-lockup-dark.png`) in dark mode at the same `280px` max width as the flat light lockup. Site header already used `docs.json` `logo.light` / `logo.dark` at matching navbar height.
+
+**Files (this repo):**
+
+- changed `index.mdx`, `hflow/getting-started.mdx`, `HELP_PAGE_LOG.md`
+
 ### DOC-0038 — 2026-05-31 — Data exports: delete is final
 
 **Summary:** Note under delete section: deletion is final, cannot be undone, no restore—download first if needed.

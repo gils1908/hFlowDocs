@@ -75,7 +75,7 @@ description: "One line: what someone can accomplish on this page."
 
 ## Screenshots and brand assets
 
-- **Logos:** Official artwork lives in **`images/brand/`** (lockup for hero/home, small mark optional on long guides). Source files: Gilat app repo **`Assets/hFlow Logos/`** (`D_lockup_flat` for light backgrounds, `D_lockup_3d` for dark theme logo in `docs.json`).
+- **Logos:** Official artwork lives in **`images/brand/`** (lockup for hero/home, small mark optional on long guides). Source files: Gilat app repo **`Assets/hFlow Logos/`** (`D_lockup_flat` → `hflow-lockup.png` for light mode; `C_deep_3d/hFlow-512.png` → `hflow-lockup-dark.png` for dark mode — square mark with white wordmark). For inline heroes, pair light lockup and dark mark with `block dark:hidden` / `hidden dark:block` (see `index.mdx`).
 - **Videos:** Store MP4 files under **`videos/`** with kebab-case names. Use H.264 + AAC, **`movflags +faststart`**, and keep files roughly under ~25 MB when possible. Embed with `<video controls playsInline>` and `<source type="video/mp4">` (avoid wrapping in `<Frame>`—it can block playback). Path `/videos/…` from site root. **Commit and push** the MP4 in `hFlowDocs` or the file 404s on help.hflow.pro.
 - **Product screenshots:** Store under **`images/<area>/`** (e.g. `images/students/`).
 - Reference in MDX with stable paths such as `/images/students/example.png` or `/images/brand/hflow-lockup.png`.
