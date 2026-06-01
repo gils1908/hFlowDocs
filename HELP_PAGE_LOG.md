@@ -4,6 +4,30 @@ Maintainers only: not published on help.hflow.pro. For each substantive change u
 
 ## Entries (newest first)
 
+### DOC-0044 — 2026-06-01 — Dark logo transparent background fix
+
+**Summary:** Removed the full-width navy card baked into the Dark framed export and rebuilt `hflow-lockup-dark.png` on a transparent **1548×512** canvas (matching the light lockup). Keeps the framed icon stroke, dots, and white wordmark; frame fill and outer margins are transparent so the navbar/page background shows through.
+
+**Files (this repo):**
+
+- changed `images/brand/hflow-lockup-dark.png`, `AUTHORING.md`, `HELP_PAGE_LOG.md`
+
+### DOC-0043 — 2026-06-01 — Dark navbar logo size fix
+
+**Summary:** Rebuilt `hflow-lockup-dark.png` on a **1548×512** canvas (matching the light navbar lockup) by cropping the framed artwork to its icon/wordmark bounds and scaling up. The prior dark asset was **1645×820**, so Mintlify shrank the mark in the top-left navbar.
+
+**Files (this repo):**
+
+- changed `images/brand/hflow-lockup-dark.png`, `HELP_PAGE_LOG.md`
+
+### DOC-0042 — 2026-06-01 — Dark mode lockup-framed logo
+
+**Summary:** Replaced dark-theme help logo (`hflow-lockup-dark.png`) with **`Assets/hFlow Logos/Dark/lockup-framed-flat-h512.png`** (horizontal framed lockup for dark UI). Help home and Getting started dark hero images now use the same `280px` max width as the light lockup. Site header `docs.json` `logo.dark` path unchanged.
+
+**Files (this repo):**
+
+- changed `images/brand/hflow-lockup-dark.png`, `index.mdx`, `hflow/getting-started.mdx`, `AUTHORING.md`, `HELP_PAGE_LOG.md`
+
 ### DOC-0041 — 2026-06-01 — Sample CSV downloads via Google Drive
 
 **Summary:** Getting started example student and assessment CSV links now point to Google Drive (Mintlify does not serve `.csv` on the current plan). Notes mention opening Drive and using **Download** to save the file.
