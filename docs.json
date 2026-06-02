@@ -7,7 +7,7 @@
     "light": "#6366F1",
     "dark": "#312E81"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/images/brand/hflow-favicon.png",
   "seo": {
     "metatags": {
       "canonical": "https://help.hflow.pro"

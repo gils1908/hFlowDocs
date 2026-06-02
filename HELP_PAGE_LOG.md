@@ -4,6 +4,30 @@ Maintainers only: not published on help.hflow.pro. For each substantive change u
 
 ## Entries (newest first)
 
+### DOC-0048 — 2026-06-01 — In-page logos: Welcome only
+
+**Summary:** Removed inline brand images from Getting started, Languages, and Troubleshooting. Lockups remain on the Welcome page (`index.mdx`) and in the site header (`docs.json`) on all pages.
+
+**Files (this repo):**
+
+- changed `hflow/getting-started.mdx`, `hflow/languages.mdx`, `hflow/troubleshooting.mdx`, `AUTHORING.md`, `HELP_PAGE_LOG.md`
+
+### DOC-0047 — 2026-06-01 — Light lockup: restore dark wordmark
+
+**Summary:** Re-exported `hflow-lockup.png` from **`D_lockup_flat`** instead of `Light/lockup-flat-h512` (white wordmark invisible on light UI). Navbar and hero lockups show **hFlow** text again in light mode.
+
+**Files (this repo):**
+
+- changed `images/brand/hflow-lockup.png`, `hflow-lockup-sm.png`, `scripts/export-brand-assets.py`, `AUTHORING.md`, `HELP_PAGE_LOG.md`
+
+### DOC-0046 — 2026-06-01 — Brand icons: flat light, framed dark
+
+**Summary:** Re-exported help brand PNGs from **`Assets/hFlow Logos/`** (flat lockup/chart for light, framed lockup/chart for dark). **Languages** and **Troubleshooting** page marks now swap by theme. Favicon uses flat chart mark. Added **`scripts/export-brand-assets.py`** for future regenerations.
+
+**Files (this repo):**
+
+- changed `images/brand/*.png`, `docs.json`, `AUTHORING.md`, `hflow/languages.mdx`, `hflow/troubleshooting.mdx`, `scripts/export-brand-assets.py`, `HELP_PAGE_LOG.md`
+
 ### DOC-0045 — 2026-06-01 — Communications: template when switching students
 
 **Summary:** Documented how the focus drafter picks a template when moving between students in a session (sent vs draft, last-used template, first-time default). Matches app behavior: draft students get the last template chosen in Communications Hub; sent students keep their sent template.
