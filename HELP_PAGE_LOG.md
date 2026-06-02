@@ -4,6 +4,14 @@ Maintainers only: not published on help.hflow.pro. For each substantive change u
 
 ## Entries (newest first)
 
+### DOC-0049 — 2026-06-02 — Report a problem (H-182)
+
+**Summary:** Added **Report a problem or suggest an idea** to Troubleshooting: FAB, four impact chips (including **Suggest an improvement**), screenshot, point-at-spot, Look on the page, student ID, receipt email, owner **Reported issues** withdraw flow.
+
+**Files (this repo):**
+
+- changed `hflow/troubleshooting.mdx`, `HELP_PAGE_LOG.md`
+
 ### DOC-0048 — 2026-06-01 — In-page logos: Welcome only
 
 **Summary:** Removed inline brand images from Getting started, Languages, and Troubleshooting. Lockups remain on the Welcome page (`index.mdx`) and in the site header (`docs.json`) on all pages.
