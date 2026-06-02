@@ -56,6 +56,18 @@ The draft screen opens in focus mode with the student on the left and the compos
 5. Use the arrows or the small roster chips at the top to move to the previous or next student in the group.
 6. Click **Close** to return to the hub. Your group, session, and roster filter choices are preserved when possible.
 
+### Which template is selected when you switch students
+
+When you open another student in the same session (roster card, **Previous** / **Next**, or the chip row), hFlow chooses the **Template** dropdown and builds the preview as follows:
+
+1. **Already marked sent** — The template tied to that student’s sent message is shown so you can review what went out. The preview reflects their saved subject and body.
+2. **Still a draft** — hFlow pre-selects the **last template you chose** while drafting in Communications (including on another student in this session). The preview is rebuilt from that template with the **new** student’s assessment data and tokens. Any unsent draft you had saved for that student under a different template is replaced when the last-used template differs.
+3. **First time in Communications** — If you have not picked a template yet in this browser, hFlow uses the first template in the list (system defaults, then your org’s custom templates).
+
+Your last chosen template is remembered for your organization on this device, so a refresh or a later visit to Communications can continue with the same default until you pick a different one from the dropdown.
+
+If you need the exact wording saved for one student (for example after heavy edits), finish or copy that message before switching away, or return to that student before changing the template for the rest of the group.
+
 ### Changing templates mid-draft
 
 If you change the **Template** dropdown after editing the preview, hFlow asks **Replace your edits?** Choosing **Replace** rebuilds the preview from the new template and current student data. **Keep editing** leaves your current text.

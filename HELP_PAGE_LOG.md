@@ -4,6 +4,14 @@ Maintainers only: not published on help.hflow.pro. For each substantive change u
 
 ## Entries (newest first)
 
+### DOC-0045 — 2026-06-01 — Communications: template when switching students
+
+**Summary:** Documented how the focus drafter picks a template when moving between students in a session (sent vs draft, last-used template, first-time default). Matches app behavior: draft students get the last template chosen in Communications Hub; sent students keep their sent template.
+
+**Files (this repo):**
+
+- changed `hflow/communications.mdx`, `HELP_PAGE_LOG.md`
+
 ### DOC-0044 — 2026-06-01 — Dark logo transparent background fix
 
 **Summary:** Removed the full-width navy card baked into the Dark framed export and rebuilt `hflow-lockup-dark.png` on a transparent **1548×512** canvas (matching the light lockup). Keeps the framed icon stroke, dots, and white wordmark; frame fill and outer margins are transparent so the navbar/page background shows through.
