@@ -4,6 +4,17 @@ Maintainers only: not published on help.hflow.pro. For each substantive change u
 
 ## Entries (newest first)
 
+### DOC-0050 — 2026-06-02 — Reporting issues and suggestions (dedicated page)
+
+**Summary:** New Support page for in-app bug reports and suggestions (FAB, sheet, impact chips, point-at, Look on the page, student ID, receipt email, owner **Reported issues** / withdraw). Troubleshooting shortened with link to the new page. Nav: Support group lists the page before Troubleshooting.
+
+**Open doc backlog:** Screenshot of ladybug FAB + report sheet → `images/support/` (optional Reference figure).
+
+**Files (this repo):**
+
+- added `hflow/reporting-issues-and-suggestions.mdx`
+- changed `docs.json`, `hflow/troubleshooting.mdx`, `HELP_PAGE_LOG.md`
+
 ### DOC-0049 — 2026-06-02 — Report a problem (H-182)
 
 **Summary:** Added **Report a problem or suggest an idea** to Troubleshooting: FAB, four impact chips (including **Suggest an improvement**), screenshot, point-at-spot, Look on the page, student ID, receipt email, owner **Reported issues** withdraw flow.

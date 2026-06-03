@@ -102,7 +102,11 @@
           },
           {
             "group": "Support",
-            "pages": ["hflow/troubleshooting", "hflow/changelog"]
+            "pages": [
+              "hflow/reporting-issues-and-suggestions",
+              "hflow/troubleshooting",
+              "hflow/changelog"
+            ]
           }
         ]
       }
