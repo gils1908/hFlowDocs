@@ -50,6 +50,7 @@
             "group": "Students",
             "pages": [
               "hflow/students",
+              "hflow/students/print-view",
               "hflow/students/student-home-page",
               "hflow/students/roles-and-permissions",
               "hflow/students/add-students",

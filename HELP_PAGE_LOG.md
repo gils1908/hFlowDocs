@@ -4,6 +4,17 @@ Maintainers only: not published on help.hflow.pro. For each substantive change u
 
 ## Entries (newest first)
 
+### DOC-0051 — 2026-06-03 — Students print roster view
+
+**Summary:** New **Print roster view** guide (open from Students header, columns, L/S/W when data exists, **Show Reading Only** forces reading-only print). App: `readingOnly=1` query param from Students print button. Linked from Students overview cards and admin/teacher roles page. Changelog bullet.
+
+**Open doc backlog:** Screenshot of print tab with full L/S/W columns; screenshot with **Show Reading Only** (reading columns only) → `images/students/`.
+
+**Files (this repo):**
+
+- added `hflow/students/print-view.mdx`
+- changed `docs.json`, `hflow/students.mdx`, `hflow/students/roles-and-permissions.mdx`, `hflow/changelog.mdx`, `HELP_PAGE_LOG.md`
+
 ### DOC-0050 — 2026-06-02 — Reporting issues and suggestions (dedicated page)
 
 **Summary:** New Support page for in-app bug reports and suggestions (FAB, sheet, impact chips, point-at, Look on the page, student ID, receipt email, owner **Reported issues** / withdraw). Troubleshooting shortened with link to the new page. Nav: Support group lists the page before Troubleshooting.

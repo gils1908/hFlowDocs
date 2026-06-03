@@ -1,0 +1,58 @@
+---
+title: "Print roster view"
+description: "Open a print-friendly table from Students that matches your filters and reading-only layout."
+---
+
+This feature lets **admins** and **teachers** open a landscape print layout of the current Students roster. The print view uses the same school year, language, grade, class, reading tier, and search filters you have on **Students**, so what you see on screen is what prints.
+
+> **Demo data notice** Any names, student records, IDs, and examples shown in this documentation section are fictitious sample data for demonstration and training purposes only. Any resemblance to real persons, schools, or records is purely coincidental.
+
+## How to open the print view
+
+1. Sign in at [app.hflow.pro](https://app.hflow.pro) and open **Students**.
+2. Set your filters (school year, language, and any grade, class, reading tier, or search you need). Teachers choose one or more **assignments** first; the roster must match the assignment you want on paper.
+3. Optionally turn on **Show Reading Only** if you want a reading-focused layout on the main roster.
+4. In the page header, click the **print roster** control (table icon). A new browser tab opens with the printable table.
+
+If you are a teacher and nothing is selected under assignments, hFlow asks you to pick an assignment before opening print. Admins must choose a **school year** and **language** before print opens.
+
+After the tab loads, use **Print** for your browser’s print dialog or **Copy** to paste the table into email or a document. The header row shows language, grade or class summary, school year, and today’s date.
+
+## What the table includes
+
+Each student row lists **Beginning of Year**, **Middle of Year**, and **End of Year** scheduled assessments. For every period, the table shows:
+
+| Column | Meaning |
+|--------|---------|
+| **Flu** | Fluency count (tier colors when a reading tier applies) |
+| **Acc** | Accuracy percentage |
+| **Levels** (under Reading) | Reading comprehension (Good / Partial / Low) and reading ACTFL level when entered |
+
+When your organization has listening, speaking, or writing scores on the roster—and **Show Reading Only** is **off** on **Students** when you open print—extra **Listening**, **Speaking**, and **Writing** columns appear for each period. Each shows abbreviated comprehension (At / Appr. / Below) and ACTFL level when present. A short legend above the table explains those abbreviations.
+
+When **Show Reading Only** is **on** on **Students** before you open print, the print tab shows **only** the reading columns (Flu, Acc, and Reading levels). Listening, Speaking, and Writing columns and their legend are omitted even if some students have language-skill data on file.
+
+Students are sorted by reading tier (Tier 1, then Tier 2, then Tier 3, then unassigned), then by latest fluency, then by name—matching the main roster order.
+
+## Admin vs teacher
+
+| Role | Print access |
+|------|----------------|
+| **Owner / admin** | Full filter bar; print uses selected year, language, grades, classes, reading tiers, and search. |
+| **Teacher** | Print uses the selected assignment(s) scope and search; no import, export, or add-student actions on **Students**. |
+
+<Note>
+  **Show Reading Only** is saved per user on **Students** but is not stored in saved shortcuts. Turn it on before opening print when you want a reading-only printout.
+</Note>
+
+## Tips for printing
+
+- Use your browser’s print preview; the layout is tuned for **letter, landscape**.
+- Re-open print from **Students** after you change filters or **Show Reading Only**—the print tab does not update live when you change settings on the main page.
+- For spreadsheet exports with more columns, use **Export CSV** on **Students** (admins only).
+
+## Related pages
+
+- [Students overview](/hflow/students) — roster layout and **Show Reading Only** on the main table
+- [Admin vs Teacher](/hflow/students/roles-and-permissions) — who can print and filter what
+- [Shortcuts](/hflow/shortcuts) — saved filter views (reading-only toggle is separate)
