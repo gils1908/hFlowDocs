@@ -4,6 +4,14 @@ Maintainers only: not published on help.hflow.pro. For each substantive change u
 
 ## Entries (newest first)
 
+### DOC-0054 — 2026-06-04 — Candidate assessments cards and list sort (H-213)
+
+**Summary:** Candidate table sorted by last name then first name. Drawer assessments tab uses full language assessment cards (reading + listening/speaking/writing) with click-to-edit modal.
+
+**Files (this repo):**
+
+- changed `hflow/students/candidate-students.mdx` — list sort, assessment cards in drawer
+
 ### DOC-0053 — 2026-06-03 — Replace "correct words" with "errors" in assessments (H-210)
 
 **Summary:** All reading metric references updated from "correct words" to "errors" (miscues). CSV column renamed `errors`; schools must update templates. Assessments page, gradebook, checkpoint modal, candidate assessments, and data export now show "Errors" instead of "Correct". Sample CSV header updated. Getting-started CSV guide updated.
