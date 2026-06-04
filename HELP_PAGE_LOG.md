@@ -4,6 +4,16 @@ Maintainers only: not published on help.hflow.pro. For each substantive change u
 
 ## Entries (newest first)
 
+### DOC-0052 — 2026-06-03 — In-app Help ? FAB + ladybug pre-report nudge (H-206)
+
+**Summary:** Document dual bottom-right controls: **`?` Help** opens contextual help in a new tab; **ladybug** shows a short “check Help first” panel before the report sheet. App map: `src/lib/helpPageForAppRoute.ts`. App map updated: yes (same release).
+
+**Open doc backlog:** Screenshot of dual FABs and pre-report panel → `images/support/` (optional Reference figure).
+
+**Files (this repo):**
+
+- changed `hflow/reporting-issues-and-suggestions.mdx`, `hflow/troubleshooting.mdx`, `HELP_PAGE_LOG.md`
+
 ### DOC-0051 — 2026-06-03 — Students print roster view
 
 **Summary:** New **Print roster view** guide (open from Students header, columns, L/S/W when data exists, **Show Reading Only** forces reading-only print). App: `readingOnly=1` query param from Students print button. Linked from Students overview cards and admin/teacher roles page. Changelog bullet.
