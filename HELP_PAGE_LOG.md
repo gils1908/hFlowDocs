@@ -4,6 +4,16 @@ Maintainers only: not published on help.hflow.pro. For each substantive change u
 
 ## Entries (newest first)
 
+### DOC-0053 — 2026-06-03 — Replace "correct words" with "errors" in assessments (H-210)
+
+**Summary:** All reading metric references updated from "correct words" to "errors" (miscues). CSV column renamed `errors`; schools must update templates. Assessments page, gradebook, checkpoint modal, candidate assessments, and data export now show "Errors" instead of "Correct". Sample CSV header updated. Getting-started CSV guide updated.
+
+**Files (this repo):**
+
+- changed `hflow/assessments.mdx` — Err/Tot label, `errors` CSV column
+- changed `hflow/getting-started.mdx` — CSV column in quick-start table
+- changed `samples/csv/hflow-sample-assessments.csv` — header `errors`
+
 ### DOC-0052 — 2026-06-03 — In-app Help ? FAB + ladybug pre-report nudge (H-206)
 
 **Summary:** Document dual bottom-right controls: **`?` Help** opens contextual help in a new tab; **ladybug** shows a short “check Help first” panel before the report sheet. App map: `src/lib/helpPageForAppRoute.ts`. App map updated: yes (same release).

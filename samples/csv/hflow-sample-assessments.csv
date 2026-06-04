@@ -1,4 +1,4 @@
-first_name,last_name,middle_name,school_year,grade,language,period,total_words,correct_words,total_time,comprehension,reading_actfl_level,listening_actfl_level,writing_actfl_level,speech_actfl_level,listening_comprehension,writing_comprehension,speech_comprehension,tested_at
+first_name,last_name,middle_name,school_year,grade,language,period,total_words,errors,total_time,comprehension,reading_actfl_level,listening_actfl_level,writing_actfl_level,speech_actfl_level,listening_comprehension,writing_comprehension,speech_comprehension,tested_at
 Emma,Walsh,,2025-2026,3,Hebrew,BOY,22,20,60,,,,,,,,,8/31/2025
 Emma,Walsh,,2025-2026,3,Hebrew,MOY,27,27,60,,,,,,,,,8/31/2025
 Noah,Becker,,2025-2026,3,Hebrew,BOY,18,16,60,,,,,,,,,8/31/2025
