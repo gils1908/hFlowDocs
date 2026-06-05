@@ -4,6 +4,14 @@ Maintainers only: not published on help.hflow.pro. For each substantive change u
 
 ## Entries (newest first)
 
+### DOC-0055 — 2026-06-05 — Communications template refresh banner (H-214)
+
+**Summary:** Renamed **Reset Template** to **Refresh Template** on the draft screen. When Configuration saved a newer template version than the student draft was built from, hFlow shows a banner with **Refresh**; confirm step warns that preview edits may be lost. Email templates help updated to match.
+
+**Files (this repo):**
+
+- changed `hflow/communications.mdx`, `hflow/configuration/email-templates.mdx`, `hflow/students/groups.mdx`
+
 ### DOC-0054 — 2026-06-04 — Candidate assessments cards and list sort (H-213)
 
 **Summary:** Candidate table sorted by last name then first name. Drawer assessments tab uses full language assessment cards (reading + listening/speaking/writing) with click-to-edit modal.
