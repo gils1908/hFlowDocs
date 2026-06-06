@@ -4,6 +4,15 @@ Maintainers only: not published on help.hflow.pro. For each substantive change u
 
 ## Entries (newest first)
 
+### DOC-0056 — 2026-06-05 — Communication Hub optional add-on (H-215)
+
+**Summary:** Documented that the **hFlow Communication Hub** (Communications and Email Templates) is an **optional add-on** to a school’s hFlow subscription. When the add-on is off, menu entries remain with a preview and message; **Close** returns to Students. Contact hFlow admin or account rep to enable.
+
+**Files (this repo):**
+
+- changed `hflow/communications.mdx` — Optional add-on section, Who can use, common issue
+- changed `hflow/configuration/email-templates.mdx` — Optional add-on section
+
 ### DOC-0055 — 2026-06-05 — Communications template refresh banner (H-214)
 
 **Summary:** Renamed **Reset Template** to **Refresh Template** on the draft screen. When Configuration saved a newer template version than the student draft was built from, hFlow shows a banner with **Refresh**; confirm step warns that preview edits may be lost. Email templates help updated to match.
