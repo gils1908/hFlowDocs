@@ -7,6 +7,16 @@
     "light": "#6366F1",
     "dark": "#312E81"
   },
+  "background": {
+    "color": {
+      "light": "#FAFAFF",
+      "dark": "#0A0B1E"
+    },
+    "image": {
+      "light": "/images/brand/hflow-wallpaper-light.png",
+      "dark": "/images/brand/hflow-wallpaper-dark.png"
+    }
+  },
   "favicon": "/images/brand/hflow-favicon.png",
   "seo": {
     "metatags": {

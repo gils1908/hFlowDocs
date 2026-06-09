@@ -4,6 +4,15 @@ Maintainers only: not published on help.hflow.pro. For each substantive change u
 
 ## Entries (newest first)
 
+### DOC-0057 — 2026-06-05 — Help site triangle wallpaper (light/dark)
+
+**Summary:** Added full-bleed hFlow triangle wallpapers for light and dark mode on help.hflow.pro. [Mintlify `background`](https://www.mintlify.com/docs/organize/settings-appearance#background) in `docs.json` sets `background.color` and `background.image` (light/dark paths). Root `style.css` applies `background-size: cover` on `#background-color` because Mintlify’s default image placement is top-right only. Assets: `images/brand/hflow-wallpaper-light.png`, `hflow-wallpaper-dark.png`.
+
+**Files (this repo):**
+
+- changed `docs.json`, `style.css`
+- added `images/brand/hflow-wallpaper-light.png`, `hflow-wallpaper-dark.png`
+
 ### DOC-0056 — 2026-06-05 — Communication Hub optional add-on (H-215)
 
 **Summary:** Documented that the **hFlow Communication Hub** (Communications and Email Templates) is an **optional add-on** to a school’s hFlow subscription. When the add-on is off, menu entries remain with a preview and message; **Close** returns to Students. Contact hFlow admin or account rep to enable.

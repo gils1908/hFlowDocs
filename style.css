@@ -1,0 +1,23 @@
+/* Full-bleed hFlow wallpaper — complements docs.json background.image (Mintlify defaults to top-right). */
+html:not(.dark) #background-color {
+  background-color: #fafaff !important;
+  background-image: url("/images/brand/hflow-wallpaper-light.png") !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+}
+
+html.dark #background-color {
+  background-color: #0a0b1e !important;
+  background-image: url("/images/brand/hflow-wallpaper-dark.png") !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+}
+
+span[style*="hflow-wallpaper-light"],
+span[style*="hflow-wallpaper-dark"] {
+  display: none !important;
+}
