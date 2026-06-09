@@ -4,6 +4,14 @@ Maintainers only: not published on help.hflow.pro. For each substantive change u
 
 ## Entries (newest first)
 
+### DOC-0058 — 2026-06-08 — Fix background wallpaper visibility in help pages
+
+**Summary:** Changed the CSS selector in `style.css` from `#background-color` to `body` so that the full-bleed `hflow-wallpaper` image displays correctly. The `#background-color` identifier was preventing the background images from showing due to Mintlify DOM updates.
+
+**Files (this repo):**
+
+- changed `style.css`
+
 ### DOC-0057 — 2026-06-05 — Help site triangle wallpaper (light/dark)
 
 **Summary:** Added full-bleed hFlow triangle wallpapers for light and dark mode on help.hflow.pro. [Mintlify `background`](https://www.mintlify.com/docs/organize/settings-appearance#background) in `docs.json` sets `background.color` and `background.image` (light/dark paths). Root `style.css` applies `background-size: cover` on `#background-color` because Mintlify’s default image placement is top-right only. Assets: `images/brand/hflow-wallpaper-light.png`, `hflow-wallpaper-dark.png`.
