@@ -4,6 +4,16 @@ Maintainers only: not published on help.hflow.pro. For each substantive change u
 
 ## Entries (newest first)
 
+### DOC-0059 — 2026-06-09 — Staff invite lifecycle (owner guide)
+
+**Summary:** Expanded **[Staff](/hflow/configuration/staff)** with plain-language steps for sending and resending invites, what colleagues do when they receive the email, how owners monitor status on the **Staff** list (**Invite sent**, **Last Login**, **Show pending**), and common fixes (expired link, wrong email, password reset). Removed the unpublished **Reference** screenshot placeholder.
+
+**Open doc backlog (screenshots):** Staff list (pending statuses, **Show pending**), pending invite page (**Send invite**), staff detail (**Last Login**, login activity).
+
+**Files (this repo):**
+
+- changed `hflow/configuration/staff.mdx`, `HELP_PAGE_LOG.md`
+
 ### DOC-0058 — 2026-06-08 — Fix background wallpaper visibility in help pages
 
 **Summary:** Changed the CSS selector in `style.css` from `#background-color` to `body` so that the full-bleed `hflow-wallpaper` image displays correctly. The `#background-color` identifier was preventing the background images from showing due to Mintlify DOM updates.
