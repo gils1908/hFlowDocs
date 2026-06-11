@@ -72,7 +72,11 @@
           },
           {
             "group": "Assessments",
-            "pages": ["hflow/assessments", "hflow/actfl-proficiency-scale"]
+            "pages": [
+              "hflow/assessments",
+              "hflow/language-metrics",
+              "hflow/actfl-proficiency-scale"
+            ]
           },
           {
             "group": "Reports",

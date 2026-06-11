@@ -4,6 +4,15 @@ Maintainers only: not published on help.hflow.pro. For each substantive change u
 
 ## Entries (newest first)
 
+### DOC-0060 — 2026-06-11 — Language metrics (reading accuracy & fluency)
+
+**Summary:** New **[Language metrics](/hflow/language-metrics)** under Assessments: plain-language and formula explanations for implied correct, accuracy, fluency (WCPM), plain vs median-based (MBA) assessments, tier linkage, and pointers to ACTFL/overall fields. Cross-link from Assessments intro.
+
+**Files (this repo):**
+
+- added `hflow/language-metrics.mdx`
+- changed `hflow/assessments.mdx`, `docs.json`, `HELP_PAGE_LOG.md`
+
 ### DOC-0059 — 2026-06-09 — Staff invite lifecycle (owner guide)
 
 **Summary:** Expanded **[Staff](/hflow/configuration/staff)** with plain-language steps for sending and resending invites, what colleagues do when they receive the email, how owners monitor status on the **Staff** list (**Invite sent**, **Last Login**, **Show pending**), and common fixes (expired link, wrong email, password reset). Removed the unpublished **Reference** screenshot placeholder.

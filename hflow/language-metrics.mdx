@@ -1,0 +1,113 @@
+---
+title: "Language metrics"
+description: "How hFlow calculates reading accuracy, fluency (WCPM), and median-based assessment scores."
+---
+
+This page explains the **reading numbers** hFlow shows on scheduled assessments—what you enter, what the app calculates, and how **plain** (single-passage) entry differs from **median-based** (three-passage) entry. For saving scores in the gradebook, see [Assessments](/hflow/assessments). For how tiers use these metrics, see [Tiers](/hflow/tiers).
+
+## What you enter
+
+For reading fluency screenings you record:
+
+| Field | Meaning |
+|-------|---------|
+| **Total words** | Word count of the passage (or passage total on each MBA row). |
+| **Errors** | Miscues during the read (substitutions, omissions, etc.). |
+| **Time (seconds)** | How long the student read. On median-based entry, one time is shared across all three passages. |
+
+hFlow does **not** ask you to type accuracy or fluency directly—it derives them from these inputs whenever total words, errors, and time are present.
+
+**Implied correct words** means total words minus errors, never below zero. All formulas below start from that value.
+
+## Plain (single-passage) assessments
+
+A **plain** scheduled assessment is one row per period (**BOY**, **MOY**, or **EOY**): one passage, one set of totals.
+
+### Accuracy
+
+**In plain words:** Take implied correct words, divide by total words, multiply by 100, and round to the **nearest whole percent**.
+
+**Formula:**
+
+```
+implied_correct = max(0, total_words − errors)
+accuracy_pct    = round((implied_correct / total_words) × 100)
+```
+
+**Example:** 100 total words, 3 errors → implied correct = 97 → accuracy = **97%**.
+
+### Fluency (WCPM)
+
+**In plain words:** Take implied correct words, divide by time in **seconds**, multiply by 60 to express a per-minute rate, and round to the **nearest whole number** (words correct per minute, often labeled **WCPM**).
+
+**Formula:**
+
+```
+implied_correct = max(0, total_words − errors)
+fluency_count   = round((implied_correct / total_time_seconds) × 60)
+```
+
+**Example:** 100 total words, 3 errors, 60 seconds → (97 ÷ 60) × 60 → **97 WCPM**.
+
+If time is missing or zero, fluency is left blank. Accuracy still calculates when total words and errors are present.
+
+## Median-based assessments (MBA)
+
+Some programs record **three passages** for the same period (aligned with DIBELS-style median scoring). In hFlow this is **median-based assessment** (MBA): three rows with **Passage 1**, **Passage 2**, and **Passage 3**, sharing one time value.
+
+There is no separate “overall” row in the database. Summaries on the gradebook, student cards, and reports show **one combined line** built from the three passages.
+
+### How the median is taken
+
+For each passage, implied correct = `total_words − errors` (not below zero).
+
+The app then takes the **middle value** when the three passage results are sorted:
+
+- **Median correct** — median of the three implied-correct counts (independent median).
+- **Median errors** — median of the three error counts (independent median).
+
+**Implied total** for display = median correct + median errors. That sum is used as the denominator for accuracy; it is not always the same as the median of the three total-word counts.
+
+### MBA accuracy
+
+**In plain words:** Divide median correct by implied total, multiply by 100, and round to the **nearest whole percent**.
+
+**Formula:**
+
+```
+median_correct = median(implied_correct₁, implied_correct₂, implied_correct₃)
+median_errors  = median(errors₁, errors₂, errors₃)
+implied_total  = median_correct + median_errors
+accuracy_pct   = round((median_correct / implied_total) × 100)
+```
+
+### MBA fluency (WCPM)
+
+**In plain words:** Divide median correct by the shared time in seconds, multiply by 60, and round to **one decimal place** on combined summaries (for example **97.3 WCPM**). Each passage row still stores its own per-passage fluency as a whole number when you save.
+
+**Formula:**
+
+```
+fluency (WCPM) = round((median_correct / total_time_seconds) × 60, 1 decimal)
+```
+
+Use the same **total_time_seconds** you entered for the assessment (typically from passage 1).
+
+## Reading tier from accuracy and fluency
+
+**Reading tier** (**Tier 1**, **Tier 2**, **Tier 3**) is not a separate formula on your scores. After accuracy and fluency are known, hFlow compares each metric to your organization’s [tier rules](/hflow/configuration/tier-rules) for that school year, grade, language, and period. The **higher tier number** (more support) from the two comparisons is the tier shown when both metrics are used.
+
+On median-based periods, tier pills on **summary** views follow the **displayed** median accuracy and median fluency. See [Tiers](/hflow/tiers) for roster behavior when multiple passages exist.
+
+## Other language metrics on the same form
+
+Scheduled assessments can also include **reading comprehension**, **listening / speech / writing** comprehension, and **ACTFL levels** (1–9). Those fields are **not** derived from total words, errors, or time.
+
+- **Grade-level overall** averages the comprehension scores you entered (reading plus any filled listening, speech, or writing domains), using only domains that have a value, then rounds to a whole level (**Below**, **Approaching**, or **At Grade**). Details are on [Assessments](/hflow/assessments).
+- **ACTFL overall (composite)** is the average of the ACTFL levels you entered (each 1–9), rounded to **one decimal**. See [ACTFL proficiency scale (overview)](/hflow/actfl-proficiency-scale).
+
+## Related pages
+
+- [Assessments](/hflow/assessments) — gradebook entry, CSV import, bulk save
+- [Tiers](/hflow/tiers) — tier codes and display
+- [Benchmarks](/hflow/configuration/benchmarks) — target accuracy and fluency on charts
