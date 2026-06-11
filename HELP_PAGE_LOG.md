@@ -4,6 +4,14 @@ Maintainers only: not published on help.hflow.pro. For each substantive change u
 
 ## Entries (newest first)
 
+### DOC-0061 — 2026-06-11 — Fix help-site wallpaper (reliable full-bleed on deploy)
+
+**Summary:** The full-bleed wallpaper kept rendering as a plain/near-empty background on the deployed site. Root cause: DOC-0058 moved the `style.css` rule from `#background-color` to `body`, but Mintlify paints an opaque full-viewport `#background-color` span (`fixed inset-0 bg-background-light dark:bg-background-dark -z-10`) over the `body`, so a `body` wallpaper is always hidden in production; meanwhile `docs.json` `background.image` only rendered Mintlify's default **top-right, natural-size** accent. Fix: paint the wallpaper onto `#background-color` (the stable full-viewport layer) with `cover`, and remove `background.image` from `docs.json` so no competing top-right accent is generated (`background.color` kept as fallback fill). Light mode uses a 30% `#FAFAFF` wash over the wallpaper so the pattern reads a notch subtler; dark mode unchanged. Verified the wallpaper assets return 200 at their root path on prod.
+
+**Files (this repo):**
+
+- changed `style.css`, `docs.json`, `HELP_PAGE_LOG.md`
+
 ### DOC-0060 — 2026-06-11 — Language metrics (reading accuracy & fluency)
 
 **Summary:** New **[Language metrics](/hflow/language-metrics)** under Assessments: plain-language and formula explanations for implied correct, accuracy, fluency (WCPM), plain vs median-based (MBA) assessments, tier linkage, and pointers to ACTFL/overall fields. Cross-link from Assessments intro.

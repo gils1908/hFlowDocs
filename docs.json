@@ -11,10 +11,6 @@
     "color": {
       "light": "#FAFAFF",
       "dark": "#0A0B1E"
-    },
-    "image": {
-      "light": "/images/brand/hflow-wallpaper-light.png",
-      "dark": "/images/brand/hflow-wallpaper-dark.png"
     }
   },
   "favicon": "/images/brand/hflow-favicon.png",

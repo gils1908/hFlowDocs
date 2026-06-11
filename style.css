@@ -1,20 +1,24 @@
-/* Full-bleed hFlow wallpaper — complements docs.json background.image (Mintlify defaults to top-right). */
-html:not(.dark) body {
-  background-color: #fafaff !important;
-  background-image: url("/images/brand/hflow-wallpaper-light.png") !important;
+/* Full-bleed hFlow wallpaper.
+   Mintlify renders a fixed, full-viewport "#background-color" span behind all
+   content (Tailwind: fixed inset-0 bg-background-light dark:bg-background-dark
+   -z-10). Painting the wallpaper onto that span gives a reliable cover image on
+   every deploy, instead of fighting the opaque overlay from a <body> rule.
+   docs.json keeps background.color as the fill/fallback; background.image is
+   intentionally omitted so Mintlify does not also add a top-right accent. */
+#background-color {
+  background-image: linear-gradient(
+      rgba(250, 250, 255, 0.3),
+      rgba(250, 250, 255, 0.3)
+    ),
+    url("/images/brand/hflow-wallpaper-light.png") !important;
   background-size: cover !important;
   background-position: center center !important;
   background-repeat: no-repeat !important;
   background-attachment: fixed !important;
 }
 
-html.dark body {
-  background-color: #0a0b1e !important;
+html.dark #background-color {
   background-image: url("/images/brand/hflow-wallpaper-dark.png") !important;
-  background-size: cover !important;
-  background-position: center center !important;
-  background-repeat: no-repeat !important;
-  background-attachment: fixed !important;
 }
 
 span[style*="hflow-wallpaper-light"],
