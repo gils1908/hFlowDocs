@@ -52,6 +52,8 @@ The student appears in the roster for that school year and grade.
    - **Successes** (includes generated `student_code`)
    - **Failures** (includes `failure_reason`)
 
+If the **wrong file** went through or the whole batch must be reversed, **owners** and **admins** can check **Configuration → CSV Imports** for undo. Undo only works when no one has added or changed data tied to that upload (for example new assessments on imported students, or a class change after the file ran). **Teachers** should contact your hFlow owner or admin immediately and avoid editing affected roster rows until they respond. See [CSV imports and undo](/hflow/configuration/csv-imports).
+
 ## CSV format rules (quick reference)
 
 Required columns:
@@ -86,4 +88,4 @@ Other constraints:
 - **“Invalid grade”**: must be between `0` and `12`
 - **Class required error**: choose a class when that grade is sectioned
 
-For the full first-time import walkthrough, see [Getting started](/hflow/getting-started).
+For the full first-time import walkthrough. See [Getting started](/hflow/getting-started).

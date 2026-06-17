@@ -5,12 +5,12 @@ description: "Creating, editing, importing, and understanding assessments in hFl
 
 This feature allows teachers and admins to record **scheduled** reading assessments (BOY, MOY, EOY), optional median-based (three-passage) entry, domain comprehension and ACTFL levels, and to use **bulk gradebook** entry or **CSV import** for a class.
 
-For how **accuracy**, **fluency (WCPM)**, and median-based scores are calculated, see [Language metrics](/hflow/language-metrics). For background on the ACTFL Proficiency Scale versus your program’s charts and forms, see [ACTFL proficiency scale (overview)](/hflow/actfl-proficiency-scale).
+For how **accuracy**, **fluency (WCPM)**, and median-based scores are calculated. See [Language metrics](/hflow/language-metrics). For background on the ACTFL Proficiency Scale versus your program’s charts and forms. See [ACTFL proficiency scale (overview)](/hflow/actfl-proficiency-scale).
 
 ## How to open the gradebook
 
 1. In the header, click **Assessments**.
-2. Choose **language**, **school year**, **grade**, and **class** using the filters at the top—or apply a [shortcut](/hflow/shortcuts) you saved on Students or a report.
+2. Choose **language**, **school year**, **grade**, and **class** using the filters at the top, or apply a [shortcut](/hflow/shortcuts) you saved on Students or a report.
 3. Use period tabs or cards to view or edit scores for BOY, MOY, and EOY.
 
 ## How to add or edit a scheduled assessment
@@ -18,7 +18,7 @@ For how **accuracy**, **fluency (WCPM)**, and median-based scores are calculated
 1. From **Students** ([student home page](/hflow/students/student-home-page)) or the **Assessments** page, choose **Add assessment** or open an existing scheduled assessment.
 2. Enter **Total words**, **Correct words**, and **Time** (seconds), or complete all three passages when **Median-based assessment** is enabled.
 3. Set **Reading comprehension** and **Reading ACTFL**, and expand **Listening**, **Speech**, and **Writing** when you need those domains.
-4. Review **Grade-level overall**: the app computes a single level (**Below**, **Approaching**, or **At Grade**) from the skill scores you entered—using only domains that have a value, then rounding the average to a whole level.
+4. Review **Grade-level overall**: the app computes a single level (**Below**, **Approaching**, or **At Grade**) from the skill scores you entered, using only domains that have a value, then rounding the average to a whole level.
 5. Turn on **Manual override** only if the stored overall must differ from that calculation. If you change **any** reading or language skill value (comprehension or ACTFL on reading, listening, speech, or writing), the override is cleared and the overall is recomputed.
 6. **ACTFL overall (composite)** is **read-only**. It is the average of the four ACTFL levels you entered (each 1–9), rounded to one decimal for storage and band mapping, with a short band label (for example `2.5 - NM` or `3 - NH` when the value is a whole number). It updates whenever any of those ACTFL fields change.
 
@@ -42,21 +42,23 @@ Bulk import is the fastest way to load many scores after your roster exists.
 4. Upload your CSV, confirm the row count, and click **Proceed**.
 5. Review successes and failures. Download **Successes** or **Failures** if you need to fix rows and re-upload.
 
-Re-uploading updates existing assessments for the same student, school year, period, and language—it does not create duplicate rows.
+Re-uploading updates existing assessments for the same student, school year, period, and language. It does not create duplicate rows.
+
+If the wrong file was imported or the entire batch must be reversed, **owners** and **admins** open **Configuration → CSV Imports** and use **Review undo**. Undo is blocked once anyone **edits** an assessment that the file created or updated, for example changing a score in the gradebook after import. **Teachers** should alert your hFlow owner or admin right away and avoid editing those scores until undo is checked. Details: [CSV imports and undo](/hflow/configuration/csv-imports).
 
 <Note>
-  Maximum **500 rows** per file. Split larger schools across multiple uploads. Median-based three-passage CSV import is not enabled—use **Bulk Entry → Use Median** in the app, or omit the `passage` column.
+  Maximum **500 rows** per file. Split larger schools across multiple uploads. Median-based three-passage CSV import is not enabled. Use **Bulk Entry → Use Median** in the app, or omit the `passage` column.
 </Note>
 
 ### Required columns (every row)
 
 - `first_name`, `last_name`, `school_year`, `grade`, `language`, `period`
 
-### Optional — student matching
+### Optional: student matching
 
 - `middle_name`, `student_code`, `tested_at`
 
-### Optional — scores (at least one score column per row)
+### Optional: scores (at least one score column per row)
 
 **Reading fluency / accuracy** (use all three together, or omit all three):
 
@@ -76,9 +78,9 @@ Re-uploading updates existing assessments for the same student, school year, per
 - If several students share the same name, include `student_code` on those rows.
 - **New** assessment → creates a row; **existing** → updates values; duplicate rows in one file → first row wins.
 
-Checkpoints are not imported—add them from the [student home page](/hflow/students/student-home-page).
+Checkpoints are not imported. Add them from the [student home page](/hflow/students/student-home-page).
 
-For a full first-time workflow, see [Getting started](/hflow/getting-started).
+For a full first-time workflow. See [Getting started](/hflow/getting-started).
 
 ## Read-only gradebook cards
 

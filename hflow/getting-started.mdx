@@ -5,7 +5,7 @@ description: "First-time setup: organization profile, languages, student roster,
 
 This guide walks school **owners and administrators** through the first login after your organization account is ready. Teachers who are invited later can skip to [Sign in](#how-to-sign-in) and [Where to go next](#where-to-go-next).
 
-When you sign in for the first time, **Students** may look empty—no roster rows, no scores. That is normal. Follow the steps below in order to add your school details, configure at least one program language, import students, then load test results.
+When you sign in for the first time, **Students** may look empty. No roster rows, no scores. That is normal. Follow the steps below in order to add your school details, configure at least one program language, import students, then load test results.
 
 ### Video walkthrough
 
@@ -28,13 +28,13 @@ When you sign in for the first time, **Students** may look empty—no roster row
 2. Enter the **email** and **password** from your invitation or setup message.
 3. Click **Sign In**.
 
-After you sign in, you usually land on **Students → View Students**. If your login is not linked to a school yet, you may see a message that your account is not associated with an organization—contact your hFlow contact or school lead; the full menu appears once linking is complete.
+After you sign in, you usually land on **Students → View Students**. If your login is not linked to a school yet, you may see a message that your account is not associated with an organization. Contact your hFlow contact or school lead; the full menu appears once linking is complete.
 
 <Note>
   **Teachers** invited after setup typically see **Students** and **Assessments** only. Menu differences are summarized in [Students: Admin vs Teacher](/hflow/students/roles-and-permissions).
 </Note>
 
-## Step 1 — Set up your organization profile
+## Step 1: Set up your organization profile
 
 1. In the header, open **Configuration**.
 2. Choose **Org Profile**.
@@ -46,7 +46,7 @@ After saving, a success message appears on the profile page. Updated contact det
 
 More detail: [Organization profile](/hflow/configuration/org-profile).
 
-## Step 2 — Add a language and review tiers
+## Step 2: Add a language and review tiers
 
 1. In the header, click **Languages**.
 2. In the **New Language** box, type your program language (for example **Hebrew**) and click **Add**.
@@ -66,19 +66,19 @@ More detail: [Languages](/hflow/languages) and [Tiers overview](/hflow/tiers).
 
 A **CSV** (comma-separated values) file is a plain text file you can open in a text editor or in spreadsheet apps such as Microsoft Excel, Google Sheets, Apple Numbers, and others. Each line is usually one row; columns are separated by commas. When you save a spreadsheet as **CSV**, use that file for **Import CSV** in hFlow.
 
-## Step 3 — Import your students
+## Step 3: Import your students
 
 1. Open **Students** → **View Students**.
 2. Click **Import CSV**.
 3. Click the **?** help control in the import panel to review required columns and rules.
 4. Prepare a spreadsheet saved as **CSV** with at least:
    - `first_name`, `last_name`, `school_year` (format `2025-2026`), `grade` (`0`–`12`, where `0` is Kindergarten)
-   - Optional: `middle_name` (helps when two students share the same first and last name), `class` (for example `5a` or `5b`—you do not create sections elsewhere; hFlow creates them from the file)
+   - Optional: `middle_name` (helps when two students share the same first and last name), `class` (for example `5a` or `5b`. You do not create sections elsewhere; hFlow creates them from the file)
 5. Upload the file, confirm the row count on the preview screen, and click **Proceed**.
 6. Review results. Successful rows appear in the summary; errors show in red with an option to download a **Failures** report. Click **Done** when finished.
 
 <Note>
-  **Example file (do not import as-is):** [Download students-upload-csv-sample.csv](https://drive.google.com/file/d/1p_8TBJ1PkXPIkVtXA1zNmPzzkK4BeJMQ/view?usp=drive_link) opens in Google Drive; use **Download** there to save the file. It shows fictitious names and columns in the format hFlow expects. **Do not load this file into your school roster**—use it only as a reference when you build your own CSV from your student data.
+  **Example file (do not import as-is):** [Download students-upload-csv-sample.csv](https://drive.google.com/file/d/1p_8TBJ1PkXPIkVtXA1zNmPzzkK4BeJMQ/view?usp=drive_link) opens in Google Drive; use **Download** there to save the file. It shows fictitious names and columns in the format hFlow expects. **Do not load this file into your school roster**, use it only as a reference when you build your own CSV from your student data.
 </Note>
 
 Imported students appear on the roster for that school year and grade. Reading and language cells stay blank until you add assessments.
@@ -89,7 +89,7 @@ Imported students appear on the roster for that school year and grade. Reading a
 
 More detail: [Add Students (Manual + CSV)](/hflow/students/add-students).
 
-## Step 4 — Import test assessments
+## Step 4: Import test assessments
 
 1. Open **Assessments** from the header.
 2. Choose **language**, **grade**, and **class** context as shown on the page.
@@ -100,16 +100,16 @@ More detail: [Add Students (Manual + CSV)](/hflow/students/add-students).
 5. Upload, confirm the count, click **Proceed**, then review successes and failures like the student import.
 
 <Note>
-  **Example file (do not import as-is):** [Download assessments-upload-csv-sample.csv](https://drive.google.com/file/d/1_GFATNrB2KCvAbLG3tBYAGSUMlIYNoon/view?usp=drive_link) opens in Google Drive; use **Download** there to save the file. It matches the sample student names and includes **Hebrew** scores for school year **2025-2026**. Import your student roster first (step 3). **Do not load this file into your school**—use it only as a reference when you build your own assessment CSV.
+  **Example file (do not import as-is):** [Download assessments-upload-csv-sample.csv](https://drive.google.com/file/d/1_GFATNrB2KCvAbLG3tBYAGSUMlIYNoon/view?usp=drive_link) opens in Google Drive; use **Download** there to save the file. It matches the sample student names and includes **Hebrew** scores for school year **2025-2026**. Import your student roster first (step 3). **Do not load this file into your school**, use it only as a reference when you build your own assessment CSV.
 </Note>
 
-Re-uploading a corrected file **updates** existing assessments for the same student, year, period, and language—it does not create duplicates.
+Re-uploading a corrected file **updates** existing assessments for the same student, year, period, and language. It does not create duplicates.
 
 <Note>
   Assessment CSV files are also capped at **500 rows** per upload. Split larger batches across multiple files.
 </Note>
 
-More detail: [Assessments — CSV import](/hflow/assessments#import-assessments-from-csv).
+More detail: [Assessments: CSV import](/hflow/assessments#import-assessments-from-csv).
 
 ## After setup
 
@@ -117,8 +117,8 @@ Your roster and gradebook should show color-coded **reading tiers** from the ban
 
 ## Where to go next
 
-- [Students overview](/hflow/students) — filters, period cells, and student home page
-- [Assessments](/hflow/assessments) — gradebook entry and CSV import
-- [Reports overview](/hflow/reports) — tier distribution, growth, and language progress
-- [Troubleshooting](/hflow/troubleshooting) — common questions
-- [Release notes](/hflow/changelog) — recent product changes
+- [Students overview](/hflow/students): filters, period cells, and student home page
+- [Assessments](/hflow/assessments): gradebook entry and CSV import
+- [Reports overview](/hflow/reports): tier distribution, growth, and language progress
+- [Troubleshooting](/hflow/troubleshooting): common questions
+- [Release notes](/hflow/changelog): recent product changes

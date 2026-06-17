@@ -1,0 +1,96 @@
+---
+title: "CSV imports and undo"
+description: "Review past student and assessment CSV uploads, download the original file, and undo a single import when nothing has changed since."
+---
+
+**CSV Imports** lets organization **owners** and **admins** see every student and assessment CSV upload for your school, download the file that was uploaded, and, when hFlow can safely reverse the batch, **undo** that one import.
+
+Undo is **not** a general “restore my data” tool. It only reverses **one specific import**: rows the file **created** are removed, and rows it **updated** are put back to how they were **immediately before** that upload. Other students, assessments, and settings are not touched.
+
+<Note>
+  **Teachers** do not see **Configuration → CSV Imports**. If you imported a file and need it reversed, contact your hFlow **owner** or **admin** right away, and avoid editing roster or assessment data tied to that upload until they have checked undo. See [Troubleshooting: Wrong CSV or need to undo](/hflow/troubleshooting#wrong-csv-import-or-need-to-undo-an-import).
+</Note>
+
+## How to open CSV Imports
+
+1. In the header, open **Configuration**.
+2. Choose **CSV Imports**.
+
+You see two tables: **Student imports** and **Assessment imports**, newest first (up to the most recent uploads hFlow keeps on this screen).
+
+## What each row shows
+
+- **Date** and **Uploaded by**: who ran the import and when.
+- **Records**: rows in the file; **Success / Failed**: how many applied versus skipped.
+- **Created / Updated**: new records versus existing records changed by the file.
+- **Status**: import result, or **Undone** with date and summary after a successful undo.
+- **File**: download icon for the original CSV (when hFlow still has a copy).
+- **Actions**: **Review undo** when undo is still available.
+
+## When an import **can** be undone
+
+Undo is offered only when **all** of the following are true:
+
+1. The import **finished successfully** with at least one successful row.
+2. hFlow recorded a **change journal** for that upload (imports from before this feature shipped show as unavailable).
+3. The import has **not** already been undone.
+4. **Nothing tied to that batch has changed since the import**: see examples below.
+
+When you click **Review undo**, hFlow runs a safety check first. If undo is allowed, you see exactly what will be removed and what will be restored before you confirm.
+
+### When undo works
+
+| Situation | Why undo is allowed |
+|-----------|---------------------|
+| You imported **new** assessment scores and no one has opened or edited those rows since | Created assessments still match what the CSV wrote. |
+| You imported assessments that **updated** existing BOY/MOY/EOY rows and scores are unchanged | Updated rows still match the import snapshot. |
+| You imported students that **only created** new roster rows and no one added assessments, goals, or accommodations for those enrollments | No post-import data on those enrollments. |
+| You imported a student file that **only changed class/section** assignments and those assignments were not edited again | Enrollment class values still match the import. |
+
+### When undo is blocked
+
+| Situation | What usually blocks undo |
+|-----------|--------------------------|
+| You imported assessments, then a teacher **edited one score** in the gradebook or on a student’s home page | That assessment was changed after the import. |
+| You imported assessments, then someone **deleted** one of the imported rows | A created assessment no longer exists as imported. |
+| You imported **new students**, then entered **assessments** (or goals/accommodations) for them | New enrollments now have data outside the import batch. |
+| You imported students and someone **enrolled the same student in another year** outside that file | The student has enrollments outside this batch. |
+| You imported a file that **updated class**, then moved a student to a **different section** in the app | Class assignment was changed after the import. |
+| You imported a file that **updated external student ID**, then changed that ID again | External ID no longer matches the import snapshot. |
+| The upload **failed** or every row **failed** | Nothing successful to reverse, or no journal. |
+| The import is **older than the undo feature** | No change journal (status unavailable). |
+| Someone already **undid** this import | Undo can only run once per upload. |
+
+Undo works best **soon after** the import, before staff add or edit related roster or assessment data.
+
+## How to undo an import
+
+1. On **CSV Imports**, find the row and click **Review undo**.
+2. Wait while hFlow checks whether undo is still safe.
+3. If undo is **not** available, read the listed reasons and close the dialog. You may need to fix data manually or re-import a corrected file.
+4. If undo **is** available, read the summary (what will be deleted and restored).
+5. Click **Undo import** to confirm.
+
+After undo completes, the row shows **Undone** with a short summary. The action is **permanent**. hFlow does not offer “undo the undo.” To get the data back, import the CSV again (or a corrected file).
+
+For **assessment** undo, tier placement may **recalculate** for affected students after scores are removed or restored.
+
+## Download the original CSV
+
+Click the **download** icon on a row to open the CSV that was uploaded for that import (when storage is still available). Use this to compare what was sent, fix rows offline, or re-import after an undo.
+
+## Admin vs teacher
+
+| Role | CSV Imports screen | Undo |
+|------|-------------------|------|
+| **Owner** | Yes | Yes |
+| **Admin** | Yes | Yes |
+| **Teacher** | No | No. Ask owner or admin; do not edit affected data while waiting |
+
+Teachers can still run **Import CSV** from **Students** or **Assessments**. The results screen reminds you to contact an owner or admin if the whole batch needs to be reversed.
+
+## Related guides
+
+- [Add Students (Manual + CSV)](/hflow/students/add-students)
+- [Assessments: Import from CSV](/hflow/assessments#import-assessments-from-csv)
+- [Data exports](/hflow/configuration/data-exports): periodic ZIP backups of org data (not the same as undoing one CSV)

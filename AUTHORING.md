@@ -1,4 +1,4 @@
-# Authoring standards — hFlow Help (help.hflow.pro)
+# Authoring standards for hFlow Help (help.hflow.pro)
 
 **Mandatory for every edit:** Any time you add or change published help (`hflow/**/*.mdx`, `index.mdx`), follow this document end-to-end before you ship. The Gilat Cursor rule **[Help Page Implications](https://github.com/gils1908/Gilat/blob/main/.cursor/rules/help-pages-implications.mdc)** (always on for agents) points here.
 
@@ -14,7 +14,7 @@ This site targets **school staff** (teachers, coordinators, admins). Write in pl
 
 Do not link staff to bare `hflow.pro` for the app or help.
 
-Maintainership (clone, Mintlify CLI, Git) lives in **`CONTRIBUTING.md`** and **`README.md`** — those documents are **not** linked from the public sidebar.
+Maintainership (clone, Mintlify CLI, Git) lives in **`CONTRIBUTING.md`** and **`README.md`**: those documents are **not** linked from the public sidebar.
 
 ---
 
@@ -26,12 +26,13 @@ Write as if explaining to a colleague at school: concrete steps, real control na
 
 ## Voice and phrasing (required)
 
-Avoid **training-manual scaffolding** readers trip over—especially labels that fence off “what happens” from the instructions.
+Avoid **training-manual scaffolding** readers trip over, especially labels that fence off “what happens” from the instructions.
 
 ### Do **not** use
 
 - Bold or heading lines such as **Expected outcome**, **Expected result**, **Expected results**, **You should expect**, etc.
 - The same phrases in prose if they feel like checklist boilerplate (**“The expected outcome is…”**).
+- **Em dashes** (the long `—` character, Unicode U+2014). Do not use them in titles, descriptions, body copy, or link text.
 
 ### Use instead
 
@@ -42,8 +43,11 @@ State **what happens next** in normal sentences immediately after steps (or weav
 | **Expected outcome:** You land on Students. | After you sign in, you usually arrive on **Students** (your home page). |
 | **Expected outcome:** Row appears in list. | A new row appears in the exports table with status queued, then processing, then complete. |
 | Expected result: student shows on roster. | The student appears in the roster for that school year and grade. |
+| Import failed, **no rows applied** — contact support. | Import failed and **no rows applied**. Contact support. |
+| **Step 1 — Set up profile** | **Step 1: Set up profile** |
+| [Assessments — CSV import](/hflow/assessments) | [Assessments: CSV import](/hflow/assessments) |
 
-Prefer **natural time order**—“After saving…”, “When the file finishes…” , “Once you confirm…”—rather than detached “outcome” bullets.
+Prefer **natural time order**, “After saving…”, “When the file finishes…” , “Once you confirm…”, rather than detached “outcome” bullets.
 
 (This pattern is summarized in **Structure § What happens next** below; both sections apply together.)
 
@@ -64,23 +68,23 @@ description: "One line: what someone can accomplish on this page."
 
 ## Structure
 
-1. **Opening paragraph** — Who this is for and what the feature lets them do.
-2. **Demo data notice** — Use the existing blockquotes where realistic student/org examples appear (see student pages).
-3. **Body** — Task-oriented **`## How to …`** sections with numbered steps.
-4. **What happens next** — After each procedure, describe on-screen changes in **plain prose** (see **Voice and phrasing** above). No “expected outcome” style headings or labels.
-5. **Admin vs teacher** — When behavior differs, use a `<Note>` or a short **`## Admin vs teacher`** subsection.
-6. **Reference** — Include screenshots where they help (`## Reference`). Use neutral captions. Do **not** publish sections whose only purpose is to list missing assets (track gaps in **Open doc backlog** in `HELP_PAGE_LOG.md`).
+1. **Opening paragraph**: Who this is for and what the feature lets them do.
+2. **Demo data notice**: Use the existing blockquotes where realistic student/org examples appear (see student pages).
+3. **Body**: Task-oriented **`## How to …`** sections with numbered steps.
+4. **What happens next**: After each procedure, describe on-screen changes in **plain prose** (see **Voice and phrasing** above). No “expected outcome” style headings or labels.
+5. **Admin vs teacher**: When behavior differs, use a `<Note>` or a short **`## Admin vs teacher`** subsection.
+6. **Reference**: Include screenshots where they help (`## Reference`). Use neutral captions. Do **not** publish sections whose only purpose is to list missing assets (track gaps in **Open doc backlog** in `HELP_PAGE_LOG.md`).
 
 ---
 
 ## Screenshots and brand assets
 
 - **Logos:** Official artwork lives in **`images/brand/`**. The site header uses **`docs.json`** `logo.light` / `logo.dark` on every page. **In-page** lockups belong only on the Welcome page (`index.mdx`); do not add brand images to other MDX pages. Source files in the Gilat app repo **`Assets/hFlow Logos/`**:
-  - **Light UI (Mintlify light mode):** flat lockup with a **dark** wordmark (`D_lockup_flat/hFlow-lockup-512.png` → `hflow-lockup.png`) and flat chart for favicon (`Light/chart-only-flat-256.png` → `hflow-favicon.png`). Do **not** use `Light/lockup-flat-*` for the help site — those files use a white wordmark meant for dark backgrounds.
+  - **Light UI (Mintlify light mode):** flat lockup with a **dark** wordmark (`D_lockup_flat/hFlow-lockup-512.png` → `hflow-lockup.png`) and flat chart for favicon (`Light/chart-only-flat-256.png` → `hflow-favicon.png`). Do **not** use `Light/lockup-flat-*` for the help site; those files use a white wordmark meant for dark backgrounds.
   - **Dark UI:** framed lockup (`Dark/lockup-framed-flat-h512.png` → `hflow-lockup-dark.png`). Strip the full-width navy card from dark lockup exports before publishing (keep frame stroke, dots, and wordmark); fit on a **1548×512** transparent canvas (same as light navbar lockup).
   - Regenerate published PNGs with `python3 hFlowDocs/scripts/export-brand-assets.py` from the Gilat workspace root (requires Pillow).
   - On `index.mdx` only, pair light and dark lockups: `block dark:hidden` / `hidden dark:block` at the same `maxWidth` (see `index.mdx`).
-- **Videos:** Store MP4 files under **`videos/`** with kebab-case names. Use H.264 + AAC, **`movflags +faststart`**, and keep files roughly under ~25 MB when possible. Embed with `<video controls playsInline>` and `<source type="video/mp4">` (avoid wrapping in `<Frame>`—it can block playback). Path `/videos/…` from site root. **Commit and push** the MP4 in `hFlowDocs` or the file 404s on help.hflow.pro.
+- **Videos:** Store MP4 files under **`videos/`** with kebab-case names. Use H.264 + AAC, **`movflags +faststart`**, and keep files roughly under ~25 MB when possible. Embed with `<video controls playsInline>` and `<source type="video/mp4">` (avoid wrapping in `<Frame>`, it can block playback). Path `/videos/…` from site root. **Commit and push** the MP4 in `hFlowDocs` or the file 404s on help.hflow.pro.
 - **Product screenshots:** Store under **`images/<area>/`** (e.g. `images/students/`).
 - Reference in MDX with stable paths such as `/images/students/example.png` or `/images/brand/hflow-lockup.png`.
 - Refresh images when UI copy or layout materially changes.
@@ -95,6 +99,7 @@ Adding or renaming `.mdx` files requires updating **`docs.json`**. Prefer nested
 
 ## After substantive edits
 
+- Run **`./scripts/check-published-mdx-style.sh`** from this repo root (blocks em dashes in `hflow/**/*.mdx` and `index.mdx`).
 - Append a **`DOC-nnnn`** entry to **`HELP_PAGE_LOG.md`** (date, summary, files list).
 - For user-visible releases, consider a bullet in **`hflow/changelog.mdx`**.
 

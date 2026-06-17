@@ -25,7 +25,7 @@ Those tools are for **owners** and **admins**. Teachers see a slimmer menu focus
 
 ### Why is my student list empty?
 
-A new school account starts with no students. Import a CSV or add students manually—see [Getting started](/hflow/getting-started) and [Add Students](/hflow/students/add-students).
+A new school account starts with no students. Import a CSV or add students manually. See [Getting started](/hflow/getting-started) and [Add Students](/hflow/students/add-students).
 
 ### Why do I not see a student I expect?
 
@@ -38,12 +38,36 @@ Open the **Failures** download from the import results. Common causes:
 - Missing required columns (`first_name`, `last_name`, `school_year`, `grade` for students)
 - Invalid `school_year` format (must be `YYYY-YYYY` with the second year equal to the first plus one)
 - Invalid `grade` (integer `0`–`12`)
-- More than **500 rows** in one file—split the file and import again
+- More than **500 rows** in one file, split the file and import again
 - Duplicate `external_student_id` when that column is used
+
+### Wrong CSV import or need to undo an import
+
+hFlow can sometimes **reverse one entire CSV upload** (student or assessment), but only while the imported data is still untouched. Undo is **not** available to teachers from the import screen.
+
+#### If you are a teacher or coordinator
+
+1. **Stop editing** roster or assessment data that came from that file, especially scores, class assignments, and new students from the upload.
+2. Note **when** you imported and whether it was **Students** or **Assessments**.
+3. Contact your hFlow **owner** or **admin** and ask them to check **Configuration → CSV Imports** as soon as possible.
+4. If you already changed a score or moved a student to another class, tell them exactly what you changed. Those edits often block undo.
+
+The import results screen also reminds you that only an owner or admin can undo from **CSV Imports**.
+
+#### If you are an owner or admin
+
+1. Open **Configuration → CSV Imports**.
+2. Find the upload (student or assessment table) and click **Review undo**.
+3. Read hFlow’s safety check. If undo is blocked, the dialog lists why. For example an assessment was edited after import, or new assessments were added for students the file created.
+4. If undo is allowed, confirm only after you understand what will be deleted and restored. Undo is **permanent**; to get data back you re-import the file (or a corrected CSV).
+
+Full rules and examples: [CSV imports and undo](/hflow/configuration/csv-imports).
+
+**Common blockers:** editing an imported assessment in the gradebook; adding assessments for newly imported students; changing a student’s class after a roster CSV updated sections; imports from before the undo feature (no journal).
 
 ### Class or section errors on import
 
-If a grade uses sections, provide a `class` value for each row. If the grade has no sections, leave `class` blank. Typing `5a` or `5b` in the CSV creates those sections automatically—you do not set them up elsewhere first.
+If a grade uses sections, provide a `class` value for each row. If the grade has no sections, leave `class` blank. Typing `5a` or `5b` in the CSV creates those sections automatically. You do not set them up elsewhere first.
 
 ## Assessments and tiers
 
@@ -55,7 +79,7 @@ Tiers follow the bands on **Languages** for that language, grade, period, and sc
 
 Match student **names** exactly to the roster file for the same `school_year` and `grade`. Include `language` and `period` on every row. Each row needs at least one score column. If two students share a name, add `student_code`.
 
-### I uploaded the same file again—will it duplicate?
+### I uploaded the same file again. Will it duplicate?
 
 No. Student import updates class assignment when the student is already enrolled for that year and grade. Assessment import **updates** existing BOY/MOY/EOY rows for the same student and language.
 

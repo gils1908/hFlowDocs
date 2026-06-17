@@ -108,6 +108,7 @@
               "hflow/configuration/email-templates",
               "hflow/configuration/staff",
               "hflow/configuration/data-exports",
+              "hflow/configuration/csv-imports",
               "hflow/configuration/tier-rules"
             ]
           },

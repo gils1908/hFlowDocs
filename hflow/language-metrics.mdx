@@ -3,7 +3,7 @@ title: "Language metrics"
 description: "How hFlow calculates reading accuracy, fluency (WCPM), and median-based assessment scores."
 ---
 
-This page explains the **reading numbers** hFlow shows on scheduled assessments—what you enter, what the app calculates, and how **plain** (single-passage) entry differs from **median-based** (three-passage) entry. For saving scores in the gradebook, see [Assessments](/hflow/assessments). For how tiers use these metrics, see [Tiers](/hflow/tiers).
+This page explains the **reading numbers** hFlow shows on scheduled assessments, what you enter, what the app calculates, and how **plain** (single-passage) entry differs from **median-based** (three-passage) entry. For saving scores in the gradebook. See [Assessments](/hflow/assessments). For how tiers use these metrics. See [Tiers](/hflow/tiers).
 
 ## What you enter
 
@@ -15,7 +15,7 @@ For reading fluency screenings you record:
 | **Errors** | Miscues during the read (substitutions, omissions, etc.). |
 | **Time (seconds)** | How long the student read. On median-based entry, one time is shared across all three passages. |
 
-hFlow does **not** ask you to type accuracy or fluency directly—it derives them from these inputs whenever total words, errors, and time are present.
+hFlow does **not** ask you to type accuracy or fluency directly, it derives them from these inputs whenever total words, errors, and time are present.
 
 **Implied correct words** means total words minus errors, never below zero. All formulas below start from that value.
 
@@ -63,8 +63,8 @@ For each passage, implied correct = `total_words − errors` (not below zero).
 
 The app then takes the **middle value** when the three passage results are sorted:
 
-- **Median correct** — median of the three implied-correct counts (independent median).
-- **Median errors** — median of the three error counts (independent median).
+- **Median correct**: median of the three implied-correct counts (independent median).
+- **Median errors**: median of the three error counts (independent median).
 
 **Implied total** for display = median correct + median errors. That sum is used as the denominator for accuracy; it is not always the same as the median of the three total-word counts.
 
@@ -108,6 +108,6 @@ Scheduled assessments can also include **reading comprehension**, **listening / 
 
 ## Related pages
 
-- [Assessments](/hflow/assessments) — gradebook entry, CSV import, bulk save
-- [Tiers](/hflow/tiers) — tier codes and display
-- [Benchmarks](/hflow/configuration/benchmarks) — target accuracy and fluency on charts
+- [Assessments](/hflow/assessments): gradebook entry, CSV import, bulk save
+- [Tiers](/hflow/tiers): tier codes and display
+- [Benchmarks](/hflow/configuration/benchmarks): target accuracy and fluency on charts

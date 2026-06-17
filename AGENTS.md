@@ -9,7 +9,7 @@
 - This is a documentation site built on [Mintlify](https://mintlify.com)
 - Pages are MDX files with YAML frontmatter
 - Configuration lives in `docs.json`
-- School-facing standards: **[AUTHORING.md](AUTHORING.md)** — read **before every published-page edit**, especially **Voice and phrasing**.
+- School-facing standards: **[AUTHORING.md](AUTHORING.md)**: read **before every published-page edit**, especially **Voice and phrasing** (no em dashes, no **Expected outcome** labels).
 - Run `mint dev` to preview locally (maintainers)
 - Run `mint broken-links` to check links
 
@@ -20,13 +20,12 @@
 
 ## Style preferences
 
-{/* Add any project-specific style rules below */}
-
 - Use active voice and second person ("you")
-- Keep sentences concise — one idea per sentence
+- Keep sentences concise, one idea per sentence
 - Use sentence case for headings
 - Bold for UI elements: Click **Settings**
 - Code formatting for file names, commands, paths, and code references
+- **No em dashes** in published `hflow/**/*.mdx` or `index.mdx` (use commas, colons, periods, or parentheses). Run `./scripts/check-published-mdx-style.sh` before commit.
 
 ## Content boundaries
 
