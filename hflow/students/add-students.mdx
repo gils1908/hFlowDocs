@@ -79,6 +79,8 @@ Other constraints:
 
 - If class is provided and does not exist, class is created automatically
 - If student is already enrolled for same year+grade, row updates class assignment
+- Two students with the same first and last name in the same school year but **different grades** import as separate records
+- When two different students share the same name in the **same grade and year**, use `middle_name` or `external_student_id` to distinguish them
 - Duplicate `external_student_id` values are rejected
 
 ## Troubleshooting
@@ -87,5 +89,6 @@ Other constraints:
 - **“Invalid year format”**: must be `YYYY-YYYY` and second year = first + 1
 - **“Invalid grade”**: must be between `0` and `12`
 - **Class required error**: choose a class when that grade is sectioned
+- **“Multiple students match this name”**: add `external_student_id` or a distinct `middle_name`
 
 For the full first-time import walkthrough. See [Getting started](/hflow/getting-started).

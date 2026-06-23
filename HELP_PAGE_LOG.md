@@ -4,6 +4,14 @@ Maintainers only: not published on help.hflow.pro. For each substantive change u
 
 ## Entries (newest first)
 
+### DOC-0064 (2026-06-23): Same-name students across grades (H-223)
+
+**Summary:** **Add students** CSV section documents that two students with the same first and last name in the same school year but different grades import as separate records, and that `middle_name` or `external_student_id` is needed when they share the same grade and year.
+
+**Files (this repo):**
+
+- changed `hflow/students/add-students.mdx`, `HELP_PAGE_LOG.md`
+
 ### DOC-0063 (2026-06-16): Remove em dashes from published help
 
 **Summary:** Replaced em dashes across all published `*.mdx` help pages (28 files) with commas, colons, or periods as appropriate. Updated **AUTHORING.md** to prohibit em dashes in staff-facing copy. Maintainer README/CONTRIBUTING/AGENTS cleaned for consistency.
