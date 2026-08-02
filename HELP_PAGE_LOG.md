@@ -4,6 +4,22 @@ Maintainers only: not published on help.hflow.pro. For each substantive change u
 
 ## Entries (newest first)
 
+### DOC-0067 (2026-08-02): Enrollment Enroll label, same-year section create, H-135 guidance
+
+**Summary:** **Student enrollment (bulk)** documents Enroll vs Bulk Enroll by selection count; same-year moves and creating an additional section when sections already exist; first whole-grade split via CSV; and that same-year class changes must include every classmate who still has no class.
+
+**Files (this repo):**
+
+- changed `hflow/students/student-enrollment.mdx`, `HELP_PAGE_LOG.md`
+
+### DOC-0066 (2026-08-02): Class filter follows selected school year
+
+**Summary:** **Students** and **Student enrollment (bulk)** note that the **Class** filter lists only sections with students in the selected school year (not leftover sections from another year that share the same grade).
+
+**Files (this repo):**
+
+- changed `hflow/students.mdx`, `hflow/students/student-enrollment.mdx`, `HELP_PAGE_LOG.md`
+
 ### DOC-0065 (2026-08-02): Student enrollment bulk help
 
 **Summary:** New **[Student enrollment (bulk)](/hflow/students/student-enrollment)** documents current Bulk Enroll mental model (one target year and one target class per run), steps, and examples (advance one section, remix into two classes, same-year reassignment, fix missing class after CSV). Cross-link from **Add students**. Nav entry under Students. App `?` for `/students/enrollment` should map to this page (Gilat help route).
