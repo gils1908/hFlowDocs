@@ -4,6 +4,15 @@ Maintainers only: not published on help.hflow.pro. For each substantive change u
 
 ## Entries (newest first)
 
+### DOC-0065 (2026-08-02): Student enrollment bulk help
+
+**Summary:** New **[Student enrollment (bulk)](/hflow/students/student-enrollment)** documents current Bulk Enroll mental model (one target year and one target class per run), steps, and examples (advance one section, remix into two classes, same-year reassignment, fix missing class after CSV). Cross-link from **Add students**. Nav entry under Students. App `?` for `/students/enrollment` should map to this page (Gilat help route).
+
+**Files (this repo):**
+
+- added `hflow/students/student-enrollment.mdx`
+- changed `docs.json`, `hflow/students/add-students.mdx`, `hflow/changelog.mdx`, `HELP_PAGE_LOG.md`
+
 ### DOC-0064 (2026-06-23): Same-name students across grades (H-223)
 
 **Summary:** **Add students** CSV section documents that two students with the same first and last name in the same school year but different grades import as separate records, and that `middle_name` or `external_student_id` is needed when they share the same grade and year.
