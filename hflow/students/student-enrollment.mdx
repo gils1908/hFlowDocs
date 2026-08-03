@@ -1,9 +1,11 @@
 ---
 title: "Student enrollment (bulk)"
-description: "Advance or reassign students by school year and class from Students → Enrollment."
+description: "Advance students into a future school year and class from Students → Enrollment."
 ---
 
-This feature allows admins to enroll selected students into a **target** school year, grade, and class from **Students → Enrollment**, or to move students between classes in the same year.
+This feature allows admins to enroll selected students into a **future** school year, grade, and class from **Students → Enrollment**.
+
+To move students between classes in the **same** school year, use **[Classes](/hflow/students/classes)** instead.
 
 > **Demo data notice**
 > Any names, student records, IDs, and examples shown in this documentation section are fictitious sample data for demonstration and training purposes only. Any resemblance to real persons, schools, or records is purely coincidental.
@@ -14,14 +16,11 @@ The button label is **Enroll** when one student is selected, and **Bulk Enroll**
 
 - Select everyone who should land in the **same** target year and class, then run Enroll / Bulk Enroll once.
 - To place students into different classes (for example some into `3a` and some into `3b`), run the action once per target class.
-- Source class does not have to match. Students can come from different current classes as long as they share the filters below.
+- Target year options are the **next** year and **two years ahead** from the **Current year** filter. Same-year class moves are not offered here.
 
-If the target grade has no class sections yet:
+If the target grade has no class sections yet, you can enroll without a class, or create the first section in the modal when offered.
 
-- For a **later** school year, you can enroll without a class, or create the first section in the modal when offered.
-- For the **same** school year, creating the first sections for a whole grade is done with Students → Import CSV (optional class column), not from this modal.
-
-When the grade already has sections, you can choose an existing section or **Create new section** and move selected students into it. Other students keep their current class.
+When the grade already has sections, choose an existing section or **Create new section**.
 
 ## Before you start
 
@@ -34,9 +33,7 @@ When the grade already has sections, you can choose an existing section or **Cre
 
 1. On **Enrollment**, select the students who should share the same target year and class.
 2. Click **Enroll** (one student) or **Bulk Enroll** (more than one).
-3. Choose the **target school year**:
-   - A **later year** creates a new enrollment for the next grade path (for example grade 2 in `2024-2025` advancing into `2025-2026`).
-   - The **same year** moves selected students to another class section. Grade stays the same.
+3. Choose the **target school year** (next year or two years ahead).
 4. Choose the **target class** when the target grade has sections. You can create an additional section in the modal when the grade already has at least one section.
 5. Click **Next**, review the summary (including any students who will be skipped), then **Confirm**.
 
@@ -64,40 +61,7 @@ You want a mixed group from `2a` and `2b` to become `3a`, and the remaining stud
 4. Clear the selection, then select everyone who should go to `3b`.
 5. **Bulk Enroll** again → same target year → class `3b` → confirm.
 
-### Reassign class in the same school year
+## Related
 
-Some grade 4 students in `2024-2025` should move from `4a` into `4b` without changing school year.
-
-1. Filter to that year and grade, then select those students.
-2. **Bulk Enroll** → target year **`2024-2025`** (same year) → class `4b` → confirm.
-
-Their grade and school year stay the same; only class changes. If you need a new section (for example `4c`), choose **Create new section** in the modal when the grade already has sections, then confirm.
-
-### Fix students missing a class after CSV import
-
-A CSV left some grade 4 students in `2024-2025` without a class, and the grade already has sections.
-
-1. On **Enrollment**, filter to that year and grade. Find students with no class (for example leave **Class** as **All classes** and scan the **Class** column).
-2. Select **all** students in that grade and year who still have no class (and anyone else you are assigning in this run).
-3. **Bulk Enroll** → target year the **same** year → choose the correct class → confirm.
-
-When the target grade has sections, a class is required. Same-year class changes cannot leave other students in that grade without a section. Include every classmate who still has no class, or assign classes for the whole grade with CSV.
-
-## Bulk Enroll vs CSV
-
-| Use Enroll / Bulk Enroll when… | Use CSV when… |
-|---|---|
-| You are choosing students interactively on **Enrollment** | You need many different target classes in one file |
-| You are advancing or reassigning a selected group to **one** target class | You are importing or updating large batches at once |
-| The grade already has sections and you are moving students (or adding another section) | You are creating the **first** class sections for a grade in the current year |
-
-To add new students or update many rows at once, see [Add students (manual + CSV)](/hflow/students/add-students). For undo of a CSV upload, see [CSV imports and undo](/hflow/configuration/csv-imports).
-
-## Common issues
-
-- **Enroll / Bulk Enroll is disabled:** Select exactly one **Grade**, then select at least one student.
-- **Some students were skipped:** They already have an enrollment for the target school year. Review them individually or pick a different target year.
-- **A class is required:** The target grade already has sections. Choose or create a class before confirming.
-- **Cannot leave classmates without a class:** For same-year class assignment, include every student in that grade and year who still has no class, or use CSV for the whole grade.
-- **Cannot create the first section for this year:** When the grade has no sections yet, use Students → Import CSV to assign the first classes. After sections exist, you can create an additional section and move students from Enrollment.
-- **Wrong students in the list:** Check **Current year**, **Grade**, and **Class** filters. Changing filters clears the current selection.
+- **[Classes](/hflow/students/classes)** for same-year class assignment
+- **[Add students](/hflow/students/add-students)** for CSV import (including class changes)

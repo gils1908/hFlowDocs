@@ -61,6 +61,7 @@
               "hflow/students/roles-and-permissions",
               "hflow/students/add-students",
               "hflow/students/student-enrollment",
+              "hflow/students/classes",
               "hflow/students/delete-student",
               "hflow/students/groups",
               "hflow/students/student-progress-charts",

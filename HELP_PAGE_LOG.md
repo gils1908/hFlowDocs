@@ -4,6 +4,23 @@ Maintainers only: not published on help.hflow.pro. For each substantive change u
 
 ## Entries (newest first)
 
+### DOC-0069 (2026-08-03): Class names unique school-wide on Classes board
+
+**Summary:** **[Classes](/hflow/students/classes)** notes that classes belong to the selected school year (no automatic carry-over). Within a year, names are unique across the school (case-insensitive). Duplicate names keep the add-class draft open so you can edit the name in place. The same name may be reused in a different school year.
+
+**Files (this repo):**
+
+- changed `hflow/students/classes.mdx`, `HELP_PAGE_LOG.md`
+
+### DOC-0068 (2026-08-03): Classes board and enrollment year-advance only
+
+**Summary:** New **[Classes](/hflow/students/classes)** page for same-year class assignment (admins/owners). **Student enrollment (bulk)** no longer documents same-year class moves; points to Classes. Export/import round-trip noted on Add students path via app import help.
+
+**Files (this repo):**
+
+- added `hflow/students/classes.mdx`
+- changed `hflow/students/student-enrollment.mdx`, `hflow/students/add-students.mdx`, `docs.json`, `HELP_PAGE_LOG.md`
+
 ### DOC-0067 (2026-08-02): Enrollment Enroll label, same-year section create, H-135 guidance
 
 **Summary:** **Student enrollment (bulk)** documents Enroll vs Bulk Enroll by selection count; same-year moves and creating an additional section when sections already exist; first whole-grade split via CSV; and that same-year class changes must include every classmate who still has no class.
