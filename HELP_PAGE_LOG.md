@@ -4,6 +4,46 @@ Maintainers only: not published on help.hflow.pro. For each substantive change u
 
 ## Entries (newest first)
 
+### DOC-0074 (2026-08-06): Bulk enroll review summary plain language
+
+**Summary:** **[Student enrollment (bulk)](/hflow/students/student-enrollment)** review step describes how many students will enroll, target year/grade, and class choice in plain language (including **Assign a class later**).
+
+**Files (this repo):**
+
+- changed `hflow/students/student-enrollment.mdx`, `HELP_PAGE_LOG.md`
+
+### DOC-0073 (2026-08-06): Class terminology (not section)
+
+**Summary:** User-facing copy uses **class** consistently (not section) on enrollment fields, import help, staff assignment labels, and student help pages. Create action is **Create new class**; empty choice remains **Assign a class later**.
+
+**Files (this repo):**
+
+- changed `hflow/students/student-enrollment.mdx`, `hflow/students/add-students.mdx`, `hflow/students/candidate-students.mdx`, `hflow/students/classes.mdx`, `hflow/students.mdx`, `hflow/troubleshooting.mdx`, `hflow/getting-started.mdx`, `hflow/configuration/csv-imports.mdx`, `HELP_PAGE_LOG.md`
+
+### DOC-0072 (2026-08-06): Enrollment class optional (Assign a class later)
+
+**Summary:** Class selection on enroll is optional across **[Student enrollment (bulk)](/hflow/students/student-enrollment)**, **[Add students](/hflow/students/add-students)**, and **[Candidate students](/hflow/students/candidate-students)**. Options list classes for the **target** school year and grade only; users can pick a class, create one, or choose **Assign a class later** (Unassigned on Classes).
+
+**Files (this repo):**
+
+- changed `hflow/students/student-enrollment.mdx`, `hflow/students/add-students.mdx`, `hflow/students/candidate-students.mdx`, `HELP_PAGE_LOG.md`
+
+### DOC-0071 (2026-08-06): Unenroll latest year + re-enroll matching on Add Student
+
+**Summary:** **[Unenroll a student from the latest year](/hflow/students/delete-student)** rewritten: replaces whole-student "Remove from roster" with unenrolling only the student's most recent enrollment year (earlier years and the student record stay intact; assessments hidden, not deleted). **[Student enrollment (bulk)](/hflow/students/student-enrollment)** now calls out the **Select all** checkbox and the pencil "Manage enrollment" icon, and links to the unenroll page. **[Add students](/hflow/students/add-students)** documents the new existing-student match step on manual add (re-enroll vs create new, including the ambiguous pick-list); CSV import behavior is unchanged.
+
+**Files (this repo):**
+
+- changed `hflow/students/delete-student.mdx`, `hflow/students/student-enrollment.mdx`, `hflow/students/add-students.mdx`, `HELP_PAGE_LOG.md`
+
+### DOC-0070 (2026-08-06): Candidate assessment Pre-K
+
+**Summary:** **[Candidate students](/hflow/students/candidate-students)** notes that assessment grade can be **Pre-K** (one year before Kindergarten). Planned enrollment grade remains Kindergarten through 12th grade.
+
+**Files (this repo):**
+
+- changed `hflow/students/candidate-students.mdx`, `HELP_PAGE_LOG.md`
+
 ### DOC-0069 (2026-08-03): Class names unique school-wide on Classes board
 
 **Summary:** **[Classes](/hflow/students/classes)** notes that classes belong to the selected school year (no automatic carry-over). Within a year, names are unique across the school (case-insensitive). Duplicate names keep the add-class draft open so you can edit the name in place. The same name may be reused in a different school year.

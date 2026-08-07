@@ -1,28 +1,29 @@
 ---
-title: "Enrollment: remove from roster"
-description: "Remove a student from the active roster through Enrollment."
+title: "Unenroll a student from the latest year"
+description: "Unenroll a student from their most recent school year through Enrollment."
 ---
 
-This feature allows admins to remove a student from the active roster when the student should no longer appear in day-to-day workflows.
+This feature allows admins to unenroll a student from their most recent (latest) school year when that student should no longer appear in day-to-day workflows for that year, without deleting the student's record or their history from earlier years.
 
 > **Demo data notice**
 > Any names, student records, IDs, and examples shown in this documentation section are fictitious sample data for demonstration and training purposes only. Any resemblance to real persons, schools, or records is purely coincidental.
 
 ## Important before you start
 
-- Student removal happens from **Enrollment** (choose **Enrollment** under **Students** in the header, not from icons on the main roster grid).
-- Confirmation states this action cannot be undone in-app.
-- Enrollment and assessment history are hidden after removal.
+- Unenrolling happens from **Enrollment** (choose **Enrollment** under **Students** in the header), not from icons on the main roster grid.
+- Only the student's **latest** enrollment year is affected. Earlier years are never touched by this action.
+- Assessments recorded for the unenrolled year are hidden, not deleted. They come back automatically if the student is re-enrolled into that same year.
+- If the year you unenroll from was the student's **only** enrollment, the student stops appearing in rosters, classes, and reports until someone re-enrolls them (see [Add students](/hflow/students/add-students)).
 
-## How to remove a student
+## How to unenroll a student from their latest year
 
 1. Open **Students** → **Enrollment** from the header.
-2. Find the student and open enrollment details.
-3. Click **Remove student from roster**.
-4. Review warning dialog.
-5. Click **Remove student** to confirm.
+2. Find the student and click the pencil icon (**Manage enrollment**), or click the student's name.
+3. Click **Unenroll from {year}**, where `{year}` is the student's latest enrollment year.
+4. Review the confirmation, which explains whether earlier years stay active or the student will disappear from year-scoped screens until re-enrolled.
+5. Click **Unenroll** to confirm.
 
-The student disappears from active student listings.
+After you confirm, that year no longer appears in the student's enrollment history, and the student drops out of rosters, classes, and reports for that year.
 
 ## Who can do this
 
@@ -30,5 +31,5 @@ The student disappears from active student listings.
 
 ## Common issues
 
-- **Button disabled**: finish or cancel any in-progress enrollment edit first.
-- **Remove failed**: retry and check if there are backend permission or data constraints.
+- **Unenroll button missing**: the student has no active enrollment year to unenroll from.
+- **Unenroll failed**: retry and check if there are backend permission or data constraints.

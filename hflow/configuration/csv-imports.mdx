@@ -45,7 +45,7 @@ When you click **Review undo**, hFlow runs a safety check first. If undo is allo
 | You imported **new** assessment scores and no one has opened or edited those rows since | Created assessments still match what the CSV wrote. |
 | You imported assessments that **updated** existing BOY/MOY/EOY rows and scores are unchanged | Updated rows still match the import snapshot. |
 | You imported students that **only created** new roster rows and no one added assessments, goals, or accommodations for those enrollments | No post-import data on those enrollments. |
-| You imported a student file that **only changed class/section** assignments and those assignments were not edited again | Enrollment class values still match the import. |
+| You imported a student file that **only changed class** assignments and those assignments were not edited again | Enrollment class values still match the import. |
 
 ### When undo is blocked
 
@@ -55,7 +55,7 @@ When you click **Review undo**, hFlow runs a safety check first. If undo is allo
 | You imported assessments, then someone **deleted** one of the imported rows | A created assessment no longer exists as imported. |
 | You imported **new students**, then entered **assessments** (or goals/accommodations) for them | New enrollments now have data outside the import batch. |
 | You imported students and someone **enrolled the same student in another year** outside that file | The student has enrollments outside this batch. |
-| You imported a file that **updated class**, then moved a student to a **different section** in the app | Class assignment was changed after the import. |
+| You imported a file that **updated class**, then moved a student to a **different class** in the app | Class assignment was changed after the import. |
 | You imported a file that **updated external student ID**, then changed that ID again | External ID no longer matches the import snapshot. |
 | The upload **failed** or every row **failed** | Nothing successful to reverse, or no journal. |
 | The import is **older than the undo feature** | No change journal (status unavailable). |

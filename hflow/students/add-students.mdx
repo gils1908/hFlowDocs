@@ -11,7 +11,7 @@ This feature allows admins to add student records either one-by-one or in bulk v
 ## Choose the right path
 
 - Use **manual add** for a few students
-- Use **CSV import** for batches and section/class updates
+- Use **CSV import** for batches and class updates
 - Use **[Student enrollment (bulk)](/hflow/students/student-enrollment)** on **Students → Enrollment** to advance existing students to a later school year
 - Use **[Classes](/hflow/students/classes)** to assign students to classes in the current school year
 - Students → **Export CSV** uses import-friendly enrollment columns (`first_name`, `last_name`, `school_year`, `grade`, `class`, and optional `external_student_id`) so you can edit year, grade, and class and re-import the same file
@@ -28,10 +28,20 @@ This feature allows admins to add student records either one-by-one or in bulk v
 4. Optional fields:
    - Middle name
    - External student ID (up to 20 characters)
-   - Class/section (required when sections exist for that grade)
+   - Class (choose an existing class for that school year and grade, create a new one, or **Assign a class later**)
 5. Click **Save** (or **Save & Add Another**).
 
-The student appears in the roster for that school year and grade.
+The student appears in the roster for that school year and grade, unless hFlow finds a matching existing student first (see below).
+
+## If a matching student already exists
+
+Before creating a new record, hFlow checks whether an existing student already matches the name or external student ID you entered. This applies wherever you can add a student manually (Students, Enrollment, and Classes).
+
+- **One match found:** hFlow shows the existing student's name, external ID, and whether they are currently enrolled or were last enrolled in an earlier year. Choose **Re-enroll {name}** to add the year, grade, and class you entered to that existing student, or **Create new student anyway** if this is genuinely a different person.
+- **Several matches found:** hFlow lists the possible matches so you can pick the right one to re-enroll. If none of them are the right person, choose **None of these, create new**. Adding an external student ID before saving again can help hFlow tell two similarly named students apart.
+- **No match found:** hFlow creates the student as usual.
+
+Re-enrolling never creates a duplicate record or loses the student's history from earlier years. This matching step does not run during CSV import; see **CSV format rules (quick reference)** below for how CSV import handles existing students.
 
 ## Add Student fields explained
 
@@ -40,7 +50,7 @@ The student appears in the roster for that school year and grade.
 - **Middle name (optional):** Helps distinguish students with similar first/last names.
 - **Grade (required):** Numeric grade level (`0` to `12`), where `0` represents Kindergarten.
 - **School year (required):** Academic year context for enrollment and reporting.
-- **Class (conditional):** Class/section for that grade and year. If no sections exist, student can be enrolled without a class.
+- **Class (optional):** Class for that **school year and grade**. Choose an existing class, create a new one, or **Assign a class later** (student enrolls unassigned; you can place them later on **[Classes](/hflow/students/classes)**).
 - **External student ID (optional, max 20):** Any ID the school wants to use as a cross-reference in another system (for example, the school's main directory or SIS record ID).
 
 ## How to add students via CSV
@@ -91,7 +101,7 @@ Other constraints:
 - **“Missing required columns”**: verify exact required headers
 - **“Invalid year format”**: must be `YYYY-YYYY` and second year = first + 1
 - **“Invalid grade”**: must be between `0` and `12`
-- **Class required error**: choose a class when that grade is sectioned
+- **Class required error**: choose a class when that grade already has classes
 - **“Multiple students match this name”**: add `external_student_id` or a distinct `middle_name`
 
 For the full first-time import walkthrough. See [Getting started](/hflow/getting-started).

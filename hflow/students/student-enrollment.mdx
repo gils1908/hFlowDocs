@@ -3,7 +3,7 @@ title: "Student enrollment (bulk)"
 description: "Advance students into a future school year and class from Students → Enrollment."
 ---
 
-This feature allows admins to enroll selected students into a **future** school year, grade, and class from **Students → Enrollment**.
+This feature allows admins to enroll selected students into a **future** school year and grade from **Students → Enrollment**. You can also pick a class for that target year, create a new class, or leave class assignment for later.
 
 To move students between classes in the **same** school year, use **[Classes](/hflow/students/classes)** instead.
 
@@ -12,34 +12,38 @@ To move students between classes in the **same** school year, use **[Classes](/h
 
 ## How Enroll / Bulk Enroll works
 
-The button label is **Enroll** when one student is selected, and **Bulk Enroll** when two or more are selected. Each run applies **one target school year** and **one target class** to every student you selected.
+The button label is **Enroll** when one student is selected, and **Bulk Enroll** when two or more are selected. Each run applies **one target school year** and **one class choice** to every student you selected.
 
-- Select everyone who should land in the **same** target year and class, then run Enroll / Bulk Enroll once.
+- Select everyone who should land in the **same** target year and the **same** class choice, then run Enroll / Bulk Enroll once.
 - To place students into different classes (for example some into `3a` and some into `3b`), run the action once per target class.
 - Target year options are the **next** year and **two years ahead** from the **Current year** filter. Same-year class moves are not offered here.
 
-If the target grade has no class sections yet, you can enroll without a class, or create the first section in the modal when offered.
+Class options come from the **target** school year and **target** grade only (not from the year you are filtering on). You can:
 
-When the grade already has sections, choose an existing section or **Create new section**.
+- Choose an existing class for that target year and grade
+- **Create new class** in the modal
+- Choose **Assign a class later** so students enroll unassigned (you can place them later on **[Classes](/hflow/students/classes)**)
 
 ## Before you start
 
 1. Go to **Students → Enrollment**.
 2. Set **Current year** to the school year you are working from (for example `2024-2025`).
 3. Choose **exactly one grade**. Enroll / Bulk Enroll stays disabled until a single grade is selected.
-4. Optionally narrow **Class**. The **Class** list only includes sections that have students in the **Current year** you selected (and the grade filter). **All classes** is fine when you are remixing across sections.
+4. Optionally narrow **Class**. The **Class** list only includes classes that have students in the **Current year** you selected (and the grade filter). **All classes** is fine when you are remixing across classes.
 
 ## How to run Enroll / Bulk Enroll
 
-1. On **Enrollment**, select the students who should share the same target year and class.
+1. On **Enrollment**, select the students who should share the same target year and class choice.
 2. Click **Enroll** (one student) or **Bulk Enroll** (more than one).
-3. Choose the **target school year** (next year or two years ahead).
-4. Choose the **target class** when the target grade has sections. You can create an additional section in the modal when the grade already has at least one section.
-5. Click **Next**, review the summary (including any students who will be skipped), then **Confirm**.
+3. Choose the **target school year** (next year or two years ahead). The target grade advances with the year.
+4. Choose a **target class** for that year and grade, create a new class, or leave **Assign a class later**.
+5. Click **Next**, then review the summary. It states how many students will be enrolled, the target school year and grade, and the class choice (including **Assign a class later** when you did not pick a class). Confirm when ready.
 
 After you confirm, the roster updates for those students. Anyone already enrolled in the target school year is skipped and listed in the review step.
 
-You can also open a single student from the row actions to manage that student’s enrollment years one at a time.
+Use the **Select all** checkbox above the list to select every row currently shown by your filters.
+
+Click a student's name, or the pencil icon (**Manage enrollment**) in the row actions, to manage that student's enrollment years one at a time, including adding an enrollment year or unenrolling them from their latest year. See [Unenroll a student from the latest year](/hflow/students/delete-student).
 
 ## Examples
 
