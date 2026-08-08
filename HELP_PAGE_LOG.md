@@ -4,6 +4,14 @@ Maintainers only: not published on help.hflow.pro. For each substantive change u
 
 ## Entries (newest first)
 
+### DOC-0075 (2026-08-08): Enrollment Guidde video walkthrough
+
+**Summary:** **[Student enrollment (bulk)](/hflow/students/student-enrollment)** embeds a Guidde walkthrough (bulk enroll, assign class later, Classes assignment, enrollment history).
+
+**Files (this repo):**
+
+- changed `hflow/students/student-enrollment.mdx`, `AUTHORING.md`, `HELP_PAGE_LOG.md`
+
 ### DOC-0074 (2026-08-06): Bulk enroll review summary plain language
 
 **Summary:** **[Student enrollment (bulk)](/hflow/students/student-enrollment)** review step describes how many students will enroll, target year/grade, and class choice in plain language (including **Assign a class later**).
