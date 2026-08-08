@@ -4,6 +4,14 @@ Maintainers only: not published on help.hflow.pro. For each substantive change u
 
 ## Entries (newest first)
 
+### DOC-0077 (2026-08-08): Rename enrollment page title
+
+**Summary:** Renamed **[Student Enrollment](/hflow/students/student-enrollment)** page title (removed “bulk”). Updated cross-links on Add students and the help changelog.
+
+**Files (this repo):**
+
+- changed `hflow/students/student-enrollment.mdx`, `hflow/students/add-students.mdx`, `hflow/changelog.mdx`, `HELP_PAGE_LOG.md`
+
 ### DOC-0076 (2026-08-08): Enrollment video embed fallback link
 
 **Summary:** Simplified the Guidde iframe on **[Student enrollment (bulk)](/hflow/students/student-enrollment)** to Mintlify’s standard embed attributes and added a fallback link when the in-page player does not hydrate.
