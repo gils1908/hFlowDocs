@@ -4,6 +4,14 @@ Maintainers only: not published on help.hflow.pro. For each substantive change u
 
 ## Entries (newest first)
 
+### DOC-0076 (2026-08-08): Enrollment video embed fallback link
+
+**Summary:** Simplified the Guidde iframe on **[Student enrollment (bulk)](/hflow/students/student-enrollment)** to Mintlify’s standard embed attributes and added a fallback link when the in-page player does not hydrate.
+
+**Files (this repo):**
+
+- changed `hflow/students/student-enrollment.mdx`, `HELP_PAGE_LOG.md`
+
 ### DOC-0075 (2026-08-08): Enrollment Guidde video walkthrough
 
 **Summary:** **[Student enrollment (bulk)](/hflow/students/student-enrollment)** embeds a Guidde walkthrough (bulk enroll, assign class later, Classes assignment, enrollment history).
