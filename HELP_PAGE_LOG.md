@@ -4,6 +4,14 @@ Maintainers only: not published on help.hflow.pro. For each substantive change u
 
 ## Entries (newest first)
 
+### DOC-0078 (2026-08-09): Enrollment video switched to Clueso
+
+**Summary:** **[Student Enrollment](/hflow/students/student-enrollment)** walkthrough embed replaced Guidde with Clueso (`watchclueso.com`). Fallback link updated; AUTHORING notes Clueso as a hosted iframe option.
+
+**Files (this repo):**
+
+- changed `hflow/students/student-enrollment.mdx`, `AUTHORING.md`, `HELP_PAGE_LOG.md`
+
 ### DOC-0077 (2026-08-08): Rename enrollment page title
 
 **Summary:** Renamed **[Student Enrollment](/hflow/students/student-enrollment)** page title (removed “bulk”). Updated cross-links on Add students and the help changelog.
