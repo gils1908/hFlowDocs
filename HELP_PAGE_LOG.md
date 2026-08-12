@@ -4,6 +4,14 @@ Maintainers only: not published on help.hflow.pro. For each substantive change u
 
 ## Entries (newest first)
 
+### DOC-0080 (2026-08-11): Document the appearance (Light/Dark/System) toggle
+
+**Summary:** hFlow app added a Light/Dark/System appearance toggle (H-250), in the header next to the account menu and, on the sign-in screen, floating in the top right corner. Added a **How to switch appearance** section to **[Getting started](/hflow/getting-started)** covering where the control lives, the three options, and that the choice is saved to the account and follows the user across devices.
+
+**Files (this repo):**
+
+- changed `hflow/getting-started.mdx`, `HELP_PAGE_LOG.md`
+
 ### DOC-0079 (2026-08-09): Revert enrollment walkthrough to Guidde
 
 **Summary:** Restored Guidde embed on **[Student Enrollment](/hflow/students/student-enrollment)** (reverted DOC-0078 Clueso swap). Clueso update tracked in Linear backlog.
