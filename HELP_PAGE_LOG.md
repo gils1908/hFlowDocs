@@ -4,6 +4,14 @@ Maintainers only: not published on help.hflow.pro. For each substantive change u
 
 ## Entries (newest first)
 
+### DOC-0081 (2026-08-23): Candidate students walkthrough video
+
+**Summary:** **[Candidate students](/hflow/students/candidate-students)** embeds a Clueso walkthrough above **How to open the list**, with the demo data notice moved below the player. Removed "(summary)" from the add-candidate heading.
+
+**Files (this repo):**
+
+- changed `hflow/students/candidate-students.mdx`, `hflow/changelog.mdx`, `HELP_PAGE_LOG.md`
+
 ### DOC-0080 (2026-08-11): Document the appearance (Light/Dark/System) toggle
 
 **Summary:** hFlow app added a Light/Dark/System appearance toggle (H-250), in the header next to the account menu and, on the sign-in screen, floating in the top right corner. Added a **How to switch appearance** section to **[Getting started](/hflow/getting-started)** covering where the control lives, the three options, and that the choice is saved to the account and follows the user across devices.
