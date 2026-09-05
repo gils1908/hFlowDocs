@@ -4,6 +4,17 @@ Maintainers only: not published on help.hflow.pro. For each substantive change u
 
 ## Entries (newest first)
 
+### DOC-0082 (2026-09-05): DIBELS risk calculator
+
+**Summary:** New page **[DIBELS risk calculator](/hflow/assessments/dibels-calculator)** for H-265. Covers the required columns and the accepted test names (including why bare `NWF` and `ORF` are rejected), how to run a CSV (up to 1,000 rows; Excel files must be saved as CSV first) and get the download, how to read the four risk bands, and a table of every "did not match" message with what to do about it. Notes that nothing is stored and no roster matching happens, that access is granted per person rather than by role, and where the benchmark PDF and the loaded benchmark table live.
+
+**Marked `hidden: true`** because the feature is gated to individually enabled users, so it should not be advertised on the public site. The page stays listed in `docs.json` (self-documenting for maintainers) and stays reachable by direct URL, which is what the in-app `?` icon uses. `hidden: true` rather than simply omitting it from `docs.json`: omitting a page only drops it from `sitemap.xml`, while `hidden: true` also emits a `noindex` meta tag and keeps it out of site search and AI assistant context. Remove the one line to publish it when the feature opens up.
+
+**Files (this repo):**
+
+- added `hflow/assessments/dibels-calculator.mdx`
+- changed `docs.json`, `HELP_PAGE_LOG.md`
+
 ### DOC-0081 (2026-08-23): Candidate students walkthrough video
 
 **Summary:** **[Candidate students](/hflow/students/candidate-students)** embeds a Clueso walkthrough above **How to open the list**, with the demo data notice moved below the player. Removed "(summary)" from the add-candidate heading.
