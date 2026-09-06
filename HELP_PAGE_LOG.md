@@ -4,6 +4,38 @@ Maintainers only: not published on help.hflow.pro. For each substantive change u
 
 ## Entries (newest first)
 
+### DOC-0086 (2026-09-05): DIBELS® calculator template covers every cell
+
+**Summary:** **[DIBELS® risk calculator](/hflow/assessments/dibels-calculator)** template CSV now has one sample student per grade K through 5 and a row for every test and period that grade uses in DIBELS® 8th Edition.
+
+**Files (this repo):**
+
+- changed `hflow/assessments/dibels-calculator.mdx`, `HELP_PAGE_LOG.md`
+
+### DOC-0085 (2026-09-05): DIBELS® calculator score-file drop zone
+
+**Summary:** **[DIBELS® risk calculator](/hflow/assessments/dibels-calculator)** now tells people to click the dashed **Score file** box or drag a CSV onto it, instead of using a native Choose File control.
+
+**Files (this repo):**
+
+- changed `hflow/assessments/dibels-calculator.mdx`, `HELP_PAGE_LOG.md`
+
+### DOC-0084 (2026-09-05): DIBELS® calculator student matrix Excel file
+
+**Summary:** **[DIBELS® risk calculator](/hflow/assessments/dibels-calculator)** now downloads two files after **Calculate**: the existing CSV with a **Risk Level** column, and an Excel student table (one row per student, grade, and period) with tests in the printed DIBELS® document order and band-colored cells. Notes that only the CSV can be uploaded again, and how to open the Excel file in Google Sheets so the colors stay.
+
+**Files (this repo):**
+
+- changed `hflow/assessments/dibels-calculator.mdx`, `HELP_PAGE_LOG.md`
+
+### DOC-0083 (2026-09-05): DIBELS® calculator template and Calculate button
+
+**Summary:** **[DIBELS® risk calculator](/hflow/assessments/dibels-calculator)** now matches the in-app **Calculate** button (was **Calculate risk levels**), points people to **Download template CSV** on the calculator page, and uses the registered mark (DIBELS®) wherever the product name appears.
+
+**Files (this repo):**
+
+- changed `hflow/assessments/dibels-calculator.mdx`, `HELP_PAGE_LOG.md`
+
 ### DOC-0082 (2026-09-05): DIBELS risk calculator
 
 **Summary:** New page **[DIBELS risk calculator](/hflow/assessments/dibels-calculator)** for H-265. Covers the required columns and the accepted test names (including why bare `NWF` and `ORF` are rejected), how to run a CSV (up to 1,000 rows; Excel files must be saved as CSV first) and get the download, how to read the four risk bands, and a table of every "did not match" message with what to do about it. Notes that nothing is stored and no roster matching happens, that access is granted per person rather than by role, and where the benchmark PDF and the loaded benchmark table live.

@@ -1,10 +1,10 @@
 ---
-title: "DIBELS risk calculator"
-description: "Upload a CSV of DIBELS scores and get the same file back with a risk level for every row."
+title: "DIBELS® risk calculator"
+description: "Upload a CSV of DIBELS® scores and download a risk-level file plus a color-coded student table."
 hidden: true
 ---
 
-The DIBELS risk calculator turns raw DIBELS scores into risk levels. You upload a CSV, and hFlow gives you back the same file with one extra column called **Risk Level**. It saves you from looking up each score in the printed benchmark tables by hand.
+The DIBELS® risk calculator turns raw DIBELS® scores into risk levels. You upload a CSV, and hFlow gives you two files: the same file with one extra column called **Risk Level**, and an Excel table with one row per student and a column for each test, colored to match the printed DIBELS® bands. It saves you from looking up each score in the printed benchmark tables by hand.
 
 This tool is switched on for individual people rather than for a whole school, so you only see it if it has been enabled for your account. If you expect to see it and do not, contact hFlow support.
 
@@ -23,13 +23,15 @@ It must contain these six columns. The names are flexible (see [Column names](#c
 | Student first name | The student's first name |
 | Student last name | The student's last name |
 | Grade | `K` through `8` |
-| Test | Which DIBELS measure was given, for example `LNF` or `ORF-WC` |
+| Test | Which DIBELS® measure was given, for example `LNF` or `ORF-WC` |
 | Period | `Beg`, `Mid`, or `End` |
 | Result | The score, as a number |
 
 Grade and period both accept the longer spellings you are likely to already have in an export. Grade takes `K`, `Kindergarten`, `Grade 3`, `3rd`, or `THIRD`. Period takes `Beg`, `Beginning`, or `BOY` for the beginning of the year, and the equivalents for the middle and end. Season names such as `Winter` are not accepted, because which period they mean depends on the school calendar.
 
-You can include any other columns you like. Student IDs, teacher names, class names, notes: all of them come back untouched in the download, in the same order.
+You can include any other columns you like. Student IDs, teacher names, class names, notes: all of them come back untouched in the **CSV** download, in the same order. The Excel table keeps only the student name, grade, period, and the tests that were in your file.
+
+The calculator page also has a **Download template CSV** button. It includes one sample student per grade K through 5, and a row for every test and period that grade uses in DIBELS® 8th Edition. Replace the names and scores with your own.
 
 ### Test names
 
@@ -37,7 +39,7 @@ Use one of these in the **Test** column. Capitalization does not matter, and the
 
 | Code | Full name |
 |---|---|
-| Composite | DIBELS Composite Score |
+| Composite | DIBELS® Composite Score |
 | LNF | Letter Naming Fluency |
 | PSF | Phonemic Segmentation Fluency |
 | NWF-CLS | Nonsense Word Fluency: Correct Letter Sounds |
@@ -57,20 +59,21 @@ Extra spaces and capitalization are ignored, and your columns can be in any orde
 
 ## How to calculate risk levels
 
-1. Open **Assessments** in the top navigation and choose **DIBELS calculator**.
+1. Open **Assessments** in the top navigation and choose **DIBELS® calculator**.
 2. Under **Benchmark edition**, leave the default edition selected unless you have been told to use a different one.
-3. Under **Score file**, choose your CSV file.
-4. Click **Calculate risk levels**.
+3. Under **Score file**, click the dashed box or drag your CSV onto it. The filename appears once the file is selected.
+4. Click **Calculate**.
 
-Your browser downloads the finished file straight away, named after your original file with `risk-levels` and the edition added, for example `winter-screening-risk-levels-dibels8.csv`. You can open that CSV in Excel, Google Sheets, or Numbers.
+Your browser downloads two files. A short summary appears on the page underneath the button telling you how many rows were scored and how many did not match a benchmark. If a download is blocked, use **Download CSV again** or **Download Excel again** on that summary.
 
-A short summary appears on the page underneath the button telling you how many rows were scored and how many did not match a benchmark. If some rows did not match, the **Risk Level** column in the file explains why for each one.
+- The CSV is named after your original file with `risk-levels` and the edition added, for example `winter-screening-risk-levels-dibels8.csv`. Each row is still one score, with a **Risk Level** column added. This is the file you can upload again later if you need to re-run. Open it in Excel, Google Sheets, or Numbers. If some rows did not match, the **Risk Level** column explains why for each one.
+- The Excel file is named with `risk-matrix` instead, for example `winter-screening-risk-matrix-dibels8.xlsx`. It has one row per student, grade, and period, and a column for each test that appeared in your file. Test columns follow the order in the DIBELS® benchmark document (Composite, then LNF, PSF, NWF-CLS, NWF-WRC, WRF, ORF-WC, ORF-Accuracy, Maze). Each risk cell is filled with the printed band color (blue, green, yellow, or red). A **Legend** sheet in the same file lists those colors. Upload the file to Google Drive, or in Google Sheets use **File**, then **Import**, to keep the colors. This Excel file cannot be uploaded back into the calculator.
 
-If you upload a file that the calculator already processed, the existing **Risk Level** column is refreshed in place rather than a second one being added.
+If you upload a file that the calculator already processed, the existing **Risk Level** column in the CSV is refreshed in place rather than a second one being added.
 
 ## Reading the results
 
-Rows that match a benchmark get a risk level made up of the band, the level of risk, and the recommended support:
+Rows that match a benchmark get a risk level made up of the band, the level of risk, and the recommended support. The CSV and the Excel table use the same wording. In the Excel table, matched cells are also filled with the matching band color from the published document.
 
 | Risk Level | What it means |
 |---|---|
@@ -79,7 +82,7 @@ Rows that match a benchmark get a risk level made up of the band, the level of r
 | `Yellow - Some Risk (Strategic Support)` | Below the benchmark, some risk |
 | `Red - At Risk (Intensive Support)` | Well below the benchmark, at risk |
 
-Not every test has all four bands at every grade and time of year. Letter Naming Fluency and ORF Accuracy have no Blue band, for instance, and a few Kindergarten cells only have two. That comes from the published benchmark document, not from hFlow.
+Not every test has all four bands at every grade and time of year. Letter Naming Fluency and ORF Accuracy have no Blue band, for instance, and a few Kindergarten cells only have two. That comes from the published benchmark document, not from hFlow. A cell with no color in the Excel table could not be scored. The cell text says why.
 
 ## When a row does not get a risk level
 
@@ -102,7 +105,7 @@ Rows are checked in order: grade first, then test, then period, then the score. 
 
 ## Where the benchmarks come from
 
-Risk levels come from the official DIBELS benchmark goals published by the University of Oregon. hFlow does not adjust the numbers.
+Risk levels come from the official DIBELS® benchmark goals published by the University of Oregon. hFlow does not adjust the numbers.
 
 Two ways to check what the calculator is using:
 
@@ -112,9 +115,9 @@ Two ways to check what the calculator is using:
 On the benchmarks table, a range marked with an asterisk (`*`) is one where the printed document has an evident typo, such as a range printed backwards. Hover over the asterisk to see the printed value and why it was corrected. The PDF you download is never altered.
 
 <Note>
-DIBELS benchmark goals are published by the University of Oregon. The **Benchmark edition** dropdown exists because the goals are revised from time to time. Unless someone tells you otherwise, use the edition marked as the default.
+DIBELS® is a registered trademark of the University of Oregon. DIBELS® benchmark goals are published by the University of Oregon. The **Benchmark edition** dropdown exists because the goals are revised from time to time. Unless someone tells you otherwise, use the edition marked as the default.
 </Note>
 
 ## Admin vs teacher
 
-Access to the calculator does not follow the usual roles. Being an owner or admin does not give you the DIBELS calculator, and having access to **Assessments** is not required either. It is enabled per person by hFlow support, so a teacher can have it while an admin in the same school does not.
+Access to the calculator does not follow the usual roles. Being an owner or admin does not give you the DIBELS® calculator, and having access to **Assessments** is not required either. It is enabled per person by hFlow support, so a teacher can have it while an admin in the same school does not.
