@@ -72,7 +72,6 @@
             "group": "Assessments",
             "pages": [
               "hflow/assessments",
-              "hflow/assessments/dibels-calculator",
               "hflow/language-metrics",
               "hflow/actfl-proficiency-scale"
             ]

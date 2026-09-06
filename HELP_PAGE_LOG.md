@@ -4,6 +4,15 @@ Maintainers only: not published on help.hflow.pro. For each substantive change u
 
 ## Entries (newest first)
 
+### DOC-0087 (2026-09-05): Unpublish DIBELS® calculator help
+
+**Summary:** Removed the public **DIBELS® risk calculator** article from help.hflow.pro. That guide now lives only in the signed-in app at `/assessments/dibels/help` (same access gate as the calculator). The in-app `?` button and ladybug **Open in Help** nudge open that page. The old public URL is not redirected, so it 404s.
+
+**Files (this repo):**
+
+- deleted `hflow/assessments/dibels-calculator.mdx`
+- changed `docs.json`, `HELP_PAGE_LOG.md`
+
 ### DOC-0086 (2026-09-05): DIBELS® calculator template covers every cell
 
 **Summary:** **[DIBELS® risk calculator](/hflow/assessments/dibels-calculator)** template CSV now has one sample student per grade K through 5 and a row for every test and period that grade uses in DIBELS® 8th Edition.
