@@ -4,6 +4,17 @@ Maintainers only: not published on help.hflow.pro. For each substantive change u
 
 ## Entries (newest first)
 
+### DOC-0088 (2026-09-08): In-app notifications for staff
+
+**Summary:** New **[Notifications](/hflow/notifications)** guide for school staff (H-251). Covers when notices appear (signed in, matching role, published), the three surfaces (header bell, amber banner with **Message 1 of n**, **New** badge on a control), how to read without auto-marking, how to dismiss (banner **X**, **Mark as read** / **Mark all as read**, hotspot **Got it**), and targeting (teachers only, admins, owners, all staff; school vs every school). Distinguishes these from [Communications](/hflow/communications) family emails and the ladybug. Linked from Getting started, Troubleshooting, Welcome, and Release notes. Sidebar: Navigation group.
+
+**Open doc backlog (screenshots):** Bell with unread count; amber banner (single and **Message 1 of n**); drawer **New** / **Read** with **Mark as read**; **New** badge on a control and **Got it** panel → `images/notifications/`.
+
+**Files (this repo):**
+
+- added `hflow/notifications.mdx`
+- changed `docs.json`, `index.mdx`, `hflow/getting-started.mdx`, `hflow/troubleshooting.mdx`, `hflow/communications.mdx`, `hflow/changelog.mdx`, `HELP_PAGE_LOG.md`
+
 ### DOC-0087 (2026-09-05): Unpublish DIBELS® calculator help
 
 **Summary:** Removed the public **DIBELS® risk calculator** article from help.hflow.pro. That guide now lives only in the signed-in app at `/assessments/dibels/help` (same access gate as the calculator). The in-app `?` button and ladybug **Open in Help** nudge open that page. The old public URL is not redirected, so it 404s.

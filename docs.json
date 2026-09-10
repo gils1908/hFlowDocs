@@ -50,7 +50,7 @@
           },
           {
             "group": "Navigation",
-            "pages": ["hflow/shortcuts"]
+            "pages": ["hflow/shortcuts", "hflow/notifications"]
           },
           {
             "group": "Students",
