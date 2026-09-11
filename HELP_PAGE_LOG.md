@@ -4,6 +4,25 @@ Maintainers only: not published on help.hflow.pro. For each substantive change u
 
 ## Entries (newest first)
 
+### DOC-0090 (2026-09-11): AI assistants roster list
+
+**Summary:** **[AI assistants](/hflow/ai-assistant)** now says staff can ask the assistant to list students they already see in hFlow. Teachers stay on assigned classes; administrators see the school roster.
+
+**Files (this repo):**
+
+- changed `hflow/ai-assistant.mdx`, `HELP_PAGE_LOG.md`
+
+### DOC-0089 (2026-09-11): AI assistants (Claude connector)
+
+**Summary:** New **[AI assistants](/hflow/ai-assistant)** guide for connecting Claude to hFlow (H-274 / H-275). Covers school authorization first, Claude custom connector URL `https://app.hflow.pro/mcp`, OTP consent, Team/Enterprise org Connectors, assignment disambiguation, owner kill switch (hidden until the school is authorized), and that hFlow cannot delete data once it is in the assistant. Linked from Configuration nav and Release notes.
+
+**Open doc backlog (screenshots):** Configuration → AI assistants (authorized vs empty state); Claude custom connector paste URL; hFlow consent screen → `images/ai-assistants/`.
+
+**Files (this repo):**
+
+- added `hflow/ai-assistant.mdx`
+- changed `docs.json`, `hflow/changelog.mdx`, `HELP_PAGE_LOG.md`
+
 ### DOC-0088 (2026-09-08): In-app notifications for staff
 
 **Summary:** New **[Notifications](/hflow/notifications)** guide for school staff (H-251). Covers when notices appear (signed in, matching role, published), the three surfaces (header bell, amber banner with **Message 1 of n**, **New** badge on a control), how to read without auto-marking, how to dismiss (banner **X**, **Mark as read** / **Mark all as read**, hotspot **Got it**), and targeting (teachers only, admins, owners, all staff; school vs every school). Distinguishes these from [Communications](/hflow/communications) family emails and the ladybug. Linked from Getting started, Troubleshooting, Welcome, and Release notes. Sidebar: Navigation group.

@@ -109,6 +109,7 @@
               "hflow/configuration/org-profile",
               "hflow/configuration/email-templates",
               "hflow/configuration/staff",
+              "hflow/ai-assistant",
               "hflow/configuration/data-exports",
               "hflow/configuration/csv-imports",
               "hflow/configuration/tier-rules"

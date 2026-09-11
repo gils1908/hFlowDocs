@@ -1,0 +1,51 @@
+---
+title: "AI assistants"
+description: "Connect Claude (and later ChatGPT) to hFlow so staff can ask about their classes using school-approved accounts."
+---
+
+This feature lets teachers and administrators ask an AI assistant about students they already see in hFlow. The assistant reads scores and names your school has allowed. It does not invent results, and it does not send letters for you.
+
+hFlow support turns this on for your school after a signed addendum is on file. Until then, **Configuration → AI assistants** explains that access is not enabled yet.
+
+> **Demo data notice**
+> Examples in this help center use fictitious names and schools for training only.
+
+## Before you connect
+
+1. Confirm with your hFlow administrator that AI assistants are enabled for the school.
+2. Use your **school hFlow email**, not a personal Gmail that is not on the staff list.
+3. v1 is **Claude** first. ChatGPT may be added by a designated admin. Google Gemini is not part of this guide.
+
+## How to connect Claude
+
+1. In Claude, open **Customize → Connectors → Add custom connector** (Claude’s labels move; look for custom connectors).
+2. Paste `https://app.hflow.pro/mcp`. Leave Advanced OAuth client id and secret empty. Add the connector.
+3. Click **Connect**. A browser window opens on hFlow.
+4. Sign in with the same email code you use for hFlow.
+5. Read the consent screen, check the school-account box, and click **Approve**.
+
+The window closes and Claude shows the connector as connected. Opening `https://app.hflow.pro/mcp` in a normal tab only explains the URL. It is not a sign-in page.
+
+If your school uses **Claude Team or Enterprise**, an Owner of that Claude organization must add the same URL under org Connectors first. Each staff member still clicks **Connect** and completes the hFlow sign-in.
+
+## What to ask
+
+Start with questions about **your** classes (for example, “How are my kids doing in Hebrew this year?” or “Show me my students”). The assistant should load your assignments first for class questions, or list the same students you can already open in hFlow. Teachers only see their assigned classes. Administrators see the school roster. If you teach more than one language or class, it should ask which one, including an option for all of them. If you ask about a grade you do not teach, it should say so and list the assignments you do have. It should not quietly show a different grade.
+
+You can ask it to draft a parent letter from a student’s facts. Saving or sending that letter still happens in hFlow.
+
+## How to turn access off (owners)
+
+1. Open **Configuration → AI assistants**.
+2. If the page says access is not enabled for your school, contact hFlow. There is no on/off switch until the school is authorized.
+3. If you see **Allow AI assistants to read hFlow facts**, turn that switch off.
+
+Staff connections fail until an owner turns it back on. Designated admins can also change allowed assistants (Claude, ChatGPT) and how names appear (first initial, full name, or student codes only).
+
+## If connect fails
+
+- Use the hFlow account for this school. A personal account that is not on the staff list is refused.
+- If the school has not been authorized, hFlow shows that access is not enabled and Claude shows a failed connection.
+- If your role or that assistant is not allowed, contact your hFlow administrator.
+
+hFlow logs which tool ran and when (not the chat text). Data that already left for the assistant cannot be deleted from that vendor by hFlow.
